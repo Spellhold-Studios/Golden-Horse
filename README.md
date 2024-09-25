@@ -35,7 +35,13 @@ Revan is a fugitive from Moonsea trying to establish his new life in Athkatla; h
 
 Revan does not have a lot of interactions, though he does have at least one banter with each Bioware NPC in SoA (less in ToB). If you are looking for a fully-fleshed NPC telling his life story throughout BG2, you may be disappointed. This mod is more about protecting an NPC from assassins with a story tying it all together.
 
-### Statistics
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://spellhold-studios.github.io/readmes/golden-horse/revan.jpg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://spellhold-studios.github.io/readmes/golden-horse/revan.jpg" />
+  <img align="left" alt="Portrait" src="https://spellhold-studios.github.io/readmes/golden-horse/revan.jpg" height="260">
+</picture>
 
 |  Ability  | Score |
 | :-------- | :---- |
@@ -58,4 +64,4 @@ Revan does not have a lot of interactions, though he does have at least one bant
 
 #### Author
 
-- svj (Juraj Svitnic)
+svj (Juraj Svitnic)
