@@ -1,0 +1,7 @@
+IF
+    Global("rqTobIllaseraIsRakshasa","GLOBAL",1)
+THEN
+    RESPONSE #100
+        DisplayStringHead(Myself,@18)  // Blast! What is that?!
+        EscapeArea()
+END

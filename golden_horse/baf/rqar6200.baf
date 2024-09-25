@@ -1,0 +1,46 @@
+IF
+    Global("StartEndBios","ar6200",1)
+    InParty("rqrev")
+    Global("rqrevanBio","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqrevanBio","GLOBAL",1)
+        TextScreen("rqrev")
+        SetGlobal("rqrevanBio","GLOBAL",1)
+        SmallWait(1)
+        SetGlobal("rqrevanBio","GLOBAL",1)
+        Continue()
+        SetGlobal("rqrevanBio","GLOBAL",1)
+        Continue()
+END
+
+IF
+    !Dead("rqt0clf1")
+    Global("rqTobSixtarchIsPrimaryAlly","GLOBAL",3)
+    Global("FinalFight","AR6200",1)
+    Global("rqTobFinalFightSummon","AR6200",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqTobFinalFightSummon","AR6200",1)
+        CreateCreatureDoor("rqt0clf1",[1406.1212],11)
+        CreateCreatureDoor("rqt0clf2",[1488.1210],11)
+        CreateCreatureDoor("rqt0clt1",[1547.1184],11)
+        CreateCreatureDoor("rqt0clt2",[1536.1264],11)
+        CreateCreatureDoor("rqt0clt3",[1602.1181],11)
+        CreateCreatureDoor("rqt0clt4",[1663.1182],11)
+END
+
+IF
+    Global("rqTobFinalFightSummon","AR6200",1)
+    Global("rqTobAssaultBalthazar","GLOBAL",1)
+    Global("rqTobDestroyInvul","AR6200",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqTobDestroyInvul","AR6200",1)
+        ActionOverride("rqt0clf1",DestroyItem("minhp20"))
+        ActionOverride("rqt0clf2",DestroyItem("minhp20"))
+        ActionOverride("rqt0clt1",DestroyItem("minhp20"))
+        ActionOverride("rqt0clt2",DestroyItem("minhp20"))
+        ActionOverride("rqt0clf3",DestroyItem("minhp20"))
+        ActionOverride("rqt0clf4",DestroyItem("minhp20"))
+END

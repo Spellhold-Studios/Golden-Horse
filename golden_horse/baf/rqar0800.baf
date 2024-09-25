@@ -1,0 +1,23 @@
+IF
+    Global("rqSpawnGraveyardKrolyn","AR0800",0)
+    Global("rq5MintipBattle","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("rqSpawnGraveyardKrolyn","AR0800",1) // Graveyard District
+        CreateCreature("rq6f18a",[1498.1996],0) // Archer
+        CreateCreature("rq6f18a",[1570.1953],0) // Archer
+        CreateCreature("rq6f18a",[1564.1955],0) // Archer
+        CreateCreature("rq6f18b",[1605.1927],0) // Archer talking
+        CreateCreature("rqwarc1b",[1637.1908],0) // Archer
+        CreateCreature("rqwarc1b",[1666.1882],0) // Archer
+        CreateCreature("rqt12f1d",[1735.2155],0) // Thief
+        CreateCreature("rqt12f1d",[1882.2157],0) // Thief
+        CreateCreature("rqt12f1d",[2006.2007],0) // Thief
+        CreateCreature("rqt12f1d",[1788.1943],0) // Thief
+        CreateCreature("rqargf1b",[1877.1810],0) // Fighter
+        CreateCreature("rq6kroly",[1945.1809],0) // Krolyn
+        CreateCreature("rqargf1b",[2001.1840],0) // Fighter
+        Continue()
+END
+
+

@@ -1,0 +1,29 @@
+IF
+    Global("rqrevCreate","AR0704",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqrevCreate","AR0704",1)
+        CreateCreature("rqrev9",[135.625],13) // Revan
+        CreateCreature("rqrahm",[651.715],5) // Rahm
+        Continue()
+END
+
+IF
+    Global("rqFougierSpawn","AR0704",0)
+    GlobalGT("rqRevanMintiper","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("rqFougierSpawn","AR0704",1)
+        CreateCreature("rqfougi",[689.691],5) // Fougier
+        Continue()
+END
+
+IF
+    Global("rqRugosSpawn","AR0704",0)
+    GlobalGT("rqContractsRugosAvailable","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqRugosSpawn","AR0704",1)
+        CreateCreature("rqrugos",[589.729],5) // Rugos
+        Continue()
+END

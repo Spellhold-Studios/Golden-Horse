@@ -1,0 +1,106 @@
+IF
+    Global("rqJaheira2Ambush","GLOBAL",1) // Berinvar battle global
+    Dead("rqberin")
+    Global("rqjaheira2tobambushSpawn","AR4000",0) // Forest of Tethir
+THEN
+    RESPONSE #100
+        SetGlobal("rqjaheira2tobambushSpawn","AR4000",1) // Forest of Tethir
+        SetGlobal("rqjaheira2tobambush","GLOBAL",1)
+        CreateCreature("rqjah134",[1572.863],0) // Jaheira
+        CreateCreature("rqs20",[1681.856],0) // Corruptor
+        CreateCreature("rqbar30a",[1708.803],0) // Blutdurst
+        CreateCreature("rqc26",[1719.852],0) // Secretwhisperer
+        CreateCreature("rqd18",[1693.844],0) // Sucio the Great
+        CreateCreature("rqriba",[1554.801],0) // Ribald
+        CreateCreature("rqstde",[1668.934],0) // Arkanis Gath
+        CreateCreature("rqvvsa",[1702.930],0) // Sansuki
+        CreateCreature("rqmonliq",[1564.760],0) // Montin Liq'var
+        CreateCreature("rqcowl1",[1605.799],0) // Cowled Wizard
+        CreateCreature("rqcowl2",[1578.648],0) // Cowled Wizard
+        CreateCreature("rqcenf1",[1557.690],0) // Cowled Enforcer
+        CreateCreature("rqcenf2",[1643.685],0) // Cowled Enforcer
+        CreateCreature("rqcenf3",[1622.595],0) // Cowled Enforcer
+        CreateCreature("rqcenf4",[1622.625],0) // Cowled Enforcer
+        CreateCreature("rqbael",[1530.819],0) // Baelnorn
+        CreateCreature("rqc6elf3",[1822.779],0) // Elven Slinger
+        CreateCreature("rqc6elf4",[1814.748],0) // Elven Slinger
+        CreateCreature("rqc6elf1",[1775.687],0) // Elven Warrior
+        CreateCreature("rqc6elf2",[1800.722],0) // Elven Warrior
+        CreateCreature("rqc6gen",[1778.837],0) // General Sovalidass
+        CreateCreature("rqf27",[1894.713],0) // Bladesinger
+        Continue()
+END
+
+IF
+    GlobalLT("SPRITE_IS_DEADNobleOrder","GLOBAL",5) // less than five Paladins died
+    Global("SPRITE_IS_DEADAlex","GLOBAL",1) // Beverus dead
+    Global("rqPaladinSpawn1Type","AR4000",0) // Forest of Tethir
+    Global("rqPaladinAlThon","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqPaladinAlThon","GLOBAL",1)
+        SetGlobal("rqPaladinSpawn1Type","AR4000",1) // Forest of Tethir
+        CreateCreature("rqwill",[1616.880],0) // Sir_Branet_al-Thon
+        CreateCreature("rqalhe",[1853.931],0) // Alhelor
+        CreateCreature("rqalex",[1882.1027],0) // Sir Beverus
+        CreateCreature("rqjolu",[1771.974],0) // Sir Jolus
+        CreateCreature("rqkenda",[1794.946],0) // Sir Laren
+        CreateCreature("rqryan",[1852.995],0) // Sir Paritin
+        Continue()
+END
+
+IF
+    Global("SPRITE_IS_DEADNobleOrder","GLOBAL",5) // Five Paladins died
+    Global("SPRITE_IS_DEADAlex","GLOBAL",0) // Beverus did not die
+    Global("rqPaladinSpawn1Type","AR4000",0) // Forest of Tethir
+    Global("rqPaladinAlThon","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqPaladinAlThon","GLOBAL",1)
+        SetGlobal("rqPaladinSpawn1Type","AR4000",1) // Forest of Tethir
+        CreateCreature("rqwill",[1616.880],0) // Sir_Branet_al-Thon
+        CreateCreature("rqalhe",[1853.931],0) // Alhelor
+        CreateCreature("rqalex",[1882.1027],0) // Sir Beverus
+        CreateCreature("rqjolu",[1771.974],0) // Sir Jolus
+        CreateCreature("rqkenda",[1794.946],0) // Sir Laren
+        CreateCreature("rqryan",[1852.995],0) // Sir Paritin
+        Continue()
+END
+
+IF
+    Global("rqPaladinAlThon","GLOBAL",0)
+    Global("SPRITE_IS_DEADNobleOrder","GLOBAL",5)
+    Global("SPRITE_IS_DEADAlex","GLOBAL",1)
+    Global("rqPaladinSpawn2Type","AR4000",0) // Forest of Tethir
+THEN
+    RESPONSE #100
+        SetGlobal("rqPaladinSpawn2Type","AR4000",1) // Forest of Tethir
+        SetGlobal("rqPaladinWoodwille","GLOBAL",1)
+        CreateCreature("rqwoodw",[1616.880],0) // Sir Woodwille
+        CreateCreature("rqnevill",[1853.931],0) // Sir Neville
+        CreateCreature("rqstaf",[1882.1027],0) // Sir Stafford
+        CreateCreature("rqhoward",[1771.974],0) // Sir Howard
+        CreateCreature("rqbeauf",[1794.946],0) // Sir Beaufort
+        CreateCreature("rqtalbot",[1852.995],0) // Talbot
+        Continue()
+END
+
+IF
+    Global("rqJaheira2Ambush","GLOBAL",1) // Berinvar battle global
+    Dead("rqberin")
+    Global("rqPaladinAlThon","GLOBAL",0)
+    Global("rqPaladinWoodwille","GLOBAL",0)
+    Global("rqPaladinAlThon","GLOBAL",0)
+    Global("rqPaladinSpawn2Type","AR4000",0) // Forest of Tethir
+THEN
+    RESPONSE #100
+        SetGlobal("rqPaladinSpawn2Type","AR4000",1) // Forest of Tethir
+        SetGlobal("rqPaladinWoodwille","GLOBAL",1)
+        CreateCreature("rqwoodw",[1616.880],0) // Sir Woodwille
+        CreateCreature("rqnevill",[1853.931],0) // Sir Neville
+        CreateCreature("rqstaf",[1882.1027],0) // Sir Stafford
+        CreateCreature("rqhoward",[1771.974],0) // Sir Howard
+        CreateCreature("rqbeauf",[1794.946],0) // Sir Beaufort
+        CreateCreature("rqtalbot",[1852.995],0) // Talbot
+        Continue()
+END

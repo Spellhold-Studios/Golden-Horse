@@ -1,0 +1,150 @@
+// cast improved haste
+IF
+    See(NearestEnemyOf(Myself))
+    Global("rqUsedClaw","LOCALS",0)
+THEN
+    RESPONSE #100
+        PlaySound("rqcast01")
+        SetGlobal("rqUsedClaw","LOCALS",1)
+        DisplayStringHead(Myself,@1)
+        ForceSpellRES("rqhymfur",Myself)  // Hymmn to Murderous Fury
+END
+// Sixtarchs last encounter failed attempt to escape
+IF
+    HPPercentLT(Myself,40)
+    Global("rqRetreatSixta-3","LOCALS",0)
+    Global("Enclave","GLOBAL",2)
+    Global("rqTobRetreatImpossible","GLOBAL",0)
+THEN
+    RESPONSE #100
+        CreateVisualEffectObject("SPDIMNDR",Myself)
+        DisplayStringHead(Myself,@2) // Next time!
+        DisplayStringHead(Myself,@3) // What?! The magic does not work! Someone betrayed us!
+        SetGlobal("rqRetreatSixta-3","LOCALS",1)
+        SetGlobal("rqTobRetreatImpossible","GLOBAL",2)
+END
+// Sixtarch tries himself
+IF
+    Global("rqTobRetreatImpossible","GLOBAL",1)
+THEN
+    RESPONSE #100
+        CreateVisualEffectObject("SPDIMNDR",Myself)
+        SetGlobal("rqTobRetreatImpossible","GLOBAL",2)
+END
+// Sixtarch negotiation
+IF
+    Alignment(Player1,MASK_EVIL)
+    Global("rqTobRetreatImpossible","GLOBAL",2)
+    ReputationLT([PC],9)
+    See([PC])
+THEN
+    RESPONSE #100
+        SetGlobal("rqTobRetreatImpossible","GLOBAL",3)
+        StartDialogNoSet([PC])
+END
+// !Not last retreat
+IF
+    GlobalLT("Enclave","GLOBAL",2)
+    Global("rqTobRetreatImpossible","GLOBAL",0)
+    HPPercentLT(Myself,40)
+    Global("rqRetreatEncT7-0","LOCALS",0)
+THEN
+    RESPONSE #100
+        ReallyForceSpell(Myself,DRYAD_TELEPORT)
+        DisplayStringHead(Myself,74086) // Damn you!
+        SetGlobal("rqRetreatEncT7-0","LOCALS",1)
+END
+
+// Turn hostile script 6100 Sendai
+IF
+    Allegiance("rqt6clf1",ENEMY)  // Deathstalker Itwantos
+    !Allegiance(Myself,ENEMY)
+    Global("rqAttackBegins2","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqAttackBegins2","LOCALS",1)
+        Enemy()
+END
+// Give Holy symbols
+IF
+    Global("rqGiveItemsControl","LOCALS",0)
+    Global("rqTobGiveCharnItems","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("rqGiveItemsControl","LOCALS",1)
+        GiveItem("rqhosy1",Player1)
+END
+// Ally
+IF
+    Global("rqChangeToALLY","LOCALS",0)
+    Global("rqTobChangeToAlly","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("rqChangeToALLY","LOCALS",1)
+        ClearAllActions()
+        ChangeEnemyAlly(Myself,ALLY)
+END
+// Escape Area
+IF
+    Global("rqEscapeAreaControl","LOCALS",0)
+    Global("rqTobEscapeArea","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("rqEscapeAreaControl","LOCALS",1)
+        ClearAllActions()
+        ChangeEnemyAlly(Myself,NEUTRAL)
+        EscapeArea()
+END
+// Start talking if joining CHARNAME is possible
+IF
+    Global("rqTobSixtarchIsPrimaryAlly","GLOBAL",1)
+    GlobalLT("rqTobItwantosPrimaryAlly","GLOBAL",1)
+    Dead("rqt5clf1") // Deathstalker Irgulis
+    Dead("rqt5clt1")
+    Dead("rqt5clt2")
+THEN
+    RESPONSE #100
+        SetGlobal("rqTobSixtarchIsPrimaryAlly","GLOBAL",2)
+        StartDialogNoSet([PC])
+END
+// Neutral stay in area Area2
+IF
+    Global("rqNeutral2","LOCALS",0)
+    Global("rqTobNeutral","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("rqNeutral2","LOCALS",1)
+        ClearAllActions()
+        ChangeEnemyAlly(Myself,NEUTRAL)
+END
+
+IF
+    !Dead("rqt6clf1")  // Deathstalker Itwantos
+    !Dead("rqt6clt1")  // Deathstalker Rengarn
+    !Dead("rqt6clt2")  // Deathstalker Jatwalg
+    !Dead("rqt7clt1")  // Deathstalker Llergwyn
+    !Dead("rqt7clt2")  // Deathstalker Nalgarath
+    Global("rqTobSixtarchIsPrimaryAlly","GLOBAL",3)
+    Global("rqTobCheckonMenCTRL1","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqTobEscapeArea","GLOBAL",1)
+        SetGlobal("rqTobCheckonMenCTRL1","LOCALS",1)
+        DisplayStringHead(Myself,@4) // <PROLADYLORD> <CHARNAME> shall lead us to power!
+END
+
+IF
+    OR(5)
+        !Dead("rqt6clf1")  // Deathstalker Itwantos
+        !Dead("rqt6clt1")  // Deathstalker Rengarn
+        !Dead("rqt6clt2")  // Deathstalker Jatwalg
+        !Dead("rqt7clt1")  // Deathstalker Llergwyn
+        !Dead("rqt7clt2")  // Deathstalker Nalgarath
+    Global("rqTobSixtarchIsPrimaryAlly","GLOBAL",3)
+    Global("rqTobCheckonMenCTRL2","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqTobEscapeArea","GLOBAL",1)
+        SetGlobal("rqTobCheckonMenCTRL2","LOCALS",1)
+        DisplayStringHead(Myself,@5) //Our servants will gather our dead so do not worry. Lets head out!
+END

@@ -1,0 +1,90 @@
+// AR5200 marching mountains script
+IF
+    AreaCheck("AR5200")
+    NumTimesTalkedTo(0)
+    See([PC])
+THEN
+    RESPONSE #100
+        StartDialogNoSet([PC])
+END
+// cast improved haste
+IF
+    See(NearestEnemyOf(Myself))
+    Global("rqUsedClaw","LOCALS",0)
+THEN
+    RESPONSE #100
+        PlaySound("rqcast01")
+        SetGlobal("rqUsedClaw","LOCALS",1)
+        DisplayStringHead(Myself,@1)
+        ForceSpellRES("rqhymfur",Myself)  // Hymmn to Murderous Fury
+END
+// Generic Deathstalker last encounter failed attempt to escape
+IF
+    HPPercentLT(Myself,40)
+    Global("rqRetreatEnc3-0","LOCALS",0)
+    Dead("Abazigal")
+    Dead("Sendai")
+    Global("rqTobRetreatImpossible","GLOBAL",0)
+THEN
+    RESPONSE #100
+        CreateVisualEffectObject("SPDIMNDR",Myself)
+        DisplayStringHead(Myself,@2) // Next time!
+        SetGlobal("rqRetreatEnc3-0","LOCALS",1)
+        DisplayStringHead(Myself,@3) // What?! The magic does not work! Someone betrayed us!
+        SetGlobal("rqTobRetreatImpossible","GLOBAL",1)
+END
+// !Not last retreat
+IF
+    GlobalLT("Enclave","GLOBAL",2)
+    Global("rqTobRetreatImpossible","GLOBAL",0)
+    HPPercentLT(Myself,40)
+    Global("rqRetreatEnc1-0","LOCALS",0)
+THEN
+    RESPONSE #100
+        ReallyForceSpell(Myself,DRYAD_TELEPORT)
+        DisplayStringHead(Myself,@11) // Soon!
+        SetGlobal("rqRetreatEnc1-0","LOCALS",1)
+END
+// !Not last retreat
+IF
+    GlobalLT("Enclave","GLOBAL",2)
+    Global("rqTobRetreatImpossible","GLOBAL",0)
+    HPPercentLT(Myself,40)
+    Global("rqRetreatEnc2-1","LOCALS",0)
+THEN
+    RESPONSE #100
+        ReallyForceSpell(Myself,DRYAD_TELEPORT)
+        DisplayStringHead(Myself,74086) // Damn you!
+        SetGlobal("rqRetreatEnc2-1","LOCALS",1)
+END
+// Turn hostile script 6000 abazigal
+IF
+    AreaCheck("AR6000")
+    Allegiance("rqt7clf1",ENEMY)  // Deathstalker Sixtarch
+    !Allegiance(Myself,ENEMY)
+    Global("rqAttackBegins1","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqAttackBegins1","LOCALS",1)
+        Enemy()
+END
+// Turn hostile script 6100 Sendai
+IF
+    AreaCheck("AR6100")
+    Allegiance("rqt6clf1",ENEMY)  // Deathstalker Itwantos
+    !Allegiance(Myself,ENEMY)
+    Global("rqAttackBegins2","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqAttackBegins2","LOCALS",1)
+        Enemy()
+END
+
+IF
+    Global("rqTobChangeToAlly","GLOBAL",1)
+    Global("rqTobEscapeAreaWhine","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqTobEscapeAreaWhine","LOCALS",1)
+        DisplayStringHead(Myself,@12) // Traitors perish!
+END

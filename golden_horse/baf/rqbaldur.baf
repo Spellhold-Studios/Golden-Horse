@@ -1,0 +1,21 @@
+IF
+    Delay(10)
+    AreaType(OUTDOOR)
+    !AreaCheck("AR0800")
+    Dead("c6bodhi")  // Bodhi
+    Global("TalkedToMalchor","GLOBAL",1)
+    Global("rqjaheira5malchor","GLOBAL",0)
+    OR(3)
+        PartyHasItem("misc5x") // Harper Pin
+        PartyHasItem("amul28") // Amulet of Master Harper
+        PartyHasItem("sw1h50") // Shazzelim + 1
+    !Exists("c6harp")  // Malchor Harpell
+    !Exists("rqmalch")  // Malchor Harpell
+    Global("rqMalchorBattle1","GLOBAL",0)
+THEN
+    RESPONSE #100
+        CreateCreatureObjectDoor("rqmalch",Player1,0,0,0)  // Malchor Harpell
+        CreateCreatureObjectDoor("rqjah132",Player1,0,0,0) // Jaheira
+        ActionOverride("rqmalch",StartDialogNoSet(Player1))
+        Continue()
+END

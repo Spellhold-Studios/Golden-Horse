@@ -1,0 +1,11 @@
+IF
+    Global("rqjaheira4ambush","GLOBAL",1) // Dermin battle global
+    Dead("rqdermin")
+    Global("rqjaheira2tobambushSpawn","AR5004",0) // Waukeen's Temple Saradush
+THEN
+    RESPONSE #100
+        CreateCreature("rqjah135",[557.636],0) // Jaheira
+        SetGlobal("rqjaheira2tobambushSpawn","AR5004",1) // Waukeen's Temple Saradush
+        SetGlobal("rqjaheira2tobambush","GLOBAL",1)
+        Continue()
+END

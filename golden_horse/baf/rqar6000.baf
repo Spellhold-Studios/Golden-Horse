@@ -1,0 +1,131 @@
+// Abazigal's Lair native deathstalkes
+IF
+    Global("rqT7DeathStalkerAbazigal","GLOBAL",0)
+    Dead("Abazigal")
+    Global("rqT7DeathStalkersABA","AR6000",0) // Abazigal's Lair
+THEN
+    RESPONSE #100
+        SetGlobal("rqT7DeathStalkersABA","AR6000",1) // Abazigal's Lair
+        SetGlobal("rqT7DeathStalkerAbazigal","GLOBAL",1)
+        CreateCreature("rqt7clf1",[1677.1398],0) // Deathstalker Sixtarch
+        CreateCreature("rqt7clt1",[1636.1338],0) // Deathstalker Llergwyn
+        CreateCreature("rqt7clt2",[1617.1387],0) // Deathstalker Nalgarath
+        Continue()
+END
+
+// --------------- Fire Giant Temple reinforcements -----------------------------
+IF
+    Global("rqT7DeathStalkerAbazigal","GLOBAL",1)
+    !Dead("rqt5clt1")
+    Global("rqT7DeathStalkerTylgarth","AR6000",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqT7DeathStalkerTylgarth","AR6000",1)
+        CreateCreature("rqt5clt1",[1757.1314],0) // Deathstalker Tylgrath
+        Continue()
+END
+
+IF
+    Global("rqT7DeathStalkerAbazigal","GLOBAL",1)
+    !Dead("rqt5clt2")
+    Global("rqT7DeathStalkerAmmar","AR6000",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqT7DeathStalkerAmmar","AR6000",1)
+        CreateCreature("rqt5clt2",[1740.1286],0) // Deathstalker Ammar
+        Continue()
+END
+
+IF
+    Global("rqT7DeathStalkerAbazigal","GLOBAL",1)
+    !Dead("rqt5clf1")
+    Global("rqT7DeathStalkerIrgulis","AR6000",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqT7DeathStalkerIrgulis","AR6000",1)
+        CreateCreature("rqt5clf1",[1809.1267],0) // Deathstalker Irgulis
+        Continue()
+END
+// Illasera Type
+IF
+    Global("rqT7DeathStalkerAbazigal","GLOBAL",1)
+    !Dead("rqt5clf1") // Deathstalker Irgulis
+    !Dead("rq2illa") // Illasera
+    Global("rqIllaseraType2","AR6000",0) // Abazigal's Lair
+    Global("rqIllaseraType3","AR6000",0) // Abazigal's Lair
+    Global("rqIllaseraType4","AR6000",0) // Abazigal's Lair
+THEN
+    RESPONSE #100
+        SetGlobal("rqIllaseraType2","AR6000",1) // // Abazigal's Lair
+        CreateCreature("rq2illa",[1754.1246],0) // Illasera
+        Continue()
+END
+
+IF
+    Global("rqT7DeathStalkerAbazigal","GLOBAL",1)
+    !Dead("rqt5clf1") // Deathstalker Irgulis
+    Dead("rq2illa") // Illasera
+    !Dead("rq3illa") // Illasera
+    Global("rqIllaseraType2","AR6000",0) // Abazigal's Lair
+    Global("rqIllaseraType3","AR6000",0) // Abazigal's Lair
+    Global("rqIllaseraType4","AR6000",0) // Abazigal's Lair
+THEN
+    RESPONSE #100
+        SetGlobal("rqIllaseraType3","AR6000",1) // Abazigal's Lair
+        CreateCreature("rq3illa",[1530.1411],8) // Illasera
+        Continue()
+END
+
+IF
+    Global("rqT7DeathStalkerAbazigal","GLOBAL",1)
+    !Dead("rqt5clf1") // Deathstalker Irgulis
+    Dead("rq2illa") // Illasera
+    Dead("rq3illa") // Illasera
+    !Dead("rq4illa") // Illasera
+    Global("rqIllaseraType2","AR6000",0) // Abazigal's Lair
+    Global("rqIllaseraType3","AR6000",0) // Abazigal's Lair
+    Global("rqIllaseraType4","AR6000",0) // Abazigal's Lair
+THEN
+    RESPONSE #100
+        SetGlobal("rqIllaseraType4","AR6000",1) // Abazigal's Lair
+        CreateCreature("rq4illa",[1645.1275],8) // Illasera
+        Continue()
+END
+
+// -------------------- Sendai reinforcements ---------------------------------
+IF
+    Global("rqT7DeathStalkerAbazigal","GLOBAL",1)
+    !Dead("rqt6clt1")
+    Dead("Sendai")
+    Global("rqT7DeathStalkers1Jatwalg","AR6000",0) // Abazigal's Lair
+THEN
+    RESPONSE #100
+        CreateCreature("rqt6clt1",[1445.1421],0) // Deathstalker Jatwalg
+        SetGlobal("rqT7DeathStalkers1Jatwalg","AR6000",1) // Abazigal's Lair
+        Continue()
+END
+
+IF
+    Global("rqT7DeathStalkerAbazigal","GLOBAL",1)
+    !Dead("rqt6clt2")
+    Dead("Sendai")
+    Global("rqT7DeathStalkersRengarn","AR6000",0) // Abazigal's Lair
+THEN
+    RESPONSE #100
+        SetGlobal("rqT7DeathStalkersRengarn","AR6000",1) // Abazigal's Lair
+        CreateCreature("rqt6clt2",[1512.1448],0) // Deathstalker Rengarn
+        Continue()
+END
+
+IF
+    Global("rqT7DeathStalkerAbazigal","GLOBAL",1)
+    !Dead("rqt6clf1")
+    Dead("Sendai")
+    Global("rqT7DeathStalkersItwantos","AR6000",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqT7DeathStalkersItwantos","AR6000",1)
+        CreateCreature("rqt6clf1",[1506.1464],0) // Deathstalker Itwantos
+        Continue()
+END
+

@@ -1,0 +1,36 @@
+// Grunelensky
+IF
+    Global("rqContractGrunelensky","GLOBAL",1)
+    Global("rqcontract5GrunelenskySpawn","AR1900",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqcontract5GrunelenskySpawn","AR1900",1)
+        CreateCreature("rqarcdrd",[1006.529],0) // Archdruid Dubovy
+        CreateCreature("rqpaud",[1042.527],0) // Pauden
+        CreateCreature("rqgrune",[972.551],0) // Grunesky
+        CreateCreature("rqships1",[914.633],0) // Shapeshifter
+        CreateCreature("rqships2",[869.500],0) // Shapeshifter
+        CreateCreature("rqearthc",[981.480],0) // Earth Conduit
+        CreateCreature("rqfirec",[944.499],0) // Fire Conduit
+        CreateCreature("rqnaturc",[916.535],0) // Nature Conduit
+        CreateCreature("rqd10",[1023.646],0) // Druid
+        Continue()
+END
+
+IF
+    Global("rqcontractGrunelensky","GLOBAL",3)
+    Global("rqcontract5Grunelensky5De5Spawn","AR1900",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqcontract5Grunelensky5De5Spawn","AR1900",1)
+        ActionOverride("rqarcdrd",EscapeArea()) // Archdruid Dubovy
+        ActionOverride("rqpaud",EscapeArea()) // Pauden
+        ActionOverride("rqgrune",EscapeArea()) // Grunesky
+        ActionOverride("rqships1",EscapeArea()) // Shapeshifter
+        ActionOverride("rqships2",EscapeArea()) // Shapeshifter
+        ActionOverride("rqearthc",EscapeArea()) // Earth Conduit
+        ActionOverride("rqfirec",EscapeArea()) // Fire Conduit
+        ActionOverride("rqnaturc",EscapeArea()) // Nature Conduit
+        ActionOverride("rqd10",EscapeArea()) // Druid
+        Continue()
+END

@@ -1,0 +1,6 @@
+BEGIN rq3temm1
+
+IF ~~ THEN BEGIN 2
+  SAY @0
+  IF ~~ THEN EXTERN ~rq3temm2~ 3
+END

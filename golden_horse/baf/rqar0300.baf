@@ -1,0 +1,31 @@
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    GlobalTimerExpired("rqRevanInParty1","GLOBAL")
+    Global("rqPranglTimer1","GLOBAL",1)
+    Global("rqSpawnPranglsGoons","AR0300",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqSpawnPranglsGoons","AR0300",1) // Docks District
+        CreateCreature("rqcappra",[3513.500],0) // Captain Prangl
+        CreateCreature("rqfight9",[3461.508],0) // fighter
+        CreateCreature("rqfight9",[3550.495],0) // fighter
+        CreateCreature("rqcrobw9",[3481.569],0) // crossbowman
+        CreateCreature("rqcrobw9",[3437.622],0) // crossbowman
+        CreateCreature("rqcle7",[3503.619],0) // cleric 7
+        CreateCreature("rqthie12",[3594.450],0) // thief
+        // toned down the spawns
+        //CreateCreature("rqt12f13",[3594.450],0) // thief/fighter 12/13
+        //CreateCreature("rqcle13",[3503.619],0) // cleric
+        Continue()
+END
+
+IF
+    Global("rqJaheira1Timer1","GLOBAL",1)
+    !InParty("Jaheira")  // Jaheira
+THEN
+    RESPONSE #100
+        ActionOverride("Jaheira",DestroySelf())
+        Continue()
+END
+

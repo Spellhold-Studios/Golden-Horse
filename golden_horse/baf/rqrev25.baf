@@ -1,0 +1,50 @@
+// dialogue when summoned by spirit
+IF
+    Global("rqRevanSummoned","GLOBAL",1)
+THEN
+    RESPONSE #100
+        StartDialogueNoSet([PC])
+        Wait(1)
+END
+// Revans reaction to tethyrian forest ambush
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    Dead("rqbar30a")
+    Dead("rqjah134")
+    Dead("rqs20")
+    Dead("rqc26")
+    Dead("rqd18")
+    !See([ENEMY])
+    Global("rqRevanTobReaction1","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqRevanTobReaction1","GLOBAL",1)
+        StartDialogNoSet(Player1)
+END
+
+// Revans reaction to tethyrian forest ambush
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    !AreaCheck("AR5004")
+    Dead("rqjah135")
+    Dead("rqberkrt")
+    Dead("rqc26t")
+    Dead("rqfb19t")
+    Dead("rqgrunt")
+    Dead("rqanakat")
+    Dead("rqs20t")
+    Dead("rqharpar")
+    Dead("rqmo22t")
+    Dead("rqpi20")
+    Dead("rqds19")
+    Dead("rqf4a18")
+    Dead("rqbs21")
+    !See([ENEMY])
+    Global("rqRevanTobReaction2","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqRevanTobReaction2","GLOBAL",1)
+        StartDialogNoSet(Player1)
+END

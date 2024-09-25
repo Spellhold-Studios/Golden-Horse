@@ -1,0 +1,45 @@
+IF
+    Global("rqcontract5battle","GLOBAL",1)
+    Allegiance(Myself,NEUTRAL)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+THEN
+    RESPONSE #100
+        Enemy()
+        SetGlobal("rqcontract5battle","GLOBAL",1)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    //NumCreatureLT("ELFIRPR2",4) // Fire Elemental
+    //GlobalLT("EarthSummons","LOCALS",4)
+THEN
+    RESPONSE #100
+        SpellNoDecRES("rqfirele",Myself) // Summon Fire Elemental
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Attack(LastAttackerOf(Myself))
+END
+
+// backup
+//ForceSpell(Myself,CLERIC_CONJURE_FIRE_ELEMENTAL) // Summon Fire Elemental
+//SpellPoint(P:Target*,I:Spell*Spell)
+//SpellPointRES(S:RES*,P:Target*)
+//SpellNoDecRES(S:RES*,O:Target*)

@@ -1,0 +1,10 @@
+// Jaheira is dead if she turned against you in SoA
+IF
+    Global("rqJaheira1Timer1","GLOBAL",1)
+    !InParty("Jaheira")  // Jaheira
+THEN
+    RESPONSE #100
+        SetGlobal("SPRITE_IS_DEADJaheira","GLOBAL",1)
+        ActionOverride("Jaheira",DestroySelf())
+        Continue()
+END

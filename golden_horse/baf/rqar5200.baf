@@ -1,0 +1,14 @@
+// Fire Giant Temple
+IF
+    Global("rqT5DeathStalkerEncounter1","GLOBAL",1)
+    Global("rqT5DeathStalkersSpawn1","AR5200",0) // Marching Mountains
+THEN
+    RESPONSE #100
+        SetGlobal("rqt5DeathStalkersSpawn1","AR5200",1) // Marching Mountains
+        CreateCreature("rqt5clf1",[193.1057],0) // Deathstalker Irgulis
+        CreateCreature("rqt5tf1",[174.1057],0) // Elvych Firetouched
+        CreateCreature("rq2illa",[184.1050],0) // Illasera
+        CreateCreature("rqt5clt1",[236.1050],0) // Deathstalker Ammar
+        CreateCreature("rqt5clt2",[249.1002],0) // Deathstalker Tylgarth
+        Continue()
+END

@@ -1,0 +1,19 @@
+// Sixtarch Balthazar battlecry
+IF
+    See(NearestEnemyOf(Myself))
+    Global("rqBattlecry","LOCALS",0)
+    Global("rqTobAssaultBalthazar","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("rqBattlecry","LOCALS",1)
+        DisplayStringHead(Myself,@16) // Kill them for <CHARNAME>!
+END
+
+IF
+    Dead("balth")
+    Global("HadBhaal25Dream5","GLOBAL",1)
+    Global("rqTobAssaultBalthazar","GLOBAL",1)
+THEN
+    RESPONSE #100
+        DestroySelf()
+END

@@ -1,0 +1,23 @@
+// Zephir merchant Illasera
+IF
+    Global("rq1IllaserraAmbush1","GLOBAL",0)
+    Global("rqEncouter1MerchantSpawn","AR5501",0) // Zephir
+THEN
+    RESPONSE #100
+        SetGlobal("rqEncouter1MerchantSpawn","AR5501",1) // Zephir
+        SetGlobal("rq1IllaserraAmbush1","GLOBAL",1)
+        CreateCreature("rqt1merc",[510.476],0) // Thacher
+        Continue()
+END
+
+// Rugos Throne of Bhaal
+IF
+    Global("rqRugosSpawnTob","AR5501",0) // Zephir
+    //Dead("rqmararg")
+    //Global("rqcontractMarcian","GLOBAL",3)
+THEN
+    RESPONSE #100
+        SetGlobal("rqRugosSpawnTob","AR5501",1) // Zephir
+        CreateCreature("rqtrugos",[665.201],4) // Rugos
+        Continue()
+END

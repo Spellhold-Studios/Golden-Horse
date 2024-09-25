@@ -1,0 +1,27 @@
+IF
+	See(NearestEnemyOf(Myself))
+	Allegiance(Myself,ENEMY)
+	Global("rqTurnedToWehrwolf","LOCALS",0)
+
+THEN
+	RESPONSE #100
+		ForceSpellRES("rqgwehr",Myself)  // Shapeshifts Greater Werewolf
+		SetGlobal("rqTurnedToWehrwolf","LOCALS",1)
+END
+
+IF
+	Global("rqcontract5battle","GLOBAL",1)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		Enemy()
+END
+
+IF
+	AttackedBy([GOODCUTOFF],DEFAULT)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		Enemy()
+		SetGlobal("rqcontract5battle","GLOBAL",1)
+END

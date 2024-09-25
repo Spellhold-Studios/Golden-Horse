@@ -1,0 +1,7 @@
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        SpellNoDecRES("rqcrdoom",NearestEnemyOf(Myself)) // Creeping Doom
+        Wait(3)
+END

@@ -1,0 +1,11 @@
+// Anakarhysse
+IF
+    Global("rqContractAnakarhysse","GLOBAL",1)
+    Global("rqcontract3AnakarhysseSpawn","AR2000",0) // Trademeet
+THEN
+    RESPONSE #100
+        SetGlobal("rqcontract3AnakarhysseSpawn","AR2000",1) // Trademeet
+        CreateCreature("rqberkri",[1586.122],0) // Berkris
+        CreateCreature("rqanakar",[1555.156],0) // Anakarhysse
+        Continue()
+END

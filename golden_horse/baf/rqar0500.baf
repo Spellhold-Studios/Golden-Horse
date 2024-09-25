@@ -1,0 +1,13 @@
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    GlobalTimerExpired("rqRevanInParty2","GLOBAL")
+    Global("rqPentarchTimer2","GLOBAL",1)
+    Global("rqSpawnPentarch","AR0500",0)
+
+THEN
+    RESPONSE #100
+        SetGlobal("rqSpawnPentarch","AR0500",1) // Bridge District
+        CreateCreature("rqpenbri",[4343.400],0) // Pentarch
+        Continue()
+END

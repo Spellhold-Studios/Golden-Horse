@@ -1,0 +1,8 @@
+IF
+    Global("rqMerchWatchKeepCreate","AR3000",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqMerchWatchKeepCreate","AR3000",1)
+        CreateCreature("rqlyngre",[1476.2378],13) // Lyvinius Gremachus
+        Continue()
+END

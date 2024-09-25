@@ -1,0 +1,115 @@
+// Hevguris
+IF
+    Global("rqcontractHevguris","GLOBAL",1)
+    Global("rqcontract4HevgurisSpawn","AR0400",0) // Slums
+THEN
+    RESPONSE #100
+        SetGlobal("rqcontract4HevgurisSpawn","AR0400",1) // Slums
+        CreateCreature("rqinqhev",[234.2085],0) // Inquisitor Hevguris
+        CreateCreature("rqordwiz",[234.2116],0) // Order wizard
+        CreateCreature("rqordp14",[149.2121],0) // Knight of the Order
+        CreateCreature("rqordp14",[149.2153],0) // Knight of the Order
+        CreateCreature("rqordp14",[149.2099],0) // Knight of the Order
+        CreateCreature("rqordp14",[158.2190],0) // Knight of the Order
+        CreateCreature("rqordp14",[238.2185],0) // Knight of the Order
+        CreateCreature("rqordp14",[306.2183],0) // Knight of the Order
+        //CreateCreature("rqordp14",[321.1495],0) // Knight of the Order
+        //CreateCreature("rqordp14",[321.2095],0) // Knight of the Order
+        //CreateCreature("rqordp14",[321.2047],0) // Knight of the Order
+        //CreateCreature("rqordp14",[302.1945],0) // Knight of the Order
+        //CreateCreature("rqordp14",[242.1946],0) // Knight of the Order
+        //CreateCreature("rqordp14",[180.1971],0) // Knight of the Order
+        CreateCreature("rqordc14",[81.2141],0) // Priest of Torm
+        CreateCreature("rqordc14",[103.2175],0) // Priest of Torm
+        Continue()
+END
+
+IF
+    Global("rqcontract4MazzyReinfSends","GLOBAL",1)
+    Global("rqcontract4MazzyReinforce","AR0400",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqcontract4MazzyReinforce","AR0400",1)
+        CreateCreatureObjectDoor("rqarvtru","Mazzy",0,0,0)
+        CreateCreatureObjectDoor("rqarvtru","Mazzy",0,0,0)
+        CreateCreatureObjectDoor("rqarvtru","Mazzy",0,0,0)
+        CreateCreatureObjectDoor("rqarvtru","Mazzy",0,0,0)
+        Continue()
+END
+
+IF
+    Global("rqcontract4KeldornReinfSends","GLOBAL",1)
+    Global("rqcontract4KeldornReinforce","AR0400",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqcontract4KeldornReinforce","AR0400",1)
+        CreateCreatureObjectDoor("rqordp1h","Keldorn",0,0,0)
+        CreateCreatureObjectDoor("rqordp1h","Keldorn",0,0,0)
+        CreateCreatureObjectDoor("rqordp1h","Keldorn",0,0,0)
+        CreateCreatureObjectDoor("rqordp1h","Keldorn",0,0,0)
+        Continue()
+END
+
+IF
+    Global("rqcontract4battle","GLOBAL",1)
+    Dead("rqinqhev")
+    Global("rqZRepDecrementForHevgu","GLOBAL",0)
+THEN
+    RESPONSE #100
+        ReputationInc(-6)
+        SetGlobal("rqZRepDecrementForHevgu","GLOBAL",1)
+        Continue()
+END
+
+/*
+IF  InParty("Aerie")
+    !Dead("Aerie")
+    Global("rqcontract4battle","GLOBAL",1)
+    Allegiance("rqinqhev",ENEMY)
+THEN
+    RESPONSE #100
+        ActionOverride("Aerie",LeaveParty())
+        ActionOverride("Aerie",Enemy())
+END
+
+IF  InParty("Anomen")
+    !Dead("Anomen")
+    Global("rqcontract4battle","GLOBAL",1)
+    Allegiance("rqinqhev",ENEMY)
+THEN
+    RESPONSE #100
+            ActionOverride("Anomen",LeaveParty())
+            ActionOverride("Anomen",Enemy())
+            DisplayStringHead("Anomen",34007)  // No! Yours is the evil that will be crushed here today!
+END
+
+IF  InParty("Aerie")
+    !Dead("Aerie")
+    Global("rqcontract4battle","GLOBAL",1)
+    Allegiance("rqinqhev",ENEMY)
+THEN
+    RESPONSE #100
+        ActionOverride("Aerie",LeaveParty())
+        ActionOverride("Aerie",Enemy())
+END
+
+IF  InParty("Aerie")
+    !Dead("Aerie")
+    Global("rqcontract4battle","GLOBAL",1)
+    Allegiance("rqinqhev",ENEMY)
+THEN
+    RESPONSE #100
+        ActionOverride("Aerie",LeaveParty())
+        ActionOverride("Aerie",Enemy())
+END
+
+IF  InParty("Aerie")
+    !Dead("Aerie")
+    Global("rqcontract4battle","GLOBAL",1)
+    Allegiance("rqinqhev",ENEMY)
+THEN
+    RESPONSE #100
+        ActionOverride("Aerie",LeaveParty())
+        ActionOverride("Aerie",Enemy())
+END
+*/

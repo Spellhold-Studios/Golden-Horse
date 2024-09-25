@@ -1,0 +1,35 @@
+IF
+	NumTimesTalkedTo(0)
+	See([PC])
+THEN
+	RESPONSE #100
+		StartDialogNoSet([PC])
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	Allegiance(Myself,ENEMY)
+	//Global("rqcontract5battle","GLOBAL",1)
+	Global("rqUsedHorn","LOCALS",0)
+THEN
+	RESPONSE #100
+		DisplayStringHead(Myself,@7) // Pauden! Use the the horn! Use the horn!
+		SetGlobal("rqUsedHorn","LOCALS",1)
+END
+
+IF
+	Global("rqcontract5battle","GLOBAL",1)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		Enemy()
+END
+
+IF
+	AttackedBy([GOODCUTOFF],DEFAULT)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		Enemy()
+		SetGlobal("rqcontract5battle","GLOBAL",1)
+END

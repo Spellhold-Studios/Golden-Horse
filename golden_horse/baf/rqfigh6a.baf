@@ -1,0 +1,20 @@
+IF
+	Global("rqBattle6Start","GLOBAL",1)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		Enemy()
+		DisplayStringHead(Myself,46150)
+		ApplySpellRES("rqregen",Myself)
+END
+
+IF
+	AttackedBy([GOODCUTOFF],DEFAULT)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		Enemy()
+		SetGlobal("rqBattle6Start","GLOBAL",1)
+		DisplayStringHead(Myself,46150)
+		ApplySpellRES("rqregen",Myself)
+END

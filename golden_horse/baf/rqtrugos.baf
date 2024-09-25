@@ -1,0 +1,8 @@
+// Rugos Throne of Bhaal
+IF
+    NumItems("rqhosy1",Myself,6)
+    See([PC])
+THEN
+    RESPONSE #100
+        StartDialogNoSet([PC])
+END

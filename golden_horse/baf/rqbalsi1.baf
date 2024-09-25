@@ -1,0 +1,9 @@
+// Sixtarch Balthazar battlecry
+IF
+    Dead("balth")
+    Global("HadBhaal25Dream5","GLOBAL",1)
+    Global("rqTobAssaultBalthazar","GLOBAL",1)
+THEN
+    RESPONSE #100
+        DestroySelf()
+END

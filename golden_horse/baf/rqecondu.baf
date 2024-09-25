@@ -1,0 +1,40 @@
+IF
+    Global("rqcontract5battle","GLOBAL",1)
+    Allegiance(Myself,NEUTRAL)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+THEN
+    RESPONSE #100
+        Enemy()
+        SetGlobal("rqcontract5battle","GLOBAL",1)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    //NumCreatureLT("ELEARPR2",4) // Earth Elemental
+THEN
+    RESPONSE #100
+        ForceSpellRES("rqearele",Myself) // Summon Earth Elemental
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	AttackedBy([ANYONE],DEFAULT)
+THEN
+	RESPONSE #100
+		Attack(LastAttackerOf(Myself))
+END
+// backup
+//ForceSpell(Myself,CLERIC_CONJURE_EARTH_ELEMENTAL)

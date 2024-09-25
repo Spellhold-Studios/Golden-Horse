@@ -1,0 +1,35 @@
+// !Not last retreat
+IF
+    AreaCheck("AR5200")
+    Global("rqTobRetreatImpossible","GLOBAL",0)
+    HPPercentLT(Myself,15)
+    Global("rqRetreatEncT7-1","LOCALS",0)
+THEN
+    RESPONSE #100
+        ReallyForceSpell(Myself,DRYAD_TELEPORT)
+        DisplayStringHead(Myself,74086) // Damn you!
+        SetGlobal("rqRetreatEncT7-1","LOCALS",1)
+END
+
+// Turn hostile script 6000 abazigal
+IF
+    AreaCheck("AR6000")
+    Allegiance("rqt7clf1",ENEMY)  // Deathstalker Sixtarch
+    !Allegiance(Myself,ENEMY)
+    Global("rqAttackBegins7","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqAttackBegins7","LOCALS",1)
+        Enemy()
+END
+// Turn hostile script 6100 Sendai
+IF
+    AreaCheck("AR6100")
+    Allegiance("rqt6clf1",ENEMY)  // Deathstalker Itwantos
+    !Allegiance(Myself,ENEMY)
+    Global("rqAttackBegins6","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqAttackBegins6","LOCALS",1)
+        Enemy()
+END

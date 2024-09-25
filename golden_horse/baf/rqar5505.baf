@@ -1,0 +1,143 @@
+// Assault on Balthazar
+IF
+    !Dead("balth")
+    Allegiance("balth",Enemy)
+    Global("rqTobAssaultBalthazar","GLOBAL",1)
+    Global("rqTobAssaultBaltSpawn","AR5505",0)
+    !Dead("rqt7clf1") // Deathstalker Sixtarch
+THEN
+    RESPONSE #100
+        SetGlobal("rqTobAssaultBaltSpawn","AR5505",1)
+        CreateCreature("rqt9clf1",[1490.748],6) // Sixtarch
+        MoveToPoint([1141.598])
+        Continue()
+END
+
+IF
+    !Dead("balth")
+    Allegiance("balth",Enemy)
+    Global("rqTobAssaultBalthazar","GLOBAL",1)
+    Global("rqTobAssaultBaltSpawn","AR5505",0)
+    !Dead("rqt6clf1") // Deathstalker Itwantos
+THEN
+    RESPONSE #100
+        SetGlobal("rqTobAssaultBaltSpawn","AR5505",1)
+        CreateCreature("rqt9clf2",[1514.705],6) // Itwantos
+        MoveToPoint([1141.598])
+        Continue()
+END
+
+IF
+    !Dead("balth")
+    Allegiance("balth",Enemy)
+    Global("rqTobAssaultBalthazar","GLOBAL",1)
+    Global("rqTobAssaultBaltSpawn","AR5505",0)
+    !Dead("rqt7clt1") // Deathstalker Llergwyn
+THEN
+    RESPONSE #100
+        SetGlobal("rqTobAssaultBaltSpawn","AR5505",1)
+        CreateCreature("rqt9clt1",[1562.675],6) // Llergwyn
+        MoveToPoint([1224.526])
+        Continue()
+END
+
+IF
+    !Dead("balth")
+    Allegiance("balth",Enemy)
+    Global("rqTobAssaultBalthazar","GLOBAL",1)
+    Global("rqTobAssaultBaltSpawn","AR5505",0)
+    !Dead("rqt7clt2") // Deathstalker Nalgarath
+THEN
+    RESPONSE #100
+        SetGlobal("rqTobAssaultBaltSpawn","AR5505",1)
+        CreateCreature("rqt9clt2",[1588.761],6) // Nalgarath
+        MoveToPoint([1227.608])
+        Continue()
+END
+
+IF
+    !Dead("balth")
+    Allegiance("balth",Enemy)
+    Global("rqTobAssaultBalthazar","GLOBAL",1)
+    Global("rqTobAssaultBaltSpawn","AR5505",0)
+    !Dead("rqt6clt1") // Deathstalker Rengarn
+THEN
+    RESPONSE #100
+        SetGlobal("rqTobAssaultBaltSpawn","AR5505",1)
+        CreateCreature("rqt9clt3",[1677.725],6) // Rengarn
+        MoveToPoint([1272.552])
+        Continue()
+END
+
+IF
+    !Dead("balth")
+    Allegiance("balth",Enemy)
+    Global("rqTobAssaultBalthazar","GLOBAL",1)
+    Global("rqTobAssaultBaltSpawn","AR5505",0)
+    !Dead("rqt6clt2") // Deathstalker Jatwalg
+THEN
+    RESPONSE #100
+        SetGlobal("rqTobAssaultBaltSpawn","AR5505",1)
+        CreateCreature("rqt9clt4",[1672.786],6)  // Jatwalg
+        MoveToPoint([1146.471])
+        Continue()
+END
+// IMPs -----------------------------------------------------
+IF
+    Dead("balth") // Balthazar
+    !Dead("rqt6clf1") // Itwantos
+    Global("rqTobItwantosPrimaryAlly","GLOBAL",1)
+    Global("rqTob8SpawnItwImp","AR5505",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqTob8SpawnItwImp","AR5505",1)
+        CreateCreatureOffScreen("rqt8imp",7)
+        Continue()
+END
+
+IF
+    Dead("balth") // Balthazar
+    !Dead("rqt7clf1") // Sixtarch
+    Global("rqTobAssaultTemple","GLOBAL",1)
+    Global("rqTob8SpawnSixImp1","AR5505",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqTob8SpawnSixImp1","AR5505",1)
+        CreateCreatureOffScreen("rqt8imp1",7)
+        Continue()
+END
+
+IF
+    Dead("balth") // Balthazar
+    !Dead("rqt7clf1") // Sixtarch
+    Global("rqTobAssaultBalthazar","GLOBAL",1)
+    Global("rqTob8SpawnSixImp2","AR5505",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqTob8SpawnSixImp2","AR5505",1)
+        CreateCreatureOffScreen("rqt8imp2",7)
+        Continue()
+END
+
+// Destroy your cultists
+IF
+    Dead("balth")
+    Global("rqTobAssaultBalthazar","GLOBAL",1)
+    Global("rqTobDeleteCultists","AR5505",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqTobDeleteCultists","AR5505",1)
+        ActionOverride("rqt9clf1",DestroySelf())
+        ActionOverride("rqt9clf2",DestroySelf())
+        ActionOverride("rqt9clt1",DestroySelf())
+        ActionOverride("rqt9clt2",DestroySelf())
+        ActionOverride("rqt9clt3",DestroySelf())
+        ActionOverride("rqt9clt4",DestroySelf())
+        CreateCreature("SKELDED",[835.665],2)
+        CreateCreature("SKELDED",[1104.556],7)
+        CreateCreature("SKELDED",[1390.711],5)
+        CreateCreature("SKELDED",[653.590],12)
+        Continue()
+END
+
+

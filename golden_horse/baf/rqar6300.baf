@@ -1,0 +1,17 @@
+// Anakarhysse
+IF
+    Global("rq1IllaserraAmbush1","GLOBAL",1)
+    Global("rqEncouter1IllaseraSpawn","AR6300",0) // Oasis
+THEN
+    RESPONSE #100
+        SetGlobal("rqEncouter1IllaseraSpawn","AR6300",1) // Oasis
+        CreateCreature("rq1illa",[1877.380],0) // Illasera
+        CreateCreature("rq1f18",[1882.433],0) // Black Reaver
+        CreateCreature("rq1fb19",[1799.330],0) // Black Reaver
+        CreateCreature("rq1mage",[1756.355],0) // Black Reaver
+        CreateCreature("rq1kamra",[1756.442],0) // Black Reaver
+        CreateCreature("rq1t12f1",[1975.483],0) // Black Reaver
+        Continue()
+END
+
+// 510.476

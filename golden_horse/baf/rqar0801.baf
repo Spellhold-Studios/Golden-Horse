@@ -1,0 +1,56 @@
+// Marcian Argent
+IF
+    Global("rqcontractMarcian","GLOBAL",1)
+    Global("rqcontract1MarcianSpawn","AR0801",0) // Graveyard Lower Tombs
+THEN
+    RESPONSE #100
+        SetGlobal("rqcontract1MarcianSpawn","AR0801",1) // Graveyard Lower Tombs
+        CreateCreature("rqmararg",[559.3593],0) // Marcian Argent
+        CreateCreature("rqcle13a",[528.3606],0) // Argent Acolyte
+        CreateCreature("rqcle13a",[571.3554],0) // Argent Acolyte
+        CreateCreature("rqargm13",[384.3616],0) // Argent Wizard
+        CreateCreature("rqargf13",[471.3517],0) // Argent Warrior
+        CreateCreature("rqargf13",[494.3515],0) // Argent Warrior
+        CreateCreature("rqargf13",[297.3463],0) // Argent Warrior
+        CreateCreature("rqargf13",[400.3691],0) // Argent Warrior
+        CreateCreature("rqt12f1c",[559.3489],0) // Argent Rogue
+        CreateCreature("rqt12f1c",[406.3661],0) // Argent Rogue
+        CreateCreature("rqt12f1c",[467.3445],0) // Argent Rogue
+        CreateCreature("rqt12f1c",[355.3580],0) // Argent Rogue
+        Continue()
+END
+
+// Spawn Trading Thief
+IF
+    Global("rq5MintipBattle","GLOBAL",1)
+    Global("rqSpawnThief","AR0801",0) // Graveyard Lower Tombs
+THEN
+    RESPONSE #100
+        SetGlobal("rqSpawnThief","AR0801",1) // Graveyard Lower Tombs
+        CreateCreature("rq7thief",[885.2193],0) // Thief
+        Continue()
+END
+
+IF
+    Dead("rq6kroly")
+    Global("rqDespawnThiefTimer","AR0801",0)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("rqDespawnKrolynTradeThief","GLOBAL",ONE_DAY)
+        SetGlobal("rqDespawnThiefTimer","AR0801",1)
+        Continue()
+END
+
+IF
+    GlobalTimerExpired("rqDespawnKrolynTradeThief","GLOBAL")
+    Global("rqDespawnThief","AR0801",0) // Graveyard Lower Tombs
+THEN
+    RESPONSE #100
+        ActionOverride("rq6kroly",DestroySelf())
+        SetGlobal("rqDespawnThief","AR0801",1) // Graveyard Lower Tombs
+        Continue()
+END
+
+
+// AR0800 append to
+

@@ -1,0 +1,18 @@
+IF
+    Global("rqjaheira2tobambush","GLOBAL",2)
+    Global("rqSpawnJaheira3Tob","AR5500",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqSpawnJaheira3Tob","AR5500",1) // Amkethran
+        CreateCreature("rqjah136",[3607.776],9) // Jaheira
+        Continue()
+END
+
+IF
+    !Dead("rqnaelt3")
+THEN
+    RESPONSE #100
+        ApplySpellRES("rqheal","rqnaelt3")
+        Wait(6)
+        Continue()
+END

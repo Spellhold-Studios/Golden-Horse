@@ -1,0 +1,3060 @@
+BACKUP ~golden_horse/backup~
+AUTHOR ~oaq@gmx.com~
+
+VERSION ~v1.4e~
+
+README ~golden_horse/tra/%LANGUAGE%/golden_horse_readme.txt~ ~golden_horse/golden_horse_readme.txt~
+
+AUTO_TRA ~golden_horse/tra/%LANGUAGE%~
+
+LANGUAGE ~English~
+         ~English~
+         ~golden_horse/tra/english/setup.tra~
+
+BEGIN @22
+REQUIRE_PREDICATE (GAME_IS ~tob bgt~) @23
+/*
+// COMPONENTS
+BEGIN ~Change Revan's class to Fighter Mage Thief~
+SUBCOMPONENT @375
+COPY ~golden_horse/cre_fmt/rqrevf6.cre~ ~golden_horse/cre/rqrev9.cre~
+COPY ~golden_horse/cre_fmt/rqrevf25.cre~ ~golden_horse/cre/rqrev25.cre~
+
+BEGIN ~Change Revan's class to Mage Assassin~
+SUBCOMPONENT @375
+COPY ~golden_horse/cre_ma/rqreva6.cre~ ~golden_horse/cre/rqrev9.cre~
+COPY ~golden_horse/cre_ma/rqreva25.cre~ ~golden_horse/cre/rqrev25.cre~
+
+BEGIN ~Change Revan's class to Mage Thief~
+SUBCOMPONENT @375
+COPY ~golden_horse/cre_mt/rqrev9.cre~ ~golden_horse/cre/rqrev9.cre~
+COPY ~golden_horse/cre_mt/rqrev25.cre~ ~golden_horse/cre/rqrev25.cre~
+*/
+//REQUIRE_COMPONENT ~Revan Artecratos NPC Mod (Requires Throne of Bhaal)~
+//BEGIN ~Revan Artecratos NPC Mod (Requires Throne of Bhaal)~
+//REQUIRE_FILE ~data/25dialog.bif~ @23
+
+// Make items "talk"
+COPY_EXISTING ~itemdial.2da~ ~override~
+
+APPEND ~itemdial.2da~
+~rqpotn1    19392  rqpotn1~
+UNLESS ~rqpotn1~
+
+APPEND ~itemdial.2da~
+~rqpotn4    19392  rqpotn4~
+UNLESS ~rqpotn4~
+
+APPEND ~itemdial.2da~
+~rqpotn5    19392  rqpotn5~
+UNLESS ~rqpotn5~
+
+APPEND ~itemdial.2da~
+~rqpotn6    19392  rqpotn6~
+UNLESS ~rqpotn6~
+
+APPEND ~itemdial.2da~
+~rqpotn7    19392  rqpotn7~
+UNLESS ~rqpotn7~
+
+APPEND ~itemdial.2da~
+~rqpotn8    19392  rqpotn8~
+UNLESS ~rqpotn8~
+
+APPEND ~itemdial.2da~
+~rqpotn9    19392  rqpotn9~
+UNLESS ~rqpotn9~
+
+APPEND ~itemdial.2da~
+~rqpotn10    19392  rqpotn10~
+UNLESS ~rqpotn10~
+
+APPEND ~itemdial.2da~
+~rqpotn11    19392  rqpotn11~
+UNLESS ~rqpotn11~
+
+APPEND ~itemdial.2da~
+~rqpotn12    19392  rqpotn12~
+UNLESS ~rqpotn12~
+
+APPEND ~itemdial.2da~
+~rqpotn13    19392  rqpotn13~
+UNLESS ~rqpotn13~
+
+APPEND ~itemdial.2da~
+~rqpotn14    19392  rqpotn14~
+UNLESS ~rqpotn14~
+
+APPEND ~itemdial.2da~
+~rqpotn15    19392  rqpotn15~
+UNLESS ~rqpotn15~
+
+APPEND ~itemdial.2da~
+~rqpotn16    19392  rqpotn16~
+UNLESS ~rqpotn16~
+
+APPEND ~itemdial.2da~
+~rqpotn17    19392  rqpotn17~
+UNLESS ~rqpotn17~
+
+APPEND ~itemdial.2da~
+~rqpotn18    19392  rqpotn18~
+UNLESS ~rqpotn18~
+
+APPEND ~itemdial.2da~
+~rqpotn19    19392  rqpotn19~
+UNLESS ~rqpotn19~
+
+APPEND ~itemdial.2da~
+~rqpotn20    19392  rqpotn20~
+UNLESS ~rqpotn20~
+
+APPEND ~itemdial.2da~
+~rqpotn21    19392  rqpotn21~
+UNLESS ~rqpotn21~
+
+APPEND ~itemdial.2da~
+~rqpotn22    19392  rqpotn22~
+UNLESS ~rqpotn22~
+
+APPEND ~itemdial.2da~
+~rqpotn23    19392  rqpotn23~
+UNLESS ~rqpotn23~
+
+APPEND ~itemdial.2da~
+~rqpotn24    19392  rqpotn24~
+UNLESS ~rqpotn24~
+
+APPEND ~itemdial.2da~
+~rqpotn25    19392  rqpotn25~
+UNLESS ~rqpotn25~
+
+APPEND ~itemdial.2da~
+~rqpotn26    19392  rqpotn26~
+UNLESS ~rqpotn26~
+
+APPEND ~itemdial.2da~
+~rqpotn27    19392  rqpotn27~
+UNLESS ~rqpotn27~
+
+APPEND ~itemdial.2da~
+~rqpotn28    19392  rqpotn28~
+UNLESS ~rqpotn28~
+
+APPEND ~itemdial.2da~
+~rqpotn29    19392  rqpotn29~
+UNLESS ~rqpotn29~
+
+APPEND ~itemdial.2da~
+~rqpotn30    19392  rqpotn30~
+UNLESS ~rqpotn30~
+
+APPEND ~itemdial.2da~
+~rqpotn31    19392  rqpotn31~
+UNLESS ~rqpotn31~
+
+APPEND ~itemdial.2da~
+~rqpotn32    19392  rqpotn32~
+UNLESS ~rqpotn32~
+
+APPEND ~itemdial.2da~
+~rqpotn33    19392  rqpotn33~
+UNLESS ~rqpotn33~
+
+APPEND ~itemdial.2da~
+~rqpotn34    19392  rqpotn34~
+UNLESS ~rqpotn34~
+
+APPEND ~itemdial.2da~
+~rqpotn35    19392  rqpotn35~
+UNLESS ~rqpotn35~
+
+APPEND ~itemdial.2da~
+~rqpotn36    19392  rqpotn36~
+UNLESS ~rqpotn36~
+
+APPEND ~itemdial.2da~
+~rqpotn37    19392  rqpotn37~
+UNLESS ~rqpotn37~
+
+// crates
+APPEND ~itemdial.2da~
+~rqpotc01    4978  rqpotc01~
+UNLESS ~rqpotc01~
+
+APPEND ~itemdial.2da~
+~rqpotc02    4978  rqpotc02~
+UNLESS ~rqpotc02~
+
+APPEND ~itemdial.2da~
+~rqpotc03    4978  rqpotc03~
+UNLESS ~rqpotc03~
+
+APPEND ~itemdial.2da~
+~rqpotc04    4978  rqpotc04~
+UNLESS ~rqpotc04~
+
+APPEND ~itemdial.2da~
+~rqpotc05    4978  rqpotc05~
+UNLESS ~rqpotc05~
+
+APPEND ~itemdial.2da~
+~rqpotc06    4978  rqpotc06~
+UNLESS ~rqpotc06~
+
+APPEND ~itemdial.2da~
+~rqpotc07    4978  rqpotc07~
+UNLESS ~rqpotc07~
+
+// Epilogue stuff
+COPY ~golden_horse/2da/rqrev.2da~ ~override/rqrev.2da~
+  REPLACE ~99999~ @24
+EXTEND_TOP ~ar6200.bcs~ ~golden_horse/baf/rqar6200.baf~
+
+// copying spells
+COPY ~golden_horse/spl/rqmaze.spl~ ~override/rqmaze.spl~ // Maze Esslin
+COPY ~golden_horse/spl/rqlunge.spl~ ~override/rqlunge.spl~ // Lunge Physical damage Esslin
+COPY ~golden_horse/spl/rqpoiso.spl~ ~override/rqpoiso.spl~ // Poison Esslin
+//COPY ~golden_horse/spl/rqsregen.spl~ ~override/rqsregen.spl~ // Spell Regeneration
+COPY ~golden_horse/spl/rqmararf.spl~ ~override/rqmararf.spl~ // Marcian Argent fireball
+COPY ~golden_horse/spl/rqgwehr.spl~ ~override/rqgwehr.spl~ // Shapeshift Greater Werewolf
+// Marcian Argent Fireball
+//COPY ~golden_horse/spl/rqfireb.spl~ ~override/rqfireb.spl~ // Party Safe fireball Marcian Argent
+// horn of wilderness summons
+COPY ~golden_horse/spl/rqwodbei.spl~ ~override/rqwodbei.spl~ // Summon Woodland Beings
+COPY ~golden_horse/spl/rqconani.spl~ ~override/rqconani.spl~ // Conjure Animals
+COPY ~golden_horse/spl/rqanisu3.spl~ ~override/rqanisu3.spl~ // Animal Summoning 3
+// conduit spells
+COPY ~golden_horse/spl/rqsumins.spl~ ~override/rqsumins.spl~ // Summon Insects
+COPY ~golden_horse/spl/rqearele.spl~ ~override/rqearele.spl~ // Summon Earth Elemental
+COPY ~golden_horse/spl/rqfirele.spl~ ~override/rqfirele.spl~ // Summon Fire Elemental
+COPY ~golden_horse/spl/rqregen.spl~ ~override/rqregen.spl~ // Regeneration
+COPY ~golden_horse/spl/rqthorns.spl~ ~override/rqthorns.spl~ // Thorns returning acid damage
+// Spell Hymn of Murderous Fury
+COPY ~golden_horse/spl/rqhymfur.spl~ ~override/rqhymfur.spl~
+// Last Encounter Spells
+COPY ~golden_horse/spl/rqcrdoom.spl~ ~override/rqcrdoom.spl~ // Creeping Doom
+COPY ~golden_horse/spl/rqheal.spl~ ~override/rqheal.spl~ // Heal
+// Illasera rakshasha
+COPY ~golden_horse/spl/rqraksha.spl~ ~override/rqraksha.spl~ // Reveal yourself as rakshasha
+// Revan Field trap
+COPY ~golden_horse/spl/rqfitrap.spl~ ~override/rqfitrap.spl~ // Revan field trap
+
+// potns --- 1-20 ---
+COPY ~golden_horse/spl/rqpotn1.spl~ ~override/rqpotn1.spl~ // Mind endurance
+COPY ~golden_horse/spl/rqpotnb4.spl~ ~override/rqpotnb4.spl~ // Weave stability with maluses
+COPY ~golden_horse/spl/rqpotn4.spl~ ~override/rqpotn4.spl~ // Weave stability
+COPY ~golden_horse/spl/rqpotn5.spl~ ~override/rqpotn5.spl~ // Blindness,Magic Sight,Sight radius
+COPY ~golden_horse/spl/rqpotn6.spl~ ~override/rqpotn6.spl~ // UNAFFECTED by acid,lightning,cold,fire,mg_dmg,poison resitance modifiers
+COPY ~golden_horse/spl/rqpotn7.spl~ ~override/rqpotn7.spl~ // hold,paralyze,slow,web
+COPY ~golden_horse/spl/rqpotn8.spl~ ~override/rqpotn8.spl~ // negative chant luck from wish
+COPY ~golden_horse/spl/rqpotn9.spl~ ~override/rqpotn9.spl~ // poison, acid, magic damage, disease
+COPY ~golden_horse/spl/rqpotn10.spl~ ~override/rqpotn10.spl~ // berserking,confusion
+COPY ~golden_horse/spl/rqpotn11.spl~ ~override/rqpotn11.spl~ // lvldrain,backstab,timestop
+COPY ~golden_horse/spl/rqpotn12.spl~ ~override/rqpotn12.spl~ // 193 code
+COPY ~golden_horse/spl/rqpotn13.spl~ ~override/rqpotn13.spl~ // killtarget,slay,petrification,feeblemind,imprisonment,disintegrate
+COPY ~golden_horse/spl/rqpotn14.spl~ ~override/rqpotn14.spl~ // Conjuration
+COPY ~golden_horse/spl/rqpotn15.spl~ ~override/rqpotn15.spl~ // Necromancy
+COPY ~golden_horse/spl/rqpotn16.spl~ ~override/rqpotn16.spl~ // Illusion
+COPY ~golden_horse/spl/rqpotn17.spl~ ~override/rqpotn17.spl~ // Evocation
+COPY ~golden_horse/spl/rqpotn18.spl~ ~override/rqpotn18.spl~ // Enchantment
+COPY ~golden_horse/spl/rqpotn19.spl~ ~override/rqpotn19.spl~ // imm power levels 0<2
+COPY ~golden_horse/spl/rqpotn20.spl~ ~override/rqpotn20.spl~ // spell duration mod
+COPY ~golden_horse/spl/rqpotn21.spl~ ~override/rqpotn21.spl~ // crits+
+COPY ~golden_horse/spl/rqpotn22.spl~ ~override/rqpotn22.spl~ // aura_cleansing
+COPY ~golden_horse/spl/rqpotn23.spl~ ~override/rqpotn23.spl~ // casting time
+COPY ~golden_horse/spl/rqpotn24.spl~ ~override/rqpotn24.spl~ // charm
+COPY ~golden_horse/spl/rqpotn25.spl~ ~override/rqpotn25.spl~ // drain wizard spell
+COPY ~golden_horse/spl/rqpotn26.spl~ ~override/rqpotn26.spl~ // atk per round
+COPY ~golden_horse/spl/rqpotn27.spl~ ~override/rqpotn27.spl~ // dmg,thac0,attack_speed
+COPY ~golden_horse/spl/rqpotn28.spl~ ~override/rqpotn28.spl~ // wizard spell slot
+COPY ~golden_horse/spl/rqpotn29.spl~ ~override/rqpotn29.spl~ // priest spell slot
+COPY ~golden_horse/spl/rqpotn30.spl~ ~override/rqpotn30.spl~ // 25+, acid,cold,lightning,fire,magic_dmg,magic_fire,magic_cold,poison_resist,+5magic_resistance,
+COPY ~golden_horse/spl/rqpotn31.spl~ ~override/rqpotn31.spl~ // polymorph
+COPY ~golden_horse/spl/rqpotn32.spl~ ~override/rqpotn32.spl~ // saving throw +2
+COPY ~golden_horse/spl/rqpotn33.spl~ ~override/rqpotn33.spl~ // immunity saving_throw_modifiers
+COPY ~golden_horse/spl/rqpotn34.spl~ ~override/rqpotn34.spl~ // immunity to AC modifications
+COPY ~golden_horse/spl/rqpotn35.spl~ ~override/rqpotn35.spl~ // mag res increase
+COPY ~golden_horse/spl/rqpotn36.spl~ ~override/rqpotn36.spl~ // hp+ modifier
+COPY ~golden_horse/spl/rqpotn37.spl~ ~override/rqpotn37.spl~ // wild surge stabilizer
+COPY ~golden_horse/spl/rqpotnb.spl~ ~override/rqpotnb.spl~ // bad effects spell
+COPY ~golden_horse/spl/rqpotncu.spl~ ~override/rqpotncu.spl~ // curses spell intoxication
+
+// Spell Sequencing Spell to maximize compatility --- obsolete ---
+//COPY ~golden_horse/spl/rqcontin.spl~ ~override/rqcontin.spl~ // Contigency
+//COPY ~golden_horse/spl/rqsplseq.spl~ ~override/rqsplseq.spl~ // Spell Sequencer
+//COPY ~golden_horse/spl/rqsplsqD.spl~ ~override/rqsplsqD.spl~ // Spell Sequencer Special Ability Component
+//COPY ~golden_horse/spl/rqspltrg.spl~ ~override/rqspltrg.spl~ // Spell Trigger
+//COPY ~golden_horse/spl/rqspltrD.spl~ ~override/rqspltrD.spl~ // Spell Trigger Special Ability Component
+
+// horn of wilderness spell sound
+COPY ~golden_horse/sounds/rqhorn.wav~ ~override/rqhorn.wav~
+COPY ~golden_horse/sounds/rqcast01.wav~ ~override/rqcast01.wav~
+COPY ~golden_horse/sounds/rqescap.wav~ ~override/rqescap.wav~
+COPY ~golden_horse/sounds/rqspawn.wav~ ~override/rqspawn.wav~
+
+// copy store files
+COPY ~golden_horse/sto/rqstor01.sto~ ~override/rqstor01.sto~
+COPY ~golden_horse/sto/rqpotc01.sto~ ~override/rqpotc01.sto~
+
+// Copying Revans .CRE files
+COPY ~golden_horse/cre/rqrev9.cre~  ~override/rqrev9.cre~
+  SAY NAME1 @25
+  SAY NAME2 @25
+  SAY BIO @26
+
+COPY ~golden_horse/cre/rqrev25.cre~  ~override/rqrev25.cre~
+  SAY NAME1 @25
+  SAY NAME2 @25
+  SAY BIO @26
+
+// Wedding ring for Pentarch bought from Ribald
+COPY ~golden_horse/itm/rq2wedrn.itm~ ~override/rq2wedrn.itm~
+/* Unidentified name */
+SAY NAME1 @27
+/* Identified name */
+SAY NAME2 @27
+SAY DESC
+@28
+SAY UNIDENTIFIED_DESC
+@28
+
+// Rahms mercenary rooster parchment
+COPY ~golden_horse/itm/rqrooste.itm~ ~override/rqrooste.itm~
+/* Unidentified name */
+SAY NAME1 @29
+/* Identified name */
+SAY NAME2 @30
+SAY DESC
+@31
+
+SAY UNIDENTIFIED_DESC
+@31
+
+// Proof of deed for contract - 1 -
+COPY ~golden_horse/itm/rqproof1.itm~ ~override/rqproof1.itm~
+/* Unidentified name */
+SAY NAME1 @32
+/* Identified name */
+SAY NAME2 @32
+SAY UNIDENTIFIED_DESC @33
+
+// Proof of deed for contract - 2 -
+COPY ~golden_horse/itm/rqproof2.itm~ ~override/rqproof2.itm~
+/* Unidentified name */
+SAY NAME1 @34
+/* Identified name */
+SAY NAME2 @34
+SAY UNIDENTIFIED_DESC @35
+
+// Proof of deed for contract - 3 -
+COPY ~golden_horse/itm/rqproof3.itm~ ~override/rqproof3.itm~
+/* Unidentified name */
+SAY NAME1 @36
+/* Identified name */
+SAY NAME2 @36
+SAY UNIDENTIFIED_DESC @37
+
+// Proof of deed for contract - 4 -
+COPY ~golden_horse/itm/rqproof4.itm~ ~override/rqproof4.itm~
+/* Unidentified name */
+SAY NAME1 @38
+/* Identified name */
+SAY NAME2 @38
+SAY UNIDENTIFIED_DESC @39
+
+// Mintiper journal rqmintip.cre
+COPY ~golden_horse/itm/rqminjo.itm~ ~override/rqminjo.itm~
+/* Unidentified name */
+SAY NAME1 @40
+/* Identified name */
+SAY NAME2 @41
+SAY UNIDENTIFIED_DESC @42
+
+// Harper Journal rq tob2 fighter
+COPY ~golden_horse/itm/rqlett1.itm~ ~override/rqlett1.itm~
+/* Unidentified name */
+SAY NAME1 @40
+/* Identified name */
+SAY NAME2 @40
+SAY UNIDENTIFIED_DESC
+@43
+
+// Jaheira letter tob1 encounter
+COPY ~golden_horse/itm/rqlettj2.itm~ ~override/rqlettj2.itm~
+/* Unidentified name */
+SAY NAME1 @44
+/* Identified name */
+SAY NAME2 @44
+SAY UNIDENTIFIED_DESC
+@45
+
+
+// Jaheira letter tob1 encounter
+COPY ~golden_horse/itm/rqlettj3.itm~ ~override/rqlettj3.itm~
+/* Unidentified name */
+SAY NAME1 @44
+/* Identified name */
+SAY NAME2 @44
+SAY UNIDENTIFIED_DESC
+@46
+
+// Jaheira letter tob1 encounter
+COPY ~golden_horse/itm/rqlettj.itm~ ~override/rqlettj.itm~
+/* Unidentified name */
+SAY NAME1 @47
+/* Identified name */
+SAY NAME2 @47
+SAY UNIDENTIFIED_DESC
+@48
+
+// Jaheira letter tob3 encounter
+COPY ~golden_horse/itm/rqlettj4.itm~ ~override/rqlettj4.itm~
+/* Unidentified name */
+SAY NAME1 @44
+/* Identified name */
+SAY NAME2 @44
+SAY UNIDENTIFIED_DESC
+@49
+
+// Letter to Prangl
+COPY ~golden_horse/itm/rqletpra.itm~ ~override/rqletpra.itm~
+/* Unidentified name */
+SAY NAME1 @44
+/* Identified name */
+SAY NAME2 @44
+SAY UNIDENTIFIED_DESC
+@50
+
+// Letter to Pentarch
+COPY ~golden_horse/itm/rqletpen.itm~ ~override/rqletpen.itm~
+/* Unidentified name */
+SAY NAME1 @44
+/* Identified name */
+SAY NAME2 @44
+SAY UNIDENTIFIED_DESC
+@51
+
+// Gervin delivery notes
+COPY ~golden_horse/itm/rqdeliv.itm~ ~override/rqdeliv.itm~
+/* Unidentified name */
+SAY NAME1 @40
+/* Identified name */
+SAY NAME2 @40
+SAY UNIDENTIFIED_DESC @52
+
+// Letter to Prangl
+COPY ~golden_horse/itm/rqletder.itm~ ~override/rqletder.itm~
+/* Unidentified name */
+SAY NAME1 @44
+/* Identified name */
+SAY NAME2 @44
+SAY UNIDENTIFIED_DESC
+@53
+
+// Mintiper bard
+COPY ~golden_horse/itm/rqmibard.itm~ ~override/rqmibard.itm~
+/* Unidentified name */
+SAY NAME1 @47
+/* Identified name */
+SAY NAME2 @47
+SAY UNIDENTIFIED_DESC @54
+
+// Letter to Blutdurst
+COPY ~golden_horse/itm/rqlettb.itm~ ~override/rqlettb.itm~
+/* Unidentified name */
+SAY NAME1 @47
+/* Identified name */
+SAY NAME2 @47
+SAY UNIDENTIFIED_DESC @55
+
+// Letter from Thief Krolyn
+COPY ~golden_horse/itm/rqkrolet.itm~ ~override/rqkrolet.itm~
+/* Unidentified name */
+SAY NAME1 @47
+/* Identified name */
+SAY NAME2 @47
+SAY UNIDENTIFIED_DESC @56
+
+// Relfin delivery notes
+COPY ~golden_horse/itm/rqdeliv2.itm~ ~override/rqdeliv2.itm~
+/* Unidentified name */
+SAY NAME1 @47
+/* Identified name */
+SAY NAME2 @47
+SAY UNIDENTIFIED_DESC @57
+
+// Letter to Groshnakh Mintiper rqgrosh
+COPY ~golden_horse/itm/rqminlet.itm~ ~override/rqminlet.itm~
+/* Unidentified name */
+SAY NAME1 @47
+/* Identified name */
+SAY NAME2 @58
+SAY UNIDENTIFIED_DESC
+@59
+
+SAY DESC
+@60
+
+// rqhorn Horn of Wilderness
+COPY ~golden_horse/itm/rqhorn.itm~ ~override/rqhorn.itm~
+/* Unidentified name */
+SAY NAME1 @61
+/* Identified name */
+SAY NAME2 @61
+SAY DESC
+@62
+SAY UNIDENTIFIED_DESC
+@62
+
+// Letter from Itwantos
+COPY ~golden_horse/itm/rqletitw.itm~ ~override/rqletitw.itm~
+/* Unidentified name */
+SAY NAME1 @44
+/* Identified name */
+SAY NAME2 @44
+SAY UNIDENTIFIED_DESC
+@63
+
+// Letter from Sixtarch temple assault
+COPY ~golden_horse/itm/rqletsi1.itm~ ~override/rqletsi1.itm~
+/* Unidentified name */
+SAY NAME1 @44
+/* Identified name */
+SAY NAME2 @44
+SAY UNIDENTIFIED_DESC
+@64
+
+// Letter from Sixtarch balthazar aid
+COPY ~golden_horse/itm/rqletsi2.itm~ ~override/rqletsi2.itm~
+/* Unidentified name */
+SAY NAME1 @44
+/* Identified name */
+SAY NAME2 @44
+SAY UNIDENTIFIED_DESC
+@65
+
+// Summoning Stone
+COPY ~golden_horse/itm/rqsixsto.itm~ ~override/rqsixsto.itm~
+/* Unidentified name */
+SAY NAME1 @66
+/* Identified name */
+SAY NAME2 @66
+SAY UNIDENTIFIED_DESC
+@67
+
+// rqhorn Bone Golem building book
+COPY ~golden_horse/itm/rqbook1.itm~ ~override/rqbook1.itm~
+/* Unidentified name */
+SAY NAME1 @68
+/* Identified name */
+SAY NAME2 @68
+SAY DESC
+@69
+SAY UNIDENTIFIED_DESC
+@69
+
+// Hymn of Murderous Fury Claw
+COPY ~golden_horse/itm/rqhymfur.itm~ ~override/rqhymfur.itm~
+/* Unidentified name */
+SAY NAME1 @70
+/* Identified name */
+SAY NAME2 @71
+SAY DESC
+@72
+SAY UNIDENTIFIED_DESC
+@73
+
+// Unknown potion blutdurst rqbar30a --- 1 ---
+COPY ~golden_horse/itm/rqpotn1.itm~ ~override/rqpotn1.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@75
+SAY UNIDENTIFIED_DESC
+@75
+
+// Unknown potion rqgerv --- 2 ---
+COPY ~golden_horse/itm/rqpotn2.itm~ ~override/rqpotn2.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@76
+SAY UNIDENTIFIED_DESC
+@76
+
+// Unknown potion rqbar30a --- 3 ---
+COPY ~golden_horse/itm/rqpotn3.itm~ ~override/rqpotn3.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@77
+SAY UNIDENTIFIED_DESC
+@78
+
+// Magic Potion  --- 4 ---
+COPY ~golden_horse/itm/rqpotn4.itm~ ~override/rqpotn4.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@79
+SAY UNIDENTIFIED_DESC
+@79
+
+// Magic Potion  --- 5 ---
+COPY ~golden_horse/itm/rqpotn5.itm~ ~override/rqpotn5.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@80
+SAY UNIDENTIFIED_DESC
+@81
+
+// Magic Potion  --- 6 ---
+COPY ~golden_horse/itm/rqpotn6.itm~ ~override/rqpotn6.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@82
+SAY UNIDENTIFIED_DESC
+@83
+
+// Magic Potion  --- 7 ---
+COPY ~golden_horse/itm/rqpotn7.itm~ ~override/rqpotn7.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@84
+SAY UNIDENTIFIED_DESC
+@84
+
+// Magic Potion  --- 8 ---
+COPY ~golden_horse/itm/rqpotn8.itm~ ~override/rqpotn8.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@85
+SAY UNIDENTIFIED_DESC
+@85
+
+// Magic Potion  --- 9 ---
+COPY ~golden_horse/itm/rqpotn9.itm~ ~override/rqpotn9.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@86
+SAY UNIDENTIFIED_DESC
+@86
+
+// Magic Potion --- 10 ---
+COPY ~golden_horse/itm/rqpotn10.itm~ ~override/rqpotn10.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@87
+SAY UNIDENTIFIED_DESC
+@87
+
+// Magic Potion  --- 11 ---
+COPY ~golden_horse/itm/rqpotn11.itm~ ~override/rqpotn11.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@88
+SAY UNIDENTIFIED_DESC
+@88
+
+// Magic Potion  --- 12 ---
+COPY ~golden_horse/itm/rqpotn12.itm~ ~override/rqpotn12.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@89
+SAY UNIDENTIFIED_DESC
+@89
+
+// Magic Potion  --- 13 ---
+COPY ~golden_horse/itm/rqpotn13.itm~ ~override/rqpotn13.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@90
+SAY UNIDENTIFIED_DESC
+@90
+
+// Magic Potion  --- 14 ---
+COPY ~golden_horse/itm/rqpotn14.itm~ ~override/rqpotn14.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@91
+SAY UNIDENTIFIED_DESC
+@91
+
+// Magic Potion  --- 15 ---
+COPY ~golden_horse/itm/rqpotn15.itm~ ~override/rqpotn15.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@92
+SAY UNIDENTIFIED_DESC
+@92
+
+// Magic Potion  --- 16 ---
+COPY ~golden_horse/itm/rqpotn16.itm~ ~override/rqpotn16.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@93
+SAY UNIDENTIFIED_DESC
+@93
+
+// Magic Potion  --- 17 ---
+COPY ~golden_horse/itm/rqpotn17.itm~ ~override/rqpotn17.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@94
+SAY UNIDENTIFIED_DESC
+@94
+
+// Magic Potion  --- 18 ---
+COPY ~golden_horse/itm/rqpotn18.itm~ ~override/rqpotn18.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@95
+SAY UNIDENTIFIED_DESC
+@95
+
+// Magic Potion  --- 19 ---
+COPY ~golden_horse/itm/rqpotn19.itm~ ~override/rqpotn19.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@96
+SAY UNIDENTIFIED_DESC
+@96
+
+// Magic Potion  --- 20 ---
+COPY ~golden_horse/itm/rqpotn20.itm~ ~override/rqpotn20.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@97
+SAY UNIDENTIFIED_DESC
+@97
+
+// Magic Potion  --- 21 ---
+COPY ~golden_horse/itm/rqpotn21.itm~ ~override/rqpotn21.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@98
+SAY UNIDENTIFIED_DESC
+@98
+
+// Magic Potion  --- 22 ---
+COPY ~golden_horse/itm/rqpotn22.itm~ ~override/rqpotn22.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@99
+SAY UNIDENTIFIED_DESC
+@99
+
+// Magic Potion  --- 23 ---
+COPY ~golden_horse/itm/rqpotn23.itm~ ~override/rqpotn23.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@100
+SAY UNIDENTIFIED_DESC
+@100
+
+// Magic Potion  --- 24 ---
+COPY ~golden_horse/itm/rqpotn24.itm~ ~override/rqpotn24.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@101
+SAY UNIDENTIFIED_DESC
+@101
+
+// Magic Potion  --- 25 ---
+COPY ~golden_horse/itm/rqpotn25.itm~ ~override/rqpotn25.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@102
+SAY UNIDENTIFIED_DESC
+@102
+
+// Magic Potion  --- 26 ---
+COPY ~golden_horse/itm/rqpotn26.itm~ ~override/rqpotn26.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@103
+SAY UNIDENTIFIED_DESC
+@103
+
+// Magic Potion  --- 27 ---
+COPY ~golden_horse/itm/rqpotn27.itm~ ~override/rqpotn27.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@104
+SAY UNIDENTIFIED_DESC
+@104
+
+// Magic Potion  --- 28 ---
+COPY ~golden_horse/itm/rqpotn28.itm~ ~override/rqpotn28.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@105
+SAY UNIDENTIFIED_DESC
+@105
+
+// Magic Potion  --- 29 ---
+COPY ~golden_horse/itm/rqpotn29.itm~ ~override/rqpotn29.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@106
+SAY UNIDENTIFIED_DESC
+@106
+
+// Magic Potion  --- 30 ---
+COPY ~golden_horse/itm/rqpotn30.itm~ ~override/rqpotn30.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@107
+SAY UNIDENTIFIED_DESC
+@107
+
+// Magic Potion  --- 31 ---
+COPY ~golden_horse/itm/rqpotn31.itm~ ~override/rqpotn31.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@108
+SAY UNIDENTIFIED_DESC
+@108
+
+// Magic Potion  --- 32 ---
+COPY ~golden_horse/itm/rqpotn32.itm~ ~override/rqpotn32.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@109
+SAY UNIDENTIFIED_DESC
+@109
+
+// Magic Potion  --- 33 ---
+COPY ~golden_horse/itm/rqpotn33.itm~ ~override/rqpotn33.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@110
+SAY UNIDENTIFIED_DESC
+@110
+
+// Magic Potion  --- 34 ---
+COPY ~golden_horse/itm/rqpotn34.itm~ ~override/rqpotn34.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@111
+SAY UNIDENTIFIED_DESC
+@111
+
+// Magic Potion  --- 35 ---
+COPY ~golden_horse/itm/rqpotn35.itm~ ~override/rqpotn35.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@112
+SAY UNIDENTIFIED_DESC
+@112
+
+// Magic Potion  --- 36 ---
+COPY ~golden_horse/itm/rqpotn36.itm~ ~override/rqpotn36.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@113
+SAY UNIDENTIFIED_DESC
+@113
+
+// Magic Potion  --- 37 ---
+COPY ~golden_horse/itm/rqpotn37.itm~ ~override/rqpotn37.itm~
+/* Unidentified name */
+SAY NAME1 @74
+/* Identified name */
+SAY NAME2 @74
+SAY DESC
+@114
+SAY UNIDENTIFIED_DESC
+@114
+
+// Sanctuary Potion
+COPY ~golden_horse/itm/rqpotn50.itm~ ~override/rqpotn50.itm~
+/* Unidentified name */
+SAY NAME1 @115
+/* Identified name */
+SAY NAME2 @116
+SAY DESC
+@117
+
+// Potion Case
+COPY ~golden_horse/itm/rqpotc01.itm~ ~override/rqpotc01.itm~
+/* Unidentified name */
+SAY NAME1 @118
+/* Identified name */
+SAY NAME2 @118
+SAY DESC
+@119
+SAY UNIDENTIFIED_DESC
+@119
+
+// Small Crate
+COPY ~golden_horse/itm/rqpotc02.itm~ ~override/rqpotc02.itm~
+/* Unidentified name */
+SAY NAME1 @120
+/* Identified name */
+SAY NAME2 @120
+SAY DESC
+@121
+SAY UNIDENTIFIED_DESC
+@121
+
+// Small Crate
+COPY ~golden_horse/itm/rqpotc03.itm~ ~override/rqpotc03.itm~
+/* Unidentified name */
+SAY NAME1 @120
+/* Identified name */
+SAY NAME2 @120
+SAY DESC
+@122
+SAY UNIDENTIFIED_DESC
+@122
+
+// Small Crate
+COPY ~golden_horse/itm/rqpotc04.itm~ ~override/rqpotc04.itm~
+/* Unidentified name */
+SAY NAME1 @120
+/* Identified name */
+SAY NAME2 @120
+SAY DESC
+@123
+SAY UNIDENTIFIED_DESC
+@123
+
+// Small Crate
+COPY ~golden_horse/itm/rqpotc05.itm~ ~override/rqpotc05.itm~
+/* Unidentified name */
+SAY NAME1 @120
+/* Identified name */
+SAY NAME2 @120
+SAY DESC
+@124
+SAY UNIDENTIFIED_DESC
+@124
+
+// Small Crate
+COPY ~golden_horse/itm/rqpotc06.itm~ ~override/rqpotc06.itm~
+/* Unidentified name */
+SAY NAME1 @120
+/* Identified name */
+SAY NAME2 @120
+SAY DESC
+@125
+SAY UNIDENTIFIED_DESC
+@125
+
+// Small Crate
+COPY ~golden_horse/itm/rqpotc07.itm~ ~override/rqpotc07.itm~
+/* Unidentified name */
+SAY NAME1 @120
+/* Identified name */
+SAY NAME2 @120
+SAY DESC
+@126
+SAY UNIDENTIFIED_DESC
+@126
+
+
+// insect rings
+COPY ~golden_horse/itm/rqinsect.itm~ ~override/rqinsect.itm~
+COPY ~golden_horse/itm/rqnatur.itm~ ~override/rqnatur.itm~
+
+// Holy symbol of Bhaal
+COPY ~golden_horse/itm/rqhosy1.itm~ ~override/rqhosy1.itm~
+/* Unidentified name */
+SAY NAME1 @127
+/* Identified name */
+SAY NAME2 @127
+SAY UNIDENTIFIED_DESC
+@128
+
+/* ----------------------------------------- Amulets -----------------------------------------*/
+
+// Arragath's amulet -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqamul01.itm~ ~override/rqamul01.itm~
+/* Unidentified name */
+SAY NAME1 @129
+/* Identified name */
+SAY NAME2 @130
+//SAY UNIDENTIFIED_DESC
+SAY DESC
+@131
+// Amulet of Chark Nagal   -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqamul02.itm~ ~override/rqamul02.itm~
+/* Unidentified name */
+SAY NAME1 @132
+/* Identified name */
+SAY NAME2  @133
+SAY UNIDENTIFIED_DESC
+@134
+SAY DESC
+@135
+
+/* ----------------------------------------- Belts -----------------------------------------*/
+
+// Revan's Belt --------------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqbelt01.itm~ ~override/rqbelt01.itm~
+/* Unidentified name */
+SAY NAME1 @136
+/* Identified name */
+SAY NAME2 @136
+SAY UNIDENTIFIED_DESC
+@137
+// Wizard battle girdle -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqbelt02.itm~ ~override/rqbelt02.itm~
+/* Unidentified name */
+SAY NAME1 @138
+/* Identified name */
+SAY NAME2  @139
+SAY UNIDENTIFIED_DESC
+@140
+SAY DESC
+@141
+
+/* ----------------------------------------- Blunt -----------------------------------------*/
+
+// War hammer of Ihragan -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqhamm01.itm~ ~override/rqhamm01.itm~
+/* Unidentified name */
+SAY NAME1 @142
+/* Identified name */
+SAY NAME2 @143
+SAY UNIDENTIFIED_DESC
+@144
+SAY DESC
+@145
+
+// Ceremonial poleaxe of Ihragan -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqhamm02.itm~ ~override/rqhamm02.itm~
+/* Unidentified name */
+SAY NAME1 @146
+/* Identified name */
+SAY NAME2 @147
+SAY UNIDENTIFIED_DESC
+@148
+SAY DESC
+@149
+// Rod of Charisma -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqrod01.itm~ ~override/rqrod01.itm~
+/* Unidentified name */
+SAY NAME1 @150
+/* Identified name */
+SAY NAME2 @151
+SAY UNIDENTIFIED_DESC
+@152
+SAY DESC
+@153
+
+/* ----------------------------------------- Boots -----------------------------------------*/
+
+// Armored Boots +2 AC +1 CON -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqboot01.itm~ ~override/rqboot01.itm~
+/* Unidentified name */
+SAY NAME1 @154
+/* Identified name */
+SAY NAME2 @155
+SAY UNIDENTIFIED_DESC
+@156
+SAY DESC
+@157
+// Boots of Acid Sheath -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqboot02.itm~ ~override/rqboot02.itm~
+/* Unidentified name */
+SAY NAME1 @154
+/* Identified name */
+SAY NAME2 @158
+SAY UNIDENTIFIED_DESC
+@156
+SAY DESC
+@159
+// Boots of long life -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqboot03.itm~ ~override/rqboot03.itm~
+/* Unidentified name */
+SAY NAME1 @160
+/* Identified name */
+SAY NAME2 @161
+SAY UNIDENTIFIED_DESC
+@156
+SAY DESC
+@162
+// Boots of fiery persuasion -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqboot04.itm~ ~override/rqboot04.itm~
+/* Unidentified name */
+SAY NAME1 @163
+/* Identified name */
+SAY NAME2  @164
+SAY UNIDENTIFIED_DESC
+@165
+SAY DESC
+@166
+
+/* ----------------------------------------- Bracers -----------------------------------------*/
+
+// Gauntlets of Time Manipulation   -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqbrac01.itm~ ~override/rqbrac01.itm~
+/* Unidentified name */
+SAY NAME1 @167
+/* Identified name */
+SAY NAME2  @168 //~Ioun Stone of protection~
+SAY UNIDENTIFIED_DESC
+@169
+SAY DESC
+@170
+// Bracers of Health -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqbrac02.itm~ ~override/rqbrac02.itm~
+/* Unidentified name */
+SAY NAME1 @171
+/* Identified name */
+SAY NAME2  @172
+SAY UNIDENTIFIED_DESC
+@173
+SAY DESC
+@174
+// Graal's Strength   -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqbrac03.itm~ ~override/rqbrac03.itm~
+/* Unidentified name */
+SAY NAME1 @167
+/* Identified name */
+SAY NAME2  @175
+SAY UNIDENTIFIED_DESC
+@176
+SAY DESC
+@177
+
+/* ----------------------------------------- Cloaks -----------------------------------------*/
+
+// Cloak of Magical Absorption -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqclck01.itm~ ~override/rqclck01.itm~
+/* Unidentified name */
+SAY NAME1 @178
+/* Identified name */
+SAY NAME2  @179
+SAY UNIDENTIFIED_DESC
+@180
+SAY DESC
+@181
+
+/* ----------------------------------------- Helmets -----------------------------------------*/
+
+//Star of spell sequencing   -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqisto01.itm~ ~override/rqisto01.itm~
+/* Unidentified name */
+SAY NAME1 @182
+/* Identified name */
+SAY NAME2  @183 //~Ioun Stone of protection~
+SAY UNIDENTIFIED_DESC
+@184
+SAY DESC
+@185
+
+//Ioun stone of elemental protection   -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqisto02.itm~ ~override/rqisto02.itm~
+/* Unidentified name */
+SAY NAME1 @182
+/* Identified name */
+SAY NAME2  @186
+SAY UNIDENTIFIED_DESC
+@184
+SAY DESC
+@187
+
+/* ----------------------------------------- Quick slot -----------------------------------------*/
+
+// Book of the Dead   -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqtome01.itm~ ~override/rqtome01.itm~
+/* Unidentified name */
+SAY NAME1 @188
+/* Identified name */
+SAY NAME2  @189
+SAY UNIDENTIFIED_DESC
+@190
+SAY DESC
+@191
+// Gem of Seeing -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqgem01.itm~ ~override/rqgem01.itm~
+/* Unidentified name */
+SAY NAME1 @192
+/* Identified name */
+SAY NAME2  @193
+SAY UNIDENTIFIED_DESC
+@194
+SAY DESC
+@195
+
+/* ----------------------------------------- Rings -----------------------------------------*/
+
+// Ring of Uwynn   -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqring01.itm~ ~override/rqring01.itm~
+/* Unidentified name */
+SAY NAME1 @196
+/* Identified name */
+SAY NAME2 @197
+SAY UNIDENTIFIED_DESC
+@198
+SAY DESC
+@199
+// Lesser Blessed ring   -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqring02.itm~ ~override/rqring02.itm~
+/* Unidentified name */
+SAY NAME1 @196
+/* Identified name */
+SAY NAME2 @200
+SAY UNIDENTIFIED_DESC
+@198
+SAY DESC
+@201
+// Ring of Spell mastery   -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqring03.itm~ ~override/rqring03.itm~
+/* Unidentified name */
+SAY NAME1 @196
+/* Identified name */
+SAY NAME2 @202
+SAY UNIDENTIFIED_DESC
+@198
+SAY DESC
+@203
+// Thrice Blessed ring -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqring04.itm~ ~override/rqring04.itm~
+/* Unidentified name */
+SAY NAME1 @204
+/* Identified name */
+SAY NAME2  @205
+SAY UNIDENTIFIED_DESC
+@206
+SAY DESC
+@207
+
+/* ----------------------------------------- Robes -----------------------------------------*/
+
+// Iluvaskar's Robe of Defence   -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqrobe01.itm~ ~override/rqrobe01.itm~
+/* Unidentified name */
+SAY NAME1 @208
+/* Identified name */
+SAY NAME2  @209
+SAY UNIDENTIFIED_DESC
+@210
+SAY DESC
+@211
+
+//  Robe of Cures "Ilhunien"  -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqrobe02.itm~ ~override/rqrobe02.itm~
+/* Unidentified name */
+SAY NAME1 @208
+/* Identified name */
+SAY NAME2  @212
+SAY UNIDENTIFIED_DESC
+@213
+SAY DESC
+@214
+
+/* ----------------------------------------- Shields -----------------------------------------*/
+
+// Shield of Augthor -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqshld01.itm~ ~override/rqshld01.itm~
+/* Unidentified name */
+SAY NAME1 @215
+/* Identified name */
+SAY NAME2 @216
+SAY UNIDENTIFIED_DESC
+@217
+SAY DESC
+@218
+
+/* ----------------------------------------- Wands -----------------------------------------*/
+
+//  Wand of Auxiliary Spells  -------------------------------------------------------------------------------------------------
+COPY ~golden_horse/itm/rqwand01.itm~ ~override/rqwand01.itm~
+/* Unidentified name */
+SAY NAME1 @219
+/* Identified name */
+SAY NAME2  @220
+//SAY UNIDENTIFIED_DESC
+
+SAY DESC
+@221
+//SAY UNIDENTIFIED_DESC
+//SAY DESC
+
+//REQUIRE_PREDICATE MOD_IS_INSTALLED "setup_golden_horse.tp2" "0" "You must have main component of Revan NPC installed"
+//BEGIN 100 DESIGNATED 100 LABEL "Revan alternative class Assasin/Mage multi-class"
+
+// copy sounds
+COPY ~golden_horse/sounds~ ~override~
+
+COPY ~golden_horse/portraits~ ~override~
+
+// Add NPC dialog references ----- Revan Artecratos -----
+
+APPEND ~pdialog.2da~ // SOA append
+~rqrev         rqrevP               rqrevJ              rqrevD~
+UNLESS ~rqrev~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~pdialog.2da~ // TOB append
+~rqrev         rqrevP               rqrevJ             rqrev25D         rqrev25P           rqrev25J           rqrev25D             rqrev25~
+UNLESS ~rqrev~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+APPEND ~interdia.2da~ // SOA append
+~rqrev         Brqrev~
+UNLESS ~rqrev~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~interdia.2da~ // TOB append
+~rqrev         Brqrev          Brqrev25~
+UNLESS ~rqrev~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+// Add NPC dialog references #Battlerager ----- Mercenary -----
+
+APPEND ~pdialog.2da~ // SOA append
+~rqfbe         rqfbeP               rqfbeJ              rqfbeD~
+UNLESS ~rqfbe~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~pdialog.2da~ // TOB append
+~rqfbe         rqfbeP               rqfbeJ             rqfbe25D         rqfbe25P           rqfbe25J           rqfbe25D             rqfbe25~
+UNLESS ~rqfbe~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+APPEND ~interdia.2da~ // SOA append
+~rqfbe         Brqrev~
+UNLESS ~rqfbe~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~interdia.2da~ // TOB append
+~rqfbe         Brqfbe          Brqfbe25~
+UNLESS ~rqfbe~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+// Add NPC dialog references #Battlerager #2 Breneke ----- Mercenary -----
+
+APPEND ~pdialog.2da~ // SOA append
+~rqfbet         rqfbetP               rqfbetJ              rqfbetD~
+UNLESS ~rqfbe~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~pdialog.2da~ // TOB append
+~rqfbet         rqfbetP               rqfbetJ             rqfbet25D         rqfbet25P           rqfbet25J           rqfbet25D             rqfbet25~
+UNLESS ~rqfbet~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+APPEND ~interdia.2da~ // SOA append
+~rqfbet         Brqrev~
+UNLESS ~rqfbet~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~interdia.2da~ // TOB append
+~rqfbet         Brqfbet          Brqfbet25~
+UNLESS ~rqfbet~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+// Add NPC dialog references #Fighter/Thief ----- Mercenary -----
+
+APPEND ~pdialog.2da~ // SOA append
+~rqfth         rqfthP               rqfthJ              rqfthD~
+UNLESS ~rqfth~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~pdialog.2da~ // TOB append
+~rqfth         rqfthP               rqfthJ             rqfth25D         rqfth25P           rqfth25J           rqfth25D             rqfth25~
+UNLESS ~rqfth~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+APPEND ~interdia.2da~ // SOA append
+~rqfth         Brqfth~
+UNLESS ~rqfth~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~interdia.2da~ // TOB append
+~rqfth         Brqfth          Brqfth25~
+UNLESS ~rqfth~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+// Add NPC dialog references #Sorcerer ----- Mercenary -----
+
+APPEND ~pdialog.2da~ // SOA append
+~rqsrc         rqsrcP               rqsrcJ              rqsrcD~
+UNLESS ~rqsrc~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~pdialog.2da~ // TOB append
+~rqsrc         rqsrcP               rqsrcJ             rqsrc25D         rqsrc25P           rqsrc25J           rqsrc25D             rqsrc25~
+UNLESS ~rqsrc~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+APPEND ~interdia.2da~ // SOA append
+~rqsrc         Brqsrc~
+UNLESS ~rqsrc~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~interdia.2da~ // TOB append
+~rqsrc        Brqsrc          Brqsrc25~
+UNLESS ~rqsrc~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+
+// Add NPC dialog references #Cleric/Illusionist ----- Mercenary -----
+
+APPEND ~pdialog.2da~ // SOA append
+~rqcmi         rqcmiP               rqcmiJ              rqcmiD~
+UNLESS ~rqcmi~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~pdialog.2da~ // TOB append
+~rqcmi         rqcmiP               rqcmiJ             rqcmi25D         rqcmi25P           rqcmi25J           rqcmi25D             rqcmi25~
+UNLESS ~rqcmi~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+APPEND ~interdia.2da~ // SOA append
+~rqcmi         Brqcmi~
+UNLESS ~rqcmi~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~interdia.2da~ // TOB append
+~rqcmi        Brqcmi          Brqcmi25~
+UNLESS ~rqcmi~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+// Add NPC dialog references #Fighter/Mage/Cleric ----- Mercenary -----
+
+APPEND ~pdialog.2da~ // SOA append
+~rqfmc         rqfmcP               rqfmcJ              rqfmcD~
+UNLESS ~rqfmc~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~pdialog.2da~ // TOB append
+~rqfmc         rqfmcP               rqfmcJ             rqfmc25D         rqfmc25P           rqfmc25J           rqfmc25D             rqfmc25~
+UNLESS ~rqfmc~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+APPEND ~interdia.2da~ // SOA append
+~rqfmc         Brqfmc~
+UNLESS ~rqfmc~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~interdia.2da~ // TOB append
+~rqfmc        Brqfmc          Brqfmc25~
+UNLESS ~rqfmc~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+// Add NPC dialog references #Fighter/*Necromancer* ----- Mercenary -----
+
+APPEND ~pdialog.2da~ // SOA append
+~rqfmn         rqfmnP               rqfmnJ              rqfmnD~
+UNLESS ~rqfmn~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~pdialog.2da~ // TOB append
+~rqfmn         rqfmnP               rqfmnJ             rqfmn25D         rqfmn25P           rqfmn25J           rqfmn25D             rqfmn25~
+UNLESS ~rqfmn~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+APPEND ~interdia.2da~ // SOA append
+~rqfmn         Brqfmn~
+UNLESS ~rqfmn~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~interdia.2da~ // TOB append
+~rqfmn        Brqfmn          Brqfmn25~
+UNLESS ~rqfmn~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+// Compile everything in D directory to DLG in override
+
+COMPILE ~golden_horse/d~
+
+/* Extend area script */
+COPY_EXISTING ~ar0300.bcs~ ~override/ar0300.bcs~
+EXTEND_TOP ~ar0300.bcs~ ~golden_horse/baf/rqar0300.baf~
+COPY_EXISTING ~ar0400.bcs~ ~override/ar0400.bcs~
+EXTEND_TOP ~ar0400.bcs~ ~golden_horse/baf/rqar0400.baf~
+COPY_EXISTING ~ar0500.bcs~ ~override/ar0500.bcs~
+EXTEND_TOP ~ar0500.bcs~ ~golden_horse/baf/rqar0500.baf~
+COPY_EXISTING ~ar0704.bcs~ ~override/ar0704.bcs~
+EXTEND_TOP ~ar0704.bcs~ ~golden_horse/baf/rqar0704.baf~
+COPY_EXISTING ~ar0800.bcs~ ~override/ar0800.bcs~
+EXTEND_TOP ~ar0800.bcs~ ~golden_horse/baf/rqar0800.baf~
+COPY_EXISTING ~ar0801.bcs~ ~override/ar0801.bcs~
+EXTEND_TOP ~ar0801.bcs~ ~golden_horse/baf/rqar0801.baf~
+COPY_EXISTING ~ar0900.bcs~ ~override/ar0900.bcs~
+EXTEND_TOP ~ar0900.bcs~ ~golden_horse/baf/rqar0900.baf~
+COPY_EXISTING ~ar1100.bcs~ ~override/ar1100.bcs~
+EXTEND_TOP ~ar1100.bcs~ ~golden_horse/baf/rqar1100.baf~
+COPY_EXISTING ~ar1900.bcs~ ~override/ar1900.bcs~
+EXTEND_TOP ~ar1900.bcs~ ~golden_horse/baf/rqar1900.baf~
+COPY_EXISTING ~ar2000.bcs~ ~override/ar2000.bcs~
+EXTEND_TOP ~ar2000.bcs~ ~golden_horse/baf/rqar2000.baf~
+COPY_EXISTING ~ar3000.bcs~ ~override/ar3000.bcs~
+EXTEND_TOP ~ar3000.bcs~ ~golden_horse/baf/rqar3000.baf~
+COPY_EXISTING ~ar4000.bcs~ ~override/ar4000.bcs~
+EXTEND_TOP ~ar4000.bcs~ ~golden_horse/baf/rqar4000.baf~
+COPY_EXISTING ~ar4500.bcs~ ~override/ar4500.bcs~
+EXTEND_TOP ~ar4500.bcs~ ~golden_horse/baf/rqar4500.baf~
+COPY_EXISTING ~ar5004.are~ ~override/ar5004.are~
+WRITE_ASCII 0x94 ~ar5004~
+EXTEND_TOP ~ar5004.bcs~ ~golden_horse/baf/rqar5004.baf~
+COPY_EXISTING ~ar5200.are~ ~override/ar5200.are~
+EXTEND_TOP ~ar5200.bcs~ ~golden_horse/baf/rqar5200.baf~
+COPY_EXISTING ~ar5500.are~ ~override/ar5500.are~
+EXTEND_TOP ~ar5500.bcs~ ~golden_horse/baf/rqar5500.baf~
+COPY_EXISTING ~ar5501.are~ ~override/ar5501.are~
+WRITE_ASCII 0x94 ~ar5501~
+EXTEND_TOP ~ar5501.bcs~ ~golden_horse/baf/rqar5501.baf~
+COPY_EXISTING ~ar5505.bcs~ ~override/ar5505.bcs~
+EXTEND_TOP ~ar5505.bcs~ ~golden_horse/baf/rqar5505.baf~
+COPY_EXISTING ~ar6000.bcs~ ~override/ar6000.bcs~
+EXTEND_TOP ~ar6000.bcs~ ~golden_horse/baf/rqar6000.baf~
+COPY_EXISTING ~ar6100.bcs~ ~override/ar6100.bcs~
+EXTEND_TOP ~ar6100.bcs~ ~golden_horse/baf/rqar6100.baf~
+COPY_EXISTING ~ar6200.bcs~ ~override/ar6200.bcs~
+EXTEND_TOP ~ar6200.bcs~ ~golden_horse/baf/rqar6200.baf~
+COPY_EXISTING ~ar6300.are~ ~override/ar6300.are~
+WRITE_ASCII 0x94 ~ar6300~
+EXTEND_TOP ~ar6300.bcs~ ~golden_horse/baf/rqar6300.baf~
+
+/* Extend baldur.bcs */
+COPY_EXISTING ~BALDUR.BCS~ ~override/BALDUR.BCS~
+EXTEND_BOTTOM ~BALDUR.BCS~ ~golden_horse/baf/rqbaldur.baf~
+
+// copy scripts and compile scripts to override
+COMPILE ~golden_horse/baf/rqecondu.baf~
+COMPILE ~golden_horse/baf/rqfcondu.baf~
+COMPILE ~golden_horse/baf/rqncondu.baf~
+COMPILE ~golden_horse/baf/rqhost1a.baf~
+COMPILE ~golden_horse/baf/rqhost1e.baf~
+COMPILE ~golden_horse/baf/rqhost2a.baf~
+COMPILE ~golden_horse/baf/rqhost2e.baf~
+COMPILE ~golden_horse/baf/rqhost3a.baf~
+COMPILE ~golden_horse/baf/rqhost3e.baf~
+COMPILE ~golden_horse/baf/rqhost4a.baf~
+COMPILE ~golden_horse/baf/rqhost4e.baf~
+COMPILE ~golden_horse/baf/rqhost5e.baf~
+COMPILE ~golden_horse/baf/rqhost5m.baf~
+COMPILE ~golden_horse/baf/rqhosta.baf~
+COMPILE ~golden_horse/baf/rqmalch.baf~
+COMPILE ~golden_horse/baf/rqrevove.baf~
+COMPILE ~golden_horse/baf/rqrev25.baf~
+COMPILE ~golden_horse/baf/rqgrun5c.baf~
+COMPILE ~golden_horse/baf/rqpaud5c.baf~
+COMPILE ~golden_horse/baf/rqwehr5e.baf~
+COMPILE ~golden_horse/baf/rqwehr5m.baf~
+COMPILE ~golden_horse/baf/rqh1ajah.baf~
+COMPILE ~golden_horse/baf/rqh2ajah.baf~
+COMPILE ~golden_horse/baf/rqh3arev.baf~
+COMPILE ~golden_horse/baf/rqh4ajah.baf~
+COMPILE ~golden_horse/baf/rqfigh6a.baf~
+COMPILE ~golden_horse/baf/rqkrol6a.baf~
+COMPILE ~golden_horse/baf/rqhost6a.baf~
+COMPILE ~golden_horse/baf/rqwehr2j.baf~
+COMPILE ~golden_horse/baf/rqinspla.baf~
+COMPILE ~golden_horse/baf/rqgpuse.baf~
+COMPILE ~golden_horse/baf/rqirgul.baf~
+COMPILE ~golden_horse/baf/rqsixta.baf~
+COMPILE ~golden_horse/baf/rqsixta2.baf~
+COMPILE ~golden_horse/baf/rqsixcul.baf~
+COMPILE ~golden_horse/baf/rqitwan.baf~
+COMPILE ~golden_horse/baf/rqt5deat.baf~
+COMPILE ~golden_horse/baf/rqt6ded1.baf~
+COMPILE ~golden_horse/baf/rqt7ded1.baf~
+COMPILE ~golden_horse/baf/rqt67dea.baf~
+COMPILE ~golden_horse/baf/rqtilla.baf~
+COMPILE ~golden_horse/baf/rqtrugos.baf~
+COMPILE ~golden_horse/baf/rqdeaths.baf~
+COMPILE ~golden_horse/baf/rqbalsix.baf~
+COMPILE ~golden_horse/baf/rqbalsi1.baf~
+COMPILE ~golden_horse/baf/rqraksha.baf~
+COMPILE ~golden_horse/baf/rq1runn1.baf~
+COMPILE ~golden_horse/baf/rq1runn2.baf~
+COMPILE ~golden_horse/baf/rq1runn3.baf~
+COMPILE ~golden_horse/baf/rq1runn4.baf~
+COMPILE ~golden_horse/baf/rq1runn5.baf~
+/*copy and name cre files to override */
+
+// Captain Prangl group
+COPY ~golden_horse/cre_other/rqcappra.cre~ ~override/rqcappra.cre~
+  WRITE_ASCII 0x280 ~rqcappra~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq1cappr~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~SHOUTDLG~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  ADD_CRE_ITEM ~rqletpra~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  SAY NAME1 @222
+  SAY NAME2 @222
+
+COPY ~golden_horse/cre_other/rqfight9.cre~ ~override/rqfight9.cre~
+  WRITE_ASCII 0x280 ~rqfight9~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhosta~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @223
+  SAY NAME2 @223
+
+COPY ~golden_horse/cre_other/rqcrobw9.cre~ ~override/rqcrobw9.cre~
+  WRITE_ASCII 0x280 ~rqcrobw9~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhosta~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @224
+  SAY NAME2 @224
+
+COPY ~golden_horse/cre_other/rqthie12.cre~ ~override/rqthie12.cre~
+  WRITE_ASCII 0x280 ~rqthie12~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhosta~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @225
+  SAY NAME2 @225
+
+COPY ~golden_horse/cre_other/rqcle7.cre~ ~override/rqcle7.cre~
+  ADD_CRE_ITEM ~rqpotn50~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  WRITE_ASCII 0x280 ~rqcle7~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhosta~ #8 // Override script
+  SAY NAME1 @226
+  SAY NAME2 @226
+
+// Pentarch bridge ambush
+COPY ~golden_horse/cre_other/rqpenbri.cre~ ~override/rqpenbri.cre~
+  WRITE_ASCII 0x280 ~rqpenbri~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq2penbr~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~SHOUTDLG~ #8 // Override script
+  ADD_CRE_ITEM ~rqletpen~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  SAY NAME1 @227
+  SAY NAME2 @227
+
+COPY ~golden_horse/cre_other/rqcle13.cre~ ~override/rqcle13.cre~
+  WRITE_ASCII 0x280 ~rqcle13~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhosta~ #8 // Override script
+  SAY NAME1 @226
+  SAY NAME2 @226
+
+COPY ~golden_horse/cre_other/rqwizsla.cre~ ~override/rqwizsla.cre~
+  WRITE_ASCII 0x280 ~rqwizsla~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhosta~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @228
+  SAY NAME2 @228
+
+// Temple ambush
+COPY ~golden_horse/cre_other/rq3temp1.cre~ ~override/rq3temp1.cre~
+  WRITE_ASCII 0x280 ~rq3temp1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq3temp1~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~SHOUTDLG~ #8 // Override script
+  SAY NAME1 @229
+  SAY NAME2 @229
+
+COPY ~golden_horse/cre_other/rq3temm1.cre~ ~override/rq3temm1.cre~
+  WRITE_ASCII 0x280 ~rq3temm1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq3temm1~ #8 // Dialogue file
+  SAY NAME1 @230
+  SAY NAME2 @230
+
+COPY ~golden_horse/cre_other/rq3temm2.cre~ ~override/rq3temm2.cre~
+  WRITE_ASCII 0x280 ~rq3temm2~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq3temm2~ #8 // Dialogue file
+  SAY NAME1 @230
+  SAY NAME2 @230
+
+COPY ~golden_horse/cre_other/rq3temo2.cre~ ~override/rq3temo2.cre~
+  WRITE_ASCII 0x280 ~rq3temo2~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq3temo2~ #8 // Dialogue file
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @231
+  SAY NAME2 @231
+
+COPY ~golden_horse/cre_other/rqt12f13.cre~ ~override/rqt12f13.cre~
+  WRITE_ASCII 0x280 ~rqt12f13~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhosta~ #8 // Override script
+  SAY NAME1 @225
+  SAY NAME2 @225
+
+// Waukeen ambush
+COPY ~golden_horse/cre_other/rqwaukm.cre~ ~override/rqwaukm.cre~
+  WRITE_ASCII 0x280 ~rqwaukm~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~SHOUTDLG~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rq4waukm~ #8 // Dialogue file
+  SAY NAME1 @232
+  SAY NAME2 @232
+
+COPY ~golden_horse/cre_other/rqclthie.cre~ ~override/rqclthie.cre~
+  ADD_CRE_ITEM ~rqminlet~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  WRITE_ASCII 0x280 ~rqclthie~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq4grosh~ #8 // Dialogue file
+  SAY NAME1 @233
+  SAY NAME2 @233
+
+COPY ~golden_horse/cre_other/rqessl.cre~ ~override/rqessl.cre~
+  WRITE_ASCII 0x280 ~rqessl~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~INITDLG~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rq4essli~ #8 // Dialogue file
+  SAY NAME1 @234
+  SAY NAME2 @234
+// Gervin courier
+COPY ~golden_horse/cre_other/rqgerv.cre~ ~override/rqgerv.cre~
+  ADD_CRE_ITEM ~rqdeliv~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  ADD_CRE_ITEM ~rqpotn2~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  WRITE_ASCII 0x280 ~rqgerv~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost4a~ #8 // Override script
+  SAY NAME1 @235
+  SAY NAME2 @235
+
+COPY ~golden_horse/cre_other/rq4fi9.cre~ ~override/rq4fi9.cre~
+  WRITE_ASCII 0x280 ~rq4fi9~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost4a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @223
+  SAY NAME2 @223
+
+COPY ~golden_horse/cre_other/rq4cros9.cre~ ~override/rq4cros9.cre~
+  WRITE_ASCII 0x280 ~rq4cros9~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost4a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @224
+  SAY NAME2 @224
+
+COPY ~golden_horse/cre_other/rq4cle13.cre~ ~override/rq4cle13.cre~
+  WRITE_ASCII 0x280 ~rq4cle13~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost4a~ #8 // Override script
+  SAY NAME1 @226
+  SAY NAME2 @226
+
+COPY ~golden_horse/cre_other/rq4wizsl.cre~ ~override/rq4wizsl.cre~
+  WRITE_ASCII 0x280 ~rq4wizsl~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost4a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @228
+  SAY NAME2 @228
+
+COPY ~golden_horse/cre_other/rq4t12f1.cre~ ~override/rq4t12f1.cre~
+  WRITE_ASCII 0x280 ~rq4t12f1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost4a~ #8 // Override script
+  SAY NAME1 @225
+  SAY NAME2 @225
+
+// Argent Marcian contract 1c
+COPY ~golden_horse/cre_other/rqmararg.cre~ ~override/rqmararg.cre~
+  ADD_CRE_ITEM ~rqproof1~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  WRITE_ASCII 0x2cc ~rq1marca~ #8 // Dialogue file
+  WRITE_ASCII 0x280 ~rq1marca~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost1e~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @236
+  SAY NAME2 @236
+
+COPY ~golden_horse/cre_other/rqcle13a.cre~ ~override/rqcle13a.cre~
+  WRITE_ASCII 0x280 ~rqcle13a~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost1e~ #8 // Override script
+  SAY NAME1 @237
+  SAY NAME2 @237
+
+COPY ~golden_horse/cre_other/rqargm13.cre~ ~override/rqargm13.cre~
+  WRITE_ASCII 0x280 ~rqargm13~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost1e~ #8 // Override script
+  SAY NAME1 @238
+  SAY NAME2 @238
+
+COPY ~golden_horse/cre_other/rqargf13.cre~ ~override/rqargf13.cre~
+  WRITE_ASCII 0x280 ~rqargf13~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost1e~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @239
+  SAY NAME2 @239
+
+COPY ~golden_horse/cre_other/rqt12f1c.cre~ ~override/rqt12f1c.cre~
+  WRITE_ASCII 0x280 ~rqt12f1c~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost1e~ #8 // Override script
+  SAY NAME1 @240
+  SAY NAME2 @240
+
+// Kamraarn wizardslayer 2c
+COPY ~golden_horse/cre_other/rqkamraa.cre~ ~override/rqkamraa.cre~
+  ADD_CRE_ITEM ~rqproof2~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  WRITE_ASCII 0x280 ~rqkamraa~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq2kamra~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~rqhost2e~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @241
+  SAY NAME2 @241
+
+COPY ~golden_horse/cre_other/rqw9m11.cre~ ~override/rqw9m11.cre~
+  WRITE_ASCII 0x280 ~rqw9m11~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost2e~ #8 // Override script
+  SAY NAME1 @242
+  SAY NAME2 @242
+
+COPY ~golden_horse/cre_other/rqwizhlb.cre~ ~override/rqwizhlb.cre~
+  WRITE_ASCII 0x280 ~rqwizhlb~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost2e~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @243
+  SAY NAME2 @243
+
+COPY ~golden_horse/cre_other/rqwarc13.cre~ ~override/rqwarc13.cre~
+  WRITE_ASCII 0x280 ~rqwarc13~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost2e~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @244
+  SAY NAME2 @244
+
+// Berkris + Anakarhysse 3e
+COPY ~golden_horse/cre_other/rqanakar.cre~ ~override/rqanakar.cre~
+  ADD_CRE_ITEM ~rqproof3~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  WRITE_ASCII 0x280 ~rqanakar~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq3anaka~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~rqhost3e~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @245
+  SAY NAME2 @245
+
+COPY ~golden_horse/cre_other/rqberkri.cre~ ~override/rqberkri.cre~
+  WRITE_ASCII 0x280 ~rqberkri~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost3e~ #8 // Override script
+  SAY NAME1 @246
+  SAY NAME2 @246
+
+// Hevguris group 4e
+COPY ~golden_horse/cre_other/rqinqhev.cre~ ~override/rqinqhev.cre~
+  ADD_CRE_ITEM ~rqproof4~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  WRITE_ASCII 0x280 ~rqinqhev~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq4hevgu~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~rqhost4e~ #8 // Override script
+  WRITE_ASCII 0x258 ~rqgpuse~ #8 // Race script
+  SAY NAME1 @247
+  SAY NAME2 @247
+
+COPY ~golden_horse/cre_other/rqordwiz.cre~ ~override/rqordwiz.cre~
+  WRITE_ASCII 0x280 ~rqordwiz~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost4e~ #8 // Override script
+  SAY NAME1 @248
+  SAY NAME2 @248
+
+COPY ~golden_horse/cre_other/rqordp14.cre~ ~override/rqordp14.cre~
+  WRITE_ASCII 0x280 ~rqordp14~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost4e~ #8 // Override script
+  WRITE_ASCII 0x258 ~rqgpuse~ #8 // Race script
+  SAY NAME1 @249
+  SAY NAME2 @249
+
+COPY ~golden_horse/cre_other/rqordc14.cre~ ~override/rqordc14.cre~
+  WRITE_ASCII 0x280 ~rqordc14~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost4e~ #8 // Override script
+  SAY NAME1 @250
+  SAY NAME2 @250
+
+COPY ~golden_horse/cre_other/rqordp1h.cre~ ~override/rqordp1h.cre~
+  WRITE_ASCII 0x280 ~rqordp1h~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x258 ~rqgpuse~ #8 // Race script
+  SAY NAME1 @251
+  SAY NAME2 @251
+
+COPY ~golden_horse/cre_other/rqarvtru.cre~ ~override/rqarvtru.cre~
+  WRITE_ASCII 0x280 ~rqarvtru~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @252
+  SAY NAME2 @252
+
+// Druid contract in Druid Grove
+COPY ~golden_horse/cre_other/rqarcdrd.cre~ ~override/rqarcdrd.cre~
+  WRITE_ASCII 0x280 ~rqarcdrd~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq5arcdr~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~rqhost5e~ #8 // Override script
+  SAY NAME1 @253
+  SAY NAME2 @253
+
+COPY ~golden_horse/cre_other/rqpaud.cre~ ~override/rqpaud.cre~
+  WRITE_ASCII 0x280 ~rqpaud~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq5paude~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~rqpaud5c~ #8 // Override script
+  ADD_CRE_ITEM ~rqhorn~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  SAY NAME1 @254
+  SAY NAME2 @254
+
+COPY ~golden_horse/cre_other/rqgrune.cre~ ~override/rqgrune.cre~
+  WRITE_ASCII 0x280 ~rqgrune~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq5grune~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~rqgrun5c~ #8 // Override script
+  SAY NAME1 @255
+  SAY NAME2 @255
+
+COPY ~golden_horse/cre_other/rqearthc.cre~ ~override/rqearthc.cre~
+  WRITE_ASCII 0x280 ~rqearthc~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqecondu~ #8 // Override script
+  SAY NAME1 @256
+  SAY NAME2 @256
+
+COPY ~golden_horse/cre_other/rqfirec.cre~ ~override/rqfirec.cre~
+  WRITE_ASCII 0x280 ~rqfirec~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqfcondu~ #8 // Override script
+  SAY NAME1 @257
+  SAY NAME2 @257
+
+COPY ~golden_horse/cre_other/rqnaturc.cre~ ~override/rqnaturc.cre~
+  WRITE_ASCII 0x280 ~rqnaturc~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqncondu~ #8 // Override script
+  SAY NAME1 @258
+  SAY NAME2 @258
+
+COPY ~golden_horse/cre_other/rqships1.cre~ ~override/rqships1.cre~
+  WRITE_ASCII 0x280 ~rqships1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqwehr5e~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @259
+  SAY NAME2 @259
+
+COPY ~golden_horse/cre_other/rqships2.cre~ ~override/rqships2.cre~
+  WRITE_ASCII 0x280 ~rqships2~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqwehr5e~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @259
+  SAY NAME2 @259
+
+COPY ~golden_horse/cre_other/rqd10.cre~ ~override/rqd10.cre~
+  WRITE_ASCII 0x280 ~rqd10~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost5e~ #8 // Override script
+  SAY NAME1 @260
+  SAY NAME2 @260
+
+// Mintiper in Umar Hills
+COPY ~golden_horse/cre_other/rqmintip.cre~ ~override/rqmintip.cre~
+  ADD_CRE_ITEM ~rqminjo~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  WRITE_ASCII 0x2cc ~rq5minti~ #8 // Dialogue file
+  WRITE_ASCII 0x280 ~rqmintip~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~SHOUTDLG~ #8 // Override script
+  SAY NAME1 @261
+  SAY NAME2 @261
+
+COPY ~golden_horse/cre_other/rqarklor.cre~ ~override/rqarklor.cre~
+  ADD_CRE_ITEM ~rqmibard~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  WRITE_ASCII 0x280 ~rqarklor~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost5m~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @262
+  SAY NAME2 @262
+
+COPY ~golden_horse/cre_other/rqfb19.cre~ ~override/rqfb19.cre~
+  WRITE_ASCII 0x280 ~rqfb19~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost5m~ #8 // Override script
+  SAY NAME1 @263
+  SAY NAME2 @263
+
+COPY ~golden_horse/cre_other/rqshapes.cre~ ~override/rqshapes.cre~
+  WRITE_ASCII 0x280 ~rqshapes~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqwehr5m~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @259
+  SAY NAME2 @259
+
+COPY ~golden_horse/cre_other/rqargf1a.cre~ ~override/rqargf1a.cre~
+  WRITE_ASCII 0x280 ~rqargf1a~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost5m~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @239
+  SAY NAME2 @239
+
+COPY ~golden_horse/cre_other/rqt12f1a.cre~ ~override/rqt12f1a.cre~
+  WRITE_ASCII 0x280 ~rqt12f1a~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost5m~ #8 // Override script
+  SAY NAME1 @240
+  SAY NAME2 @240
+
+COPY ~golden_horse/cre_other/rqt12f1b.cre~ ~override/rqt12f1b.cre~
+  WRITE_ASCII 0x280 ~rqt12f1b~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost5m~ #8 // Override script
+  SAY NAME1 @240
+  SAY NAME2 @240
+
+COPY ~golden_horse/cre_other/rqwarc1a.cre~ ~override/rqwarc1a.cre~
+  WRITE_ASCII 0x280 ~rqwarc1a~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost5m~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @244
+  SAY NAME2 @244
+
+COPY ~golden_horse/cre_other/rqcle131.cre~ ~override/rqcle131.cre~
+  WRITE_ASCII 0x280 ~rqcle131~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost5m~ #8 // Override script
+  SAY NAME1 @237
+  SAY NAME2 @237
+
+// Krolyn in Graveyard AR0800 --------------------------------------
+COPY ~golden_horse/cre_other/rq6kroly.cre~ ~override/rq6kroly.cre~
+  //ADD_CRE_ITEM ~rqlettkr~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  ADD_CRE_ITEM ~rqkrolet~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  WRITE_ASCII 0x280 ~rq6kroly~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq6kroly~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~rqkrol6a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @265
+  SAY NAME2 @265
+
+COPY ~golden_horse/cre_other/rq6f18a.cre~ ~override/rq6f18a.cre~
+  WRITE_ASCII 0x280 ~rq6f18a~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost6a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @266
+  SAY NAME2 @266
+
+COPY ~golden_horse/cre_other/rq6f18b.cre~ ~override/rq6f18b.cre~
+  WRITE_ASCII 0x280 ~rq6f18b~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq6merc~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~rqhost6a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @266
+  SAY NAME2 @266
+
+COPY ~golden_horse/cre_other/rqt12f1d.cre~ ~override/rqt12f1d.cre~
+  WRITE_ASCII 0x280 ~rqt12f1d~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost6a~ #8 // Override script
+  SAY NAME1 @225
+  SAY NAME2 @225
+
+COPY ~golden_horse/cre_other/rqwarc1b.cre~ ~override/rqwarc1b.cre~
+  WRITE_ASCII 0x280 ~rqwarc1b~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost6a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @266
+  SAY NAME2 @266
+
+COPY ~golden_horse/cre_other/rqargf1b.cre~ ~override/rqargf1b.cre~
+  WRITE_ASCII 0x280 ~rqargf1b~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqfigh6a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @223
+  SAY NAME2 @223
+// 7Thief
+COPY ~golden_horse/cre_other/rq7thief.cre~ ~override/rq7thief.cre~
+  WRITE_ASCII 0x280 ~rq7thief~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq7thief~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~INITDLG~ #8 // Override script
+  SAY NAME1 @225
+  SAY NAME2 @225
+
+// Jaheira Ambush + Galvarey
+COPY ~golden_horse/cre_other/rqjah121.cre~ ~override/rqjah121.cre~
+  WRITE_ASCII 0x280 ~rqjah121~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqh1ajah~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  WRITE_ASCII 0x2cc ~rqjah1~ #8 // Dialogue file
+  SAY NAME1 @267
+  SAY NAME2 @267
+
+COPY ~golden_horse/cre_other/rqgalva.cre~ ~override/rqgalva.cre~
+  WRITE_ASCII 0x280 ~rqgalva~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqgalvar~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~rqhost1a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @268
+  SAY NAME2 @268
+
+COPY ~golden_horse/cre_other/rqjaga4.cre~ ~override/rqjaga4.cre~
+  WRITE_ASCII 0x280 ~rqjaga4~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost1a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @269
+  SAY NAME2 @269
+
+COPY ~golden_horse/cre_other/rqjaga1.cre~ ~override/rqjaga1.cre~
+  WRITE_ASCII 0x280 ~rqjaga1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost1a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @270
+  SAY NAME2 @270
+
+COPY ~golden_horse/cre_other/rqjaga2.cre~ ~override/rqjaga2.cre~
+  WRITE_ASCII 0x280 ~rqjaga2~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost1a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @271
+  SAY NAME2 @271
+
+COPY ~golden_horse/cre_other/rqjaga3.cre~ ~override/rqjaga3.cre~
+  WRITE_ASCII 0x280 ~rqjaga3~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost1a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @272
+  SAY NAME2 @272
+
+// Lucette + Jaheira
+COPY ~golden_horse/cre_other/rqjah122.cre~ ~override/rqjah122.cre~
+  WRITE_ASCII 0x280 ~rqjah122~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqh2ajah~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rqjah2~ #8 // Dialogue file
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @267
+  SAY NAME2 @267
+
+COPY ~golden_horse/cre_other/rqhass1.cre~ ~override/rqhass1.cre~
+  WRITE_ASCII 0x280 ~rqhass1~ #32 // Script name aka Death Variable
+  //WRITE_ASCII 0x2cc ~rqhass1~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~rqhost2a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @273
+  SAY NAME2 @273
+
+COPY ~golden_horse/cre_other/rqberin.cre~ ~override/rqberin.cre~
+  WRITE_ASCII 0x280 ~rqberin~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost2a~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rqberin~ #8 // Dialogue file
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @274
+  SAY NAME2 @274
+
+COPY ~golden_horse/cre_other/rqpace.cre~ ~override/rqpace.cre~
+  WRITE_ASCII 0x280 ~rqpace~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost2a~ #8 // Override script
+  WRITE_ASCII 0x258 ~rqgpuse~ #8 // Race script // Ring of invisibility backstab
+  SAY NAME1 @275
+  SAY NAME2 @275
+
+COPY ~golden_horse/cre_other/rqmero.cre~ ~override/rqmero.cre~
+  WRITE_ASCII 0x280 ~rqmero~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost2a~ #8 // Override script
+  SAY NAME1 @276
+  SAY NAME2 @276
+
+COPY ~golden_horse/cre_other/rqrenf.cre~ ~override/rqrenf.cre~
+  WRITE_ASCII 0x280 ~rqrenf~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost2a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @277
+  SAY NAME2 @277
+
+COPY ~golden_horse/cre_other/rqrylo.cre~ ~override/rqrylo.cre~
+  WRITE_ASCII 0x280 ~rqrylo~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost2a~ #8 // Override script
+  SAY NAME1 @278
+  SAY NAME2 @278
+
+// Revianne Ambush group
+COPY ~golden_horse/cre_other/rqjare.cre~ ~override/rqjare.cre~
+  WRITE_ASCII 0x280 ~rqjare~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqh3arev~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rqrevia~ #8 // Dialogue file
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @279
+  SAY NAME2 @279
+
+COPY ~golden_horse/cre_other/rqjare1.cre~ ~override/rqjare1.cre~
+  WRITE_ASCII 0x280 ~rqjare1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost3a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @280
+  SAY NAME2 @280
+
+COPY ~golden_horse/cre_other/rqjare2.cre~ ~override/rqjare2.cre~
+  WRITE_ASCII 0x280 ~rqjare2~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost3a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @280
+  SAY NAME2 @280
+
+COPY ~golden_horse/cre_other/rqjare3.cre~ ~override/rqjare3.cre~
+  WRITE_ASCII 0x280 ~rqjare3~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost3a~ #8 // Override script
+  SAY NAME1 @280
+  SAY NAME2 @280
+
+COPY ~golden_horse/cre_other/rqjare4.cre~ ~override/rqjare4.cre~
+  WRITE_ASCII 0x280 ~rqjare4~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost3a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @280
+  SAY NAME2 @280
+
+// Dermin + Jaheira ambush
+COPY ~golden_horse/cre_other/rqjah131.cre~ ~override/rqjah131.cre~
+  WRITE_ASCII 0x280 ~rqjah131~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqh4ajah~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rqjah4~ #8 // Dialogue file
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @267
+  SAY NAME2 @267
+
+COPY ~golden_horse/cre_other/rqdermin.cre~ ~override/rqdermin.cre~
+  WRITE_ASCII 0x280 ~rqdermin~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqdermin~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~rqhost4a~ #8 // Override script
+  ADD_CRE_ITEM ~rqbrac01~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  ADD_CRE_ITEM ~rqletder~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  SAY NAME1 @281
+  SAY NAME2 @281
+
+COPY ~golden_horse/cre_other/rqjade1.cre~ ~override/rqjade1.cre~
+  WRITE_ASCII 0x280 ~rqjade1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost4a~ #8 // Override script
+  SAY NAME1 @282
+  SAY NAME2 @282
+
+COPY ~golden_horse/cre_other/rqjade2.cre~ ~override/rqjade2.cre~
+  WRITE_ASCII 0x280 ~rqjade2~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost4a~ #8 // Override script
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @283
+  SAY NAME2 @283
+
+COPY ~golden_horse/cre_other/rqjade3.cre~ ~override/rqjade3.cre~
+  WRITE_ASCII 0x280 ~rqjade3~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost4a~ #8 // Override script
+  SAY NAME1 @284
+  SAY NAME2 @284
+
+COPY ~golden_horse/cre_other/rqjade4.cre~ ~override/rqjade4.cre~
+  WRITE_ASCII 0x280 ~rqjade4~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqhost4a~ #8 // Override script
+  SAY NAME1 @285
+  SAY NAME2 @285
+
+// Malchor + Jaheira ambush
+COPY ~golden_horse/cre_other/rqmalch.cre~ ~override/rqmalch.cre~
+  WRITE_ASCII 0x280 ~rqmalch~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqmalch~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rqmalch~ #8 // Dialogue file
+  SAY NAME1 @286
+  SAY NAME2 @286
+
+COPY ~golden_horse/cre_other/rqjah132.cre~ ~override/rqjah132.cre~
+  WRITE_ASCII 0x280 ~rqjah132~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqjah5~ #8 // Dialogue file
+  SAY NAME1 @267
+  SAY NAME2 @267
+
+// Jaheira Harper Elite  Shadow Thieves Cowled Wizards etc Throne of Bhaal ambush group 0
+COPY ~golden_horse/cre_other/rqjah134.cre~ ~override/rqjah134.cre~
+  WRITE_ASCII 0x280 ~rqjah134~ #32 // Script name aka Death Variable
+  ADD_CRE_ITEM ~rqlettj3~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  ADD_CRE_ITEM ~rqlettj2~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  ADD_CRE_ITEM ~rqlettj~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  WRITE_ASCII 0x248 ~SHOUTDLG~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rqjah134~ #8 // Dialogue file
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @267
+  SAY NAME2 @267
+
+COPY ~golden_horse/cre_other/rqbar30a.cre~ ~override/rqbar30a.cre~
+  WRITE_ASCII 0x280 ~rqbar30a~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqbar30a~ #8 // Dialogue file
+  ADD_CRE_ITEM ~rqpotn3~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  ADD_CRE_ITEM ~rqdeliv2~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  ADD_CRE_ITEM ~rqpotc03~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  ADD_CRE_ITEM ~REGHP2~ #0 #0 #0 ~unstealable&undroppable~ ~RRING~
+  ADD_CRE_ITEM ~RINGDEMN~ #0 #0 #0 ~unstealable&undroppable~ ~LRING~
+  //WRITE_ASCII 0x248 ~SHOUTDLG~ #8 // Override script
+  WRITE_ASCII 0x250 ~CFIGH30B~ #8 // Class script CFIGH20B
+  SAY NAME1 @287
+  SAY NAME2 @287
+
+COPY ~golden_horse/cre_other/rqs20.cre~ ~override/rqs20.cre~
+  WRITE_ASCII 0x280 ~rqs20~ #32 // Script name aka Death Variable
+  ADD_CRE_ITEM ~REGHP2~ #0 #0 #0 ~unstealable&undroppable~ ~RRING~
+  ADD_CRE_ITEM ~RINGDEMN~ #0 #0 #0 ~unstealable&undroppable~ ~LRING~
+  SAY NAME1 @288
+  SAY NAME2 @288
+
+COPY ~golden_horse/cre_other/rqc26.cre~ ~override/rqc26.cre~
+  WRITE_ASCII 0x280 ~rqc26~ #32 // Script name aka Death Variable
+  ADD_CRE_ITEM ~REGHP2~ #0 #0 #0 ~unstealable&undroppable~ ~RRING~
+  ADD_CRE_ITEM ~RINGDEMN~ #0 #0 #0 ~unstealable&undroppable~ ~LRING~
+  SAY NAME1 @289
+  SAY NAME2 @289
+
+COPY ~golden_horse/cre_other/rqd18.cre~ ~override/rqd18.cre~
+  WRITE_ASCII 0x280 ~rqd18~ #32 // Script name aka Death Variable
+  ADD_CRE_ITEM ~REGHP2~ #0 #0 #0 ~unstealable&undroppable~ ~RRING~
+  ADD_CRE_ITEM ~RINGDEMN~ #0 #0 #0 ~unstealable&undroppable~ ~LRING~
+  SAY NAME1 @290
+  SAY NAME2 @290
+
+// Ribald 1
+COPY ~golden_horse/cre_other/rqriba.cre~ ~override/rqriba.cre~
+  WRITE_ASCII 0x280 ~rqriba~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqriba~ #8 // Dialogue file
+  SAY NAME1 @291
+  SAY NAME2 @291
+
+// Shadow Thieves 2
+COPY ~golden_horse/cre_other/rqmonliq.cre~ ~override/rqmonliq.cre~
+  WRITE_ASCII 0x280 ~rqmonliq~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqmonliq~ #8 // Dialogue file
+  SAY NAME1 @292
+  SAY NAME2 @292
+
+COPY ~golden_horse/cre_other/rqstde.cre~ ~override/rqstde.cre~
+  WRITE_ASCII 0x280 ~rqstde~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x250 ~CFIGH20B~ #8 // Class script
+  SAY NAME1 @293
+  SAY NAME2 @293
+
+COPY ~golden_horse/cre_other/rqvvsa.cre~ ~override/rqvvsa.cre~
+  WRITE_ASCII 0x280 ~rqvvsa~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x250 ~CFIGH20B~ #8 // Class script
+  SAY NAME1 @294
+  SAY NAME2 @294
+
+// Cowled wizards reinforcements 3
+COPY ~golden_horse/cre_other/rqcowl1.cre~ ~override/rqcowl1.cre~
+  WRITE_ASCII 0x280 ~rqcowl1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqcowl~ #8 // Dialogue file
+  SAY NAME1 @295
+  SAY NAME2 @295
+
+COPY ~golden_horse/cre_other/rqcowl2.cre~ ~override/rqcowl2.cre~
+  WRITE_ASCII 0x280 ~rqcowl2~ #32 // Script name aka Death Variable
+  SAY NAME1 @295
+  SAY NAME2 @295
+
+COPY ~golden_horse/cre_other/rqcenf1.cre~ ~override/rqcenf1.cre~
+  WRITE_ASCII 0x280 ~rqcenf1~ #32 // Script name aka Death Variable
+  SAY NAME1 @296
+  SAY NAME2 @296
+
+COPY ~golden_horse/cre_other/rqcenf2.cre~ ~override/rqcenf2.cre~
+  WRITE_ASCII 0x280 ~rqcenf2~ #32 // Script name aka Death Variable
+  SAY NAME1 @296
+  SAY NAME2 @296
+
+COPY ~golden_horse/cre_other/rqcenf3.cre~ ~override/rqcenf3.cre~
+  WRITE_ASCII 0x280 ~rqcenf3~ #32 // Script name aka Death Variable
+  SAY NAME1 @296
+  SAY NAME2 @296
+
+COPY ~golden_horse/cre_other/rqcenf4.cre~ ~override/rqcenf4.cre~
+  WRITE_ASCII 0x280 ~rqcenf4~ #32 // Script name aka Death Variable
+  SAY NAME1 @296
+  SAY NAME2 @296
+
+// Elven reinforcements 4
+COPY ~golden_horse/cre_other/rqbael.cre~ ~override/rqbael.cre~
+  WRITE_ASCII 0x280 ~rqbael~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqbael~ #8 // Dialogue file
+  SAY NAME1 @297
+  SAY NAME2 @297
+
+COPY ~golden_horse/cre_other/rqc6gen.cre~ ~override/rqc6gen.cre~
+  WRITE_ASCII 0x280 ~rqc6gen~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x250 ~CFIGH20B~ #8 // Class script
+  SAY NAME1 @298
+  SAY NAME2 @298
+
+COPY ~golden_horse/cre_other/rqf27.cre~ ~override/rqf27.cre~
+  WRITE_ASCII 0x280 ~rqf27~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x250 ~CFIGH30B~ #8 // Class script
+  SAY NAME1 @299
+  SAY NAME2 @299
+
+COPY ~golden_horse/cre_other/rqc6elf1.cre~ ~override/rqc6elf1.cre~
+  WRITE_ASCII 0x280 ~rqc6elf1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x250 ~CFIGH20B~ #8 // Class script
+  SAY NAME1 @300
+  SAY NAME2 @300
+
+COPY ~golden_horse/cre_other/rqc6elf2.cre~ ~override/rqc6elf2.cre~
+  WRITE_ASCII 0x280 ~rqc6elf2~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x250 ~CFIGH20B~ #8 // Class script
+  SAY NAME1 @300
+  SAY NAME2 @300
+
+COPY ~golden_horse/cre_other/rqc6elf3.cre~ ~override/rqc6elf3.cre~
+  WRITE_ASCII 0x280 ~rqc6elf3~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x250 ~CFIGH20B~ #8 // Class script
+  SAY NAME1 @301
+  SAY NAME2 @301
+
+COPY ~golden_horse/cre_other/rqc6elf4.cre~ ~override/rqc6elf4.cre~
+  WRITE_ASCII 0x280 ~rqc6elf4~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x250 ~CFIGH20B~ #8 // Class script
+  SAY NAME1 @301
+  SAY NAME2 @301
+
+// Paladin reinforcements 5
+COPY ~golden_horse/cre_other/rqwill.cre~ ~override/rqwill.cre~
+  WRITE_ASCII 0x280 ~rqwill~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqwill~ #8 // Dialogue file
+  WRITE_ASCII 0x250 ~CFIGH20B~ #8 // Class script
+  SAY NAME1 @302
+  SAY NAME2 @302
+
+COPY ~golden_horse/cre_other/rqalhe.cre~ ~override/rqalhe.cre~
+  WRITE_ASCII 0x280 ~rqalhe~ #32 // Script name aka Death Variable
+  SAY NAME1 @303
+  SAY NAME2 @303
+
+COPY ~golden_horse/cre_other/rqalex.cre~ ~override/rqalex.cre~
+  WRITE_ASCII 0x280 ~rqalex~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x250 ~CFIGH20B~ #8 // Class script
+  SAY NAME1 @304
+  SAY NAME2 @304
+
+COPY ~golden_horse/cre_other/rqjolu.cre~ ~override/rqjolu.cre~
+  WRITE_ASCII 0x280 ~rqjolu~ #32 // Script name aka Death Variable
+  SAY NAME1 @305
+  SAY NAME2 @305
+
+COPY ~golden_horse/cre_other/rqkenda.cre~ ~override/rqkenda.cre~
+  WRITE_ASCII 0x280 ~rqkenda~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x250 ~CFIGH20B~ #8 // Class script
+  SAY NAME1 @306
+  SAY NAME2 @306
+
+COPY ~golden_horse/cre_other/rqryan.cre~ ~override/rqryan.cre~
+  WRITE_ASCII 0x280 ~rqryan~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x250 ~CFIGH20B~ #8 // Class script
+  SAY NAME1 @307
+  SAY NAME2 @307
+
+//Alternative Paladins
+COPY ~golden_horse/cre_other/rqwoodw.cre~ ~override/rqwoodw.cre~
+  WRITE_ASCII 0x280 ~rqwoodw~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqwoodw~ #8 // Dialogue file
+  WRITE_ASCII 0x250 ~CFIGH20B~ #8 // Class script
+  SAY NAME1 @308
+  SAY NAME2 @308
+
+COPY ~golden_horse/cre_other/rqnevill.cre~ ~override/rqnevill.cre~
+  WRITE_ASCII 0x280 ~rqnevill~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x250 ~CFIGH20B~ #8 // Class script
+  SAY NAME1 @309
+  SAY NAME2 @309
+
+COPY ~golden_horse/cre_other/rqstaf.cre~ ~override/rqstaf.cre~
+  WRITE_ASCII 0x280 ~rqstaf~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x250 ~CFIGH20B~ #8 // Class script
+  SAY NAME1 @310
+  SAY NAME2 @310
+
+COPY ~golden_horse/cre_other/rqhoward.cre~ ~override/rqhoward.cre~
+  WRITE_ASCII 0x280 ~rqhoward~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x250 ~CFIGH20B~ #8 // Class script
+  SAY NAME1 @311
+  SAY NAME2 @311
+
+COPY ~golden_horse/cre_other/rqbeauf.cre~ ~override/rqbeauf.cre~
+  WRITE_ASCII 0x280 ~rqbeauf~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x250 ~CFIGH20B~ #8 // Class script
+  SAY NAME1 @312
+  SAY NAME2 @312
+
+COPY ~golden_horse/cre_other/rqtalbot.cre~ ~override/rqtalbot.cre~
+  WRITE_ASCII 0x280 ~rqtalbot~ #32 // Script name aka Death Variable
+  SAY NAME1 @313
+  SAY NAME2 @313
+
+// Ambush in Saradush Waukeen Temple
+COPY ~golden_horse/cre_other/rqjah135.cre~ ~override/rqjah135.cre~
+  WRITE_ASCII 0x280 ~rqjah135~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~SHOUTDLG~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rqjtob2~ #8 // Dialogue file
+  SAY NAME1 @267
+  SAY NAME2 @267
+
+COPY ~golden_horse/cre_other/rqberkrt.cre~ ~override/rqberkrt.cre~
+  WRITE_ASCII 0x280 ~rqberkrt~ #32 // Script name aka Death Variable
+  SAY NAME1 @314
+  SAY NAME2 @314
+
+COPY ~golden_horse/cre_other/rqc26t.cre~ ~override/rqc26t.cre~
+  WRITE_ASCII 0x280 ~rqc26t~ #32 // Script name aka Death Variable
+  SAY NAME1 @315
+  SAY NAME2 @315
+
+COPY ~golden_horse/cre_other/rqfb19t.cre~ ~override/rqfb19t.cre~
+  WRITE_ASCII 0x280 ~rqfb19t~ #32 // Script name aka Death Variable
+  SAY NAME1 @316
+  SAY NAME2 @316
+
+COPY ~golden_horse/cre_other/rqgrunt.cre~ ~override/rqgrunt.cre~
+  WRITE_ASCII 0x280 ~rqgrunt~ #32 // Script name aka Death Variable
+  SAY NAME1 @317
+  SAY NAME2 @317
+
+COPY ~golden_horse/cre_other/rqanakat.cre~ ~override/rqanakat.cre~
+  WRITE_ASCII 0x280 ~rqanakat~ #32 // Script name aka Death Variable
+  SAY NAME1 @318
+  SAY NAME2 @318
+
+COPY ~golden_horse/cre_other/rqs20t.cre~ ~override/rqs20t.cre~
+  WRITE_ASCII 0x280 ~rqs20t~ #32 // Script name aka Death Variable
+  SAY NAME1 @319
+  SAY NAME2 @319
+
+COPY ~golden_horse/cre_other/rqharpar.cre~ ~override/rqharpar.cre~
+  WRITE_ASCII 0x280 ~rqharpar~ #32 // Script name aka Death Variable
+  SAY NAME1 @320
+  SAY NAME2 @320
+
+COPY ~golden_horse/cre_other/rqmo22t.cre~ ~override/rqmo22t.cre~
+  WRITE_ASCII 0x280 ~rqmo22t~ #32 // Script name aka Death Variable
+  SAY NAME1 @321
+  SAY NAME2 @321
+
+COPY ~golden_horse/cre_other/rqpi20.cre~ ~override/rqpi20.cre~
+  WRITE_ASCII 0x280 ~rqpi20~ #32 // Script name aka Death Variable
+  SAY NAME1 @322
+  SAY NAME2 @322
+
+COPY ~golden_horse/cre_other/rqds19.cre~ ~override/rqds19.cre~
+  WRITE_ASCII 0x280 ~rqds19~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqwehr2j~ #8 // Override script Shapeshifting and attack
+  SAY NAME1 @323
+  SAY NAME2 @323
+
+COPY ~golden_horse/cre_other/rqf4a18.cre~ ~override/rqf4a18.cre~
+  WRITE_ASCII 0x280 ~rqf4a18~ #32 // Script name aka Death Variable
+  SAY NAME1 @324
+  SAY NAME2 @324
+
+COPY ~golden_horse/cre_other/rqbs21.cre~ ~override/rqbs21.cre~
+  WRITE_ASCII 0x280 ~rqbs21~ #32 // Script name aka Death Variable
+  ADD_CRE_ITEM ~rqlett1~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  SAY NAME1 @325
+  SAY NAME2 @325
+
+// Mithrest Revan people
+COPY ~golden_horse/cre_other/rqrugos.cre~ ~override/rqrugos.cre~
+  WRITE_ASCII 0x280 ~rqrugos~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqrugos~ #8 // Dialogue file
+  SAY NAME1 @326
+  SAY NAME2 @326
+
+COPY ~golden_horse/cre_other/rqfougi.cre~ ~override/rqfougi.cre~
+  WRITE_ASCII 0x280 ~rqfougi~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqfougi~ #8 // Dialogue file
+  SAY NAME1 @327
+  SAY NAME2 @327
+
+COPY ~golden_horse/cre_other/rqrahm.cre~ ~override/rqrahm.cre~
+  WRITE_ASCII 0x280 ~rqrahm~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqrahm~ #8 // Dialogue file
+  ADD_CRE_ITEM ~rqrooste~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  SAY NAME1 @328
+  SAY NAME2 @328
+
+// Mercenaries
+COPY ~golden_horse/cre_allies/rqfbe.cre~ ~override/rqfbe.cre~
+  WRITE_ASCII 0x280 ~rqfbe~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqfbe~ #8 // Dialogue file
+  SAY BIO @329
+  SAY NAME1 @330
+  SAY NAME2 @330
+
+COPY ~golden_horse/cre_allies/rqfbet.cre~ ~override/rqfbet.cre~
+  WRITE_ASCII 0x280 ~rqfbet~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqfbet~ #8 // Dialogue file
+  SAY BIO @331
+  SAY NAME1 @332
+  SAY NAME2 @332
+
+COPY ~golden_horse/cre_allies/rqfth.cre~ ~override/rqfth.cre~
+  WRITE_ASCII 0x280 ~rqfth~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqfth~ #8 // Dialogue file
+  SAY BIO @333
+  SAY NAME1 @334
+  SAY NAME2 @334
+
+COPY ~golden_horse/cre_allies/rqfmc.cre~ ~override/rqfmc.cre~
+  WRITE_ASCII 0x280 ~rqfmc~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqfmc~ #8 // Dialogue file
+  SAY BIO @335
+  SAY NAME1 @336
+  SAY NAME2 @336
+
+COPY ~golden_horse/cre_allies/rqcmi.cre~ ~override/rqcmi.cre~
+  WRITE_ASCII 0x280 ~rqcmi~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqcmi~ #8 // Dialogue file
+  SAY BIO @337
+  SAY NAME1 @338
+  SAY NAME2 @338
+
+COPY ~golden_horse/cre_allies/rqfmn.cre~ ~override/rqfmn.cre~
+  WRITE_ASCII 0x280 ~rqfmn~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqfmn~ #8 // Dialogue file
+  SAY BIO @339
+  SAY NAME1 @340
+  SAY NAME2 @340
+
+COPY ~golden_horse/cre_allies/rqsrc.cre~ ~override/rqsrc.cre~
+  WRITE_ASCII 0x280 ~rqsrc~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqsrc~ #8 // Dialogue file
+  SAY BIO @341
+  SAY NAME1 @342
+  SAY NAME2 @342
+
+// Neutral Merchant in Watchers Keep
+COPY ~golden_horse/cre_other/rqlyngre.cre~ ~override/rqlyngre.cre~
+  WRITE_ASCII 0x280 ~rqlyngre~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqlyngre~ #8 // Dialogue file
+  SAY NAME1 @343
+  SAY NAME2 @343
+
+// Last Jaheira Encounter in Tob
+COPY ~golden_horse/cre_other/rqjah136.cre~ ~override/rqjah136.cre~
+  WRITE_ASCII 0x280 ~rqjah136~ #32 // Script name aka Death Variable
+  ADD_CRE_ITEM ~rqlettj4~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  WRITE_ASCII 0x248 ~SHOUTDLG~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rqjtob3~ #8 // Dialogue file
+  WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @267
+  SAY NAME2 @267
+
+COPY ~golden_horse/cre_other/rqbeart3.cre~ ~override/rqbeart3.cre~
+  WRITE_ASCII 0x280 ~rqbeart3~ #32 // Script name aka Death Variable
+  SAY NAME1 @344
+  SAY NAME2 @344
+
+COPY ~golden_horse/cre_other/rqwolft3.cre~ ~override/rqwolft3.cre~
+  WRITE_ASCII 0x280 ~rqwolft3~ #32 // Script name aka Death Variable
+  SAY NAME1 @345
+  SAY NAME2 @345
+
+COPY ~golden_horse/cre_other/rqinset3.cre~ ~override/rqinset3.cre~
+  WRITE_ASCII 0x280 ~rqinset3~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqinspla~ #8 // Override script
+  ADD_CRE_ITEM ~rqinsect~ #0 #0 #0 ~unstealable&undroppable~ ~RRING~
+  SAY NAME1 @346
+  SAY NAME2 @346
+
+COPY ~golden_horse/cre_other/rqnaelt3.cre~ ~override/rqnaelt3.cre~
+  WRITE_ASCII 0x280 ~rqnaelt3~ #32 // Script name aka Death Variable
+  ADD_CRE_ITEM ~rqnatur~ #0 #0 #0 ~unstealable&undroppable~ ~WEAPON1~ EQUIP
+  SAY NAME1 @347
+  SAY NAME2 @348
+
+COPY ~golden_horse/cre_other/rqshamt3.cre~ ~override/rqshamt3.cre~
+  WRITE_ASCII 0x280 ~rqshamt3~ #32 // Script name aka Death Variable
+  SAY NAME1 @349
+  SAY NAME2 @349
+
+// Bhaal 1 quest line Illasera Oasis Encounter
+COPY ~golden_horse/cre_other/rq1illa.cre~ ~override/rq1illa.cre~
+  WRITE_ASCII 0x280 ~rq1illa~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqraksha~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rq1illa~ #8 // Dialogue file
+  //WRITE_ASCII 0x250 ~rqgpuse~ #8 // Class script
+  SAY NAME1 @350
+  SAY NAME2 @350
+
+COPY ~golden_horse/cre_other/rq1f18.cre~ ~override/rq1f18.cre~
+  WRITE_ASCII 0x280 ~rq1f18~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rq1runn1~ #8 // Override script
+  SAY NAME1 @351
+  SAY NAME2 @351
+
+COPY ~golden_horse/cre_other/rq1fb19.cre~ ~override/rq1fb19.cre~
+  WRITE_ASCII 0x280 ~rq1fb19~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rq1runn2~ #8 // Override script
+  SAY NAME1 @351
+  SAY NAME2 @351
+
+COPY ~golden_horse/cre_other/rq1kamra.cre~ ~override/rq1kamra.cre~
+  WRITE_ASCII 0x280 ~rq1kamra~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rq1runn3~ #8 // Override script
+  SAY NAME1 @351
+  SAY NAME2 @351
+
+COPY ~golden_horse/cre_other/rq1mage.cre~ ~override/rq1mage.cre~
+  WRITE_ASCII 0x280 ~rq1mage~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rq1runn4~ #8 // Override script
+  SAY NAME1 @351
+  SAY NAME2 @351
+
+COPY ~golden_horse/cre_other/rq1t12f1.cre~ ~override/rq1t12f1.cre~
+  WRITE_ASCII 0x280 ~rq1t12f1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rq1runn5~ #8 // Override script
+  SAY NAME1 @351
+  SAY NAME2 @351
+
+COPY ~golden_horse/cre_other/rqmahraj.cre~ ~override/rqmahraj.cre~
+  WRITE_ASCII 0x280 ~rqmahraj~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqraksha~ #8 // Override script
+  SAY NAME1 @352
+  SAY NAME2 @352
+
+COPY ~golden_horse/cre_other/rqt1merc.cre~ ~override/rqt1merc.cre~
+  WRITE_ASCII 0x280 ~rqt1merc~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqt1oasi~ #8 // Dialogue file
+  SAY NAME1 @353
+  SAY NAME2 @353
+
+// Deathstalker t5-1 quest Fire Giant Temple
+COPY ~golden_horse/cre_other/rqtrugos.cre~ ~override/rqtrugos.cre~
+  WRITE_ASCII 0x280 ~rqtrugos~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqtrugos~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rqtrugos~ #8 // Dialogue file
+  SAY NAME1 @326
+  SAY NAME2 @326
+
+COPY ~golden_horse/cre_other/rqt5clf1.cre~ ~override/rqt5clf1.cre~
+  WRITE_ASCII 0x280 ~rqt5clf1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqt5dea1~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~rqirgul~ #8 // Override script
+  ADD_CRE_ITEM ~rqhymfur~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  ADD_CRE_ITEM ~rqbook1~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  SAY NAME1 @354
+  SAY NAME2 @354
+
+COPY ~golden_horse/cre_other/rqt5tf1.cre~ ~override/rqt5tf1.cre~
+  WRITE_ASCII 0x280 ~rqt5tf1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqt5elvy~ #8 // Dialogue file
+  SAY NAME1 @355
+  SAY NAME2 @355
+
+COPY ~golden_horse/cre_other/rq2illa.cre~ ~override/rq2illa.cre~
+  WRITE_ASCII 0x280 ~rq2illa~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rq2illa~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~rqtilla~ #8 // Override scripts
+  SAY NAME1 @350
+  SAY NAME2 @350
+
+COPY ~golden_horse/cre_other/rqt5clt1.cre~ ~override/rqt5clt1.cre~
+  WRITE_ASCII 0x280 ~rqt5clt1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqt5deat~ #8 // Override script
+  SAY NAME1 @356
+  SAY NAME2 @356
+
+COPY ~golden_horse/cre_other/rqt5clt2.cre~ ~override/rqt5clt2.cre~
+  WRITE_ASCII 0x280 ~rqt5clt2~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqt5deat~ #8 // Override script
+  SAY NAME1 @357
+  SAY NAME2 @357
+
+COPY ~golden_horse/cre_other/rqt5pba1.cre~ ~override/rqt5pba1.cre~
+  WRITE_ASCII 0x280 ~rqt5pba1~ #32 // Script name aka Death Variable
+  SAY NAME1 @358
+  SAY NAME2 @358
+
+COPY ~golden_horse/cre_other/rqt5fw01.cre~ ~override/rqt5fw01.cre~
+  WRITE_ASCII 0x280 ~rqt5fw01~ #32 // Script name aka Death Variable
+  SAY NAME1 @359
+  SAY NAME2 @359
+
+COPY ~golden_horse/cre_other/rqt5bga1.cre~ ~override/rqt5bga1.cre~
+  WRITE_ASCII 0x280 ~rqt5bga1~ #32 // Script name aka Death Variable
+  SAY NAME1 @360
+  SAY NAME2 @360
+
+// Deathstalker t6-2 quest Sendai Enclave
+COPY ~golden_horse/cre_other/rqt6clf1.cre~ ~override/rqt6clf1.cre~
+  WRITE_ASCII 0x280 ~rqt6clf1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqt6dea2~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~rqitwan~ #8 // Override script
+  ADD_CRE_ITEM ~rqbook1~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  ADD_CRE_ITEM ~rqhymfur~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  SAY NAME1 @361
+  SAY NAME2 @361
+
+COPY ~golden_horse/cre_other/rq3illa.cre~ ~override/rq3illa.cre~
+  WRITE_ASCII 0x280 ~rq3illa~ #32 // Script name aka Death Variable
+  //WRITE_ASCII 0x2cc ~rq3illa~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~rqtilla~ #8 // Override script
+  SAY NAME1 @350
+  SAY NAME2 @350
+
+COPY ~golden_horse/cre_other/rqt6clt1.cre~ ~override/rqt6clt1.cre~
+  WRITE_ASCII 0x280 ~rqt6clt1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqt6ded1~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rqt6ded1~ #8 // Dialogue file
+  SAY NAME1 @362
+  SAY NAME2 @362
+
+COPY ~golden_horse/cre_other/rqt6clt2.cre~ ~override/rqt6clt2.cre~
+  WRITE_ASCII 0x280 ~rqt6clt2~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqt67dea~ #8 // Override script
+  SAY NAME1 @363
+  SAY NAME2 @363
+
+// Deathstalker t7-3 quest Abazigal Lair
+COPY ~golden_horse/cre_other/rqt7clf1.cre~ ~override/rqt7clf1.cre~
+  ADD_CRE_ITEM ~rqhymfur~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  WRITE_ASCII 0x280 ~rqt7clf1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqt7dea2~ #8 // Dialogue file
+  ADD_CRE_ITEM ~rqbook1~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  WRITE_ASCII 0x248 ~rqsixta~ #8 // Override script
+  SAY NAME1 @364
+  SAY NAME2 @364
+
+COPY ~golden_horse/cre_other/rq4illa.cre~ ~override/rq4illa.cre~
+  WRITE_ASCII 0x280 ~rq4illa~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqtilla~ #8 // Override script
+  SAY NAME1 @350
+  SAY NAME2 @350
+
+COPY ~golden_horse/cre_other/rqt7clt1.cre~ ~override/rqt7clt1.cre~
+  WRITE_ASCII 0x280 ~rqt7clt1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqt7ded1~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rqt7ded1~ #8 // Dialogue file
+  SAY NAME1 @365
+  SAY NAME2 @365
+
+COPY ~golden_horse/cre_other/rqt7clt2.cre~ ~override/rqt7clt2.cre~
+  WRITE_ASCII 0x280 ~rqt7clt2~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqt67dea~ #8 // Override script
+  SAY NAME1 @366
+  SAY NAME2 @366
+
+// Itwantos Imp T8
+COPY ~golden_horse/cre_other/rqt8imp.cre~ ~override/rqt8imp.cre~
+  WRITE_ASCII 0x280 ~rqt8imp~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~SHOUTDLG~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rqt8imp~ #8 // Dialogue file
+  SAY NAME1 @367
+  SAY NAME1 @367
+
+// Sixtarchs Imp T8 temple assault
+COPY ~golden_horse/cre_other/rqt8imp1.cre~ ~override/rqt8imp1.cre~
+  WRITE_ASCII 0x280 ~rqt8imp1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~SHOUTDLG~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rqt8imp1~ #8 // Dialogue file
+  SAY NAME1 @367
+  SAY NAME1 @367
+
+// Sixtarchs Imp T8 balthazar assault
+COPY ~golden_horse/cre_other/rqt8imp2.cre~ ~override/rqt8imp2.cre~
+  WRITE_ASCII 0x280 ~rqt8imp2~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~SHOUTDLG~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rqt8imp2~ #8 // Dialogue file
+  SAY NAME1 @367
+  SAY NAME1 @367
+
+// Sixtarch T9
+COPY ~golden_horse/cre_other/rqt9clf1.cre~ ~override/rqt9clf1.cre~
+  WRITE_ASCII 0x280 ~rqt9clf1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqbalsix~ #8 // Override script
+  SAY NAME1 @368
+  SAY NAME1 @368
+
+COPY ~golden_horse/cre_other/rqt9clt1.cre~ ~override/rqt9clt1.cre~
+  WRITE_ASCII 0x280 ~rqt9clt1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqbalsi1~ #8 // Override script
+  SAY NAME1 @369
+  SAY NAME1 @369
+
+COPY ~golden_horse/cre_other/rqt9clt2.cre~ ~override/rqt9clt2.cre~
+  WRITE_ASCII 0x280 ~rqt9clt2~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqbalsi1~ #8 // Override script
+  SAY NAME1 @370
+  SAY NAME1 @370
+
+COPY ~golden_horse/cre_other/rqt9clf2.cre~ ~override/rqt9clf2.cre~
+  WRITE_ASCII 0x280 ~rqt9clf2~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqbalsi1~ #8 // Override script
+  SAY NAME1 @371
+  SAY NAME1 @371
+
+COPY ~golden_horse/cre_other/rqt9clt3.cre~ ~override/rqt9clt3.cre~
+  WRITE_ASCII 0x280 ~rqt9clt3~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqbalsi1~ #8 // Override script
+  SAY NAME1 @372
+  SAY NAME1 @372
+
+COPY ~golden_horse/cre_other/rqt9clt4.cre~ ~override/rqt9clt4.cre~
+  WRITE_ASCII 0x280 ~rqt9clt4~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqbalsi1~ #8 // Override script
+  SAY NAME1 @373
+  SAY NAME1 @373
+
+// Sixtarch T0 teleport and non teleport version
+COPY ~golden_horse/cre_other/rqt0clf1.cre~ ~override/rqt0clf1.cre~
+  WRITE_ASCII 0x280 ~rqt0clf1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x2cc ~rqt0clf1~ #8 // Dialogue file
+  WRITE_ASCII 0x248 ~rqsixta2~ #8 // Override script
+  SAY NAME1 @368
+  SAY NAME1 @368
+
+COPY ~golden_horse/cre_other/rqt0clt1.cre~ ~override/rqt0clt1.cre~
+  WRITE_ASCII 0x280 ~rqt0clt1~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqsixcul~ #8 // Override script
+  SAY NAME1 @369
+  SAY NAME1 @369
+
+COPY ~golden_horse/cre_other/rqt0clt2.cre~ ~override/rqt0clt2.cre~
+  WRITE_ASCII 0x280 ~rqt0clt2~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqsixcul~ #8 // Override script
+  SAY NAME1 @370
+  SAY NAME1 @370
+
+COPY ~golden_horse/cre_other/rqt0clf2.cre~ ~override/rqt0clf2.cre~
+  WRITE_ASCII 0x280 ~rqt0clf2~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqsixcul~ #8 // Override script
+  WRITE_ASCII 0x2cc ~rqt0clf2~ #8 // Dialogue file
+  SAY NAME1 @371
+  SAY NAME1 @371
+
+COPY ~golden_horse/cre_other/rqt0clt3.cre~ ~override/rqt0clt3.cre~
+  WRITE_ASCII 0x280 ~rqt0clt3~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqsixcul~ #8 // Override script
+  SAY NAME1 @372
+  SAY NAME1 @372
+
+COPY ~golden_horse/cre_other/rqt0clt4.cre~ ~override/rqt0clt4.cre~
+  WRITE_ASCII 0x280 ~rqt0clt4~ #32 // Script name aka Death Variable
+  WRITE_ASCII 0x248 ~rqsixcul~ #8 // Override script
+  SAY NAME1 @373
+  SAY NAME1 @373
+
+// Bhaal 6-3 quest Sendai Enclave
+// Bhaal 7-4 quest Abazigal Lair
+
+// Make mercenaries to never leave -------------------------------------------
+/*
+COPY_EXISTING ~DPLAYER2.bcs~ ~override/DPLAYER2.bcs~
+DECOMPILE_BCS_TO_BAF
+REPLACE_TEXTUALLY ~BreakingPoint()~
+~BreakingPoint()
+!CharName("rqfbe",Myself)
+!CharName("rqfbet",Myself)
+!CharName("rqfth",Myself)
+!CharName("rqfmc",Myself)
+!CharName("rqfmn",Myself)
+!CharName("rqcmi",Myself)
+!CharName("rqsrc",Myself)
+!CharName("rqrev",Myself)~
+COMPILE_BAF_TO_BCS
+*/
+COPY_EXISTING ~DPLAYER2.bcs~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+      REPLACE_TEXTUALLY ~BreakingPoint()~
+      ~BreakingPoint()
+      !CharName("rqfbe",Myself)
+      !CharName("rqfbet",Myself)
+      !CharName("rqfth",Myself)
+      !CharName("rqfmc",Myself)
+      !CharName("rqfmn",Myself)
+      !CharName("rqcmi",Myself)
+      !CharName("rqsrc",Myself)
+      !CharName("rqrev",Myself)~
+    END
+    BUT_ONLY
+
+
+// COMPONENTS
+//REQUIRE_COMPONENT @22
+BEGIN @374
+SUBCOMPONENT @375
+
+COPY ~golden_horse/cre/rqreva6.cre~ ~override/rqrev9.cre~
+  SAY NAME1 @25 //
+  SAY NAME2 @25 //
+  SAY BIO @26
+
+COPY ~golden_horse/cre/rqreva25.cre~ ~override/rqrev25.cre~
+  SAY NAME1 @25 //
+  SAY NAME2 @25 //
+  SAY BIO @26
+
+//REQUIRE_PREDICATE MOD_IS_INSTALLED "golden_horse.tp2" "0" "You must have main component of Revan NPC installed"
+//BEGIN 200 DESIGNATED 200 LABEL "Revan alternative class Fighter Mage Thief multi-class"
+
+BEGIN @376
+SUBCOMPONENT @375
+
+COPY ~golden_horse/cre/rqrevf6.cre~ ~override/rqrev9.cre~
+  SAY NAME1 @25
+  SAY NAME2 @25
+  SAY BIO @26
+
+COPY ~golden_horse/cre/rqrevf25.cre~ ~override/rqrev25.cre~
+  SAY NAME1 @25
+  SAY NAME2 @25
+  SAY BIO @26
+
+

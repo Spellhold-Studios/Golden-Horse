@@ -1,0 +1,581 @@
+// Prangl Ambush
+IF
+    Inparty("rqrev")
+    !Dead("rqrev")
+    Global("rqAgreedtoJob","GLOBAL",1)
+    Global("rqPranglTimer1","GLOBAL",0)
+
+THEN
+    RESPONSE #100
+        SetGlobalTimer("rqRevanInParty1","GLOBAL",SEVEN_DAYS) //FOUR_DAYS
+        SetGlobal("rqPranglTimer1","GLOBAL",1)
+END
+/*
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    AreaCheck("AR0300")
+    GlobalTimerExpired("rqRevanInParty1","GLOBAL")
+    Global("rqPranglTimer1","GLOBAL",1)
+    Global("rqSpawnPranglsGoons","AR0300",0)
+
+THEN
+    RESPONSE #100
+        SetGlobal("rqSpawnPranglsGoons","AR0300",1) // Docks District
+        CreateCreature("rqcappra",[3513.500],0) // Captain Prangl
+        CreateCreature("rqfight9",[3461.508],0) // fighter
+        CreateCreature("rqfight9",[3550.495],0) // fighter
+        CreateCreature("rqcrobw9",[3481.569],0) // crossbowman
+        CreateCreature("rqcrobw9",[3437.622],0) // crossbowman
+        CreateCreature("rqcle7",[3503.619],0) // cleric 7
+        CreateCreature("rqthie12",[3594.450],0) // thief
+        // toned down the spawns
+        //CreateCreature("rqt12f13",[3594.450],0) // thief/fighter 12/13
+        //CreateCreature("rqcle13",[3503.619],0) // cleric
+END
+*/
+// After Ambush 1 talk
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    AreaCheck("AR0300")
+    Dead("rqcappra")
+    !See([ENEMY])
+    Global("rqRevanAmbush1Reaction","GLOBAL",0)
+    Global("rqPranglGroupAmbush1","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("rqRevanAmbush1Reaction","GLOBAL",1)
+        StartDialogNoSet(Player1)
+END
+
+// Pentarch ambush
+IF
+    Inparty("rqrev")
+    !Dead("rqrev")
+    Dead("rqcappra")
+    Global("rqPranglGroupAmbush1","GLOBAL",1)  // ambush prangl no.1 rq1cappra.d
+    Global("rqPentarchTimer2","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("rqRevanInParty2","GLOBAL",TWO_DAYS)
+        SetGlobal("rqPentarchTimer2","GLOBAL",1)
+END
+/*
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    AreaCheck("AR0500")
+    GlobalTimerExpired("rqRevanInParty2","GLOBAL")
+    Global("rqPentarchTimer2","GLOBAL",1)
+    Global("rqSpawnPentarch","AR0500",0)
+
+THEN
+    RESPONSE #100
+        SetGlobal("rqSpawnPentarch","AR0500",1) // Bridge District
+        CreateCreature("rqpenbri",[4343.400],0) // Pentarch
+END
+*/
+// Pentarch Bridge Spawn Ambush Enemies
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    AreaCheck("AR0500")
+    Global("rqSpawnPentarchAmbush","GLOBAL",1)
+    Global("rqSpawnPentarchsGoons","AR0500",0)
+
+THEN
+    RESPONSE #100
+        SetGlobal("rqSpawnPentarchsGoons","AR0500",1)
+        CreateCreature("rqfight9",[4409.285],0) // fighter
+        CreateCreature("rqfight9",[4285.202],0) // fighter
+        CreateCreature("rqcrobw9",[4294.172],0) // crossbowman
+        CreateCreature("rqcrobw9",[4352.197],0) // crossbowman
+        CreateCreature("rqcle13",[4381.111],0) // cleric
+        CreateCreature("rqthie12",[4407.276],0) // thief
+        CreateCreature("rqthie12",[4328.221],0) // thief
+        CreateCreature("rqwizsla",[4343.228],0) // wizardslayer
+
+        //CreateCreature("rqfight9",[3550.495],0) // fighter
+        //CreateCreature("rqcle13",[4437.257],0) // cleric
+END
+
+// Revan after ambush talk suspiction on Ribald
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    !AreaCheck("AR0702")
+    //See(rqrev)
+    !See([ENEMY])
+    Global("rqRevanAfterAmbush2Talk","GLOBAL",1)
+
+THEN
+    RESPONSE #100
+        SetGlobal("rqRevanAfterAmbush2Talk","GLOBAL",2)
+        SetGlobal("rqRevanAfterAccusingRibald","GLOBAL",1)
+        StartDialogNoSet(Player1)
+END
+
+// Revan after Ribalds denial
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    //See([rqrev])
+    !AreaCheck("AR0702")
+    Global("rqRevanAfterAmbush2Talk","GLOBAL",3)
+    Global("rqRevanAfterAccusingRibald","GLOBAL",2)
+THEN
+    RESPONSE #100
+        SetGlobal("rqRevanAfterAccusingRibald","GLOBAL",3)
+        StartDialogNoSet(Player1)
+END
+
+// Temple ambush Pentarchs goons
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    Global("rqPentachBridgeAmbush2","GLOBAL",3)
+    Global("rqSpawnPentarchAmbush","GLOBAL",1)
+    Global("rqTempleTimer3","GLOBAL",0)
+
+THEN
+    RESPONSE #100
+        SetGlobalTimer("rqRevanInParty3","GLOBAL",TWO_DAYS)
+        SetGlobal("rqTempleTimer3","GLOBAL",1)
+END
+/*
+IF
+    AreaCheck("AR0900")
+    InParty("rqrev")
+    !Dead("rqrev")
+    GlobalTimerExpired("rqRevanInParty3","GLOBAL")
+    Global("rqSpawnTempleBards","AR0900",0)
+    Global("rqTempleTimer3","GLOBAL",1)
+
+THEN
+    RESPONSE #100
+        SetGlobal("rqSpawnTempleBards","AR0900",1) // Temple District
+        CreateCreature("rq3temo2",[1858.993],5) // Onlooker
+        CreateCreature("rq3temp1",[1957.1034],8) // Peasant orig. observer
+        CreateCreature("rq3temm1",[1930.965],14) // Merchant
+        CreateCreature("rq3temm2",[1963.983],5) // Merchant
+END
+*/
+// After Ambush 3 talk
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    !See([ENEMY])
+    Dead("rq3temo2")
+    //See([rqrev])
+    AreaCheck("AR0900")
+    Global("rqRevanAmbush3Reaction","GLOBAL",0)
+    Global("rqSpawnTempleAmbush","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("rqRevanAmbush3Reaction","GLOBAL",1)
+        StartDialogNoSet(Player1)
+END
+
+// Spawn Temple Battle Ambush Group
+IF
+    AreaCheck("AR0900")
+    InParty("rqrev")
+    !Dead("rqrev")
+    Global("rqSpawnTempleAmbush","GLOBAL",1)
+    Global("rqSpawnTempleGoons","AR0900",0)
+
+THEN
+    RESPONSE #100
+        SetGlobal("rqSpawnTempleGoons","AR0900",1) // Temple District
+        CreateCreature("rqfight9",[1693.887],0) // fighter
+        CreateCreature("rqfight9",[1714.870],0) // fighter
+        CreateCreature("rqcrobw9",[1655.874],0) // crossbowman
+        CreateCreature("rqcrobw9",[1703.853],0) // crossbowman
+        CreateCreature("rqcle13",[1625.844],0) // cleric
+        CreateCreature("rqt12f13",[2016.1017],0) // thief
+        CreateCreature("rqwizsla",[1663.812],0) // wizardslayer
+END
+
+// Esslin Ambush in Waukeens Promenade
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    Global("rqSpawnTempleAmbush","GLOBAL",1)
+    Global("rqEsslinTimer4","GLOBAL",0)
+
+THEN
+    RESPONSE #100
+        SetGlobalTimer("rqRevanInParty4","GLOBAL",TWO_DAYS)
+        SetGlobal("rqEsslinTimer4","GLOBAL",1)
+END
+
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    AreaCheck("AR0700")
+    Global("rqEsslinTimer4","GLOBAL",1)
+    GlobalTimerExpired("rqRevanInParty4","GLOBAL")
+    Global("rqSpawnWaukeensGoons","AR0700",0)
+
+THEN
+    RESPONSE #100
+        SetGlobal("rqSpawnWaukeensGoons","AR0700",1) // Waukeen Promenade
+        SetGlobal("rqEsslinTimer4","GLOBAL",2)
+        CreateCreatureOffScreen("rqwaukm",0) // Messenger [742.788]
+        CreateCreature("rqclthie",[217.1279],0) // Groshnakh
+        CreateCreature("rqessl",[216.1313],0) // Esslin
+        CreateCreature("rqgerv",[131.1185],0) // Gervin
+        CreateCreature("rq4fi9",[153.1327],0) // fighter
+        CreateCreature("rq4fi9",[154.1292],0) // fighter
+        CreateCreature("rq4fi9",[228.1224],0) // fighter
+        CreateCreature("rq4cros9",[172.1214],0) // crossbowman
+        CreateCreature("rq4cros9",[180.1182],0) // crossbowman
+        CreateCreature("rq4cros9",[71.1307],0) // crossbowman
+        CreateCreature("rq4cle13",[114.1314],0) // cleric
+        CreateCreature("rq4t12f1",[269.1128],0) // thief
+        CreateCreature("rq4wizsl",[101.1429],0) // wizardslayer
+        CreateCreature("rq4wizsl",[147.1440],0) // wizardslayer
+        //CreateCreature("rq4t12f1",[3594.450],0) // thief
+        //CreateCreature("rq4cle13",[3503.619],0) // cleric
+        //CreateCreature("rq4figh9",[153.1327],0) // fighter
+        //CreateCreature("rq4figh9",[154.1292],0) // fighter
+        //CreateCreature("rq4figh9",[228.1224],0) // fighter
+END
+
+// Renfelds reaction
+/*
+IF
+    !PartyHasItem("MISC5F")  // Renfelds Body
+    !Global("LyrosJob","GLOBAL",3)
+    Global("LyrosSpawn","GLOBAL",1)
+    Global("rqTalkedAboutHarpers","GLOBAL",0)
+    !See("RYLOCK")
+THEN
+    RESPONSE #100
+        StartDialogNoSet(Player1)
+        SetGlobal("rqTalkedAboutHarpers","GLOBAL",1)
+END
+*/
+
+// Mintiper Letter found reaction
+IF
+    PartyHasItemIdentified("rqminlet")  // Mintipers Letter
+    Global("rqRevanMintiper","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("rqRevanMintiper","GLOBAL",2)
+        StartDialogNoSet(Player1)
+END
+/*
+// Rugos Spawn append to AR0704 Mithrest Inn
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    Global("rqRevanMintiper","GLOBAL",2)
+    Global("rqRugosSpawn","AR0704",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqRugosSpawn","AR0704",1) // Mithrest Inn
+        CreateCreature("rqrugos",[742.788],0) // Rugos
+END
+*/
+// Mintiper meeting delete this? append to Umar Hills are bcs?
+IF
+    InParty("rqrev")
+    Dead("rqessl")
+    Dead("rqclthie")
+    Global("rqRevanMintiper","GLOBAL",5)
+    Global("rqSpawnMintiperUmar","AR1100",0)
+
+THEN
+    RESPONSE #100
+        SetGlobal("rqSpawnMintiperUmar","AR1100",1)
+        CreateCreature("rqmintip",[357.1492],0) // Mintiper Moonsilver
+        CreateCreature("rqarklor",[311.1390],0) // Arklor Silvereye
+        CreateCreature("rqfb19",[310.1495],0) // Harper Berserker
+        CreateCreature("rqshapes",[402.1510],0) // Harper Shapechanger
+        CreateCreature("rqargf1a",[429.1420],0) // Argent Warrior
+        CreateCreature("rqargf1a",[335.1458],0) // Argent Warrior
+        CreateCreature("rqt12f1a",[297.1463],0) // Argent Rogue
+        CreateCreature("rqt12f1b",[388.1440],0) // Argent Rogue
+        CreateCreature("rqwarc1a",[379.1366],0) // Wizardslayer Archer
+        CreateCreature("rqcle131",[388.1392],0) // Argent Acolyte
+END
+
+// Mintiper dead reaction
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    !AreaCheck("AR1100")
+    Dead("rqmintip")
+    !See([ENEMY])
+    Global("rqContractsRugosAvailable","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("rqContractsRugosAvailable","GLOBAL",2)
+        StartDialogNoSet(Player1)
+END
+
+// Jaheira Ambush 1
+IF
+    Global("rqRevanMintiper","GLOBAL",5)
+    Global("LyrosJob","GLOBAL",3)
+    !Dead("jaheira")
+    InParty("rqrev")
+    Dead("rqmintip") // mintiper dead
+    Global("rqJaheira1Timer1","GLOBAL",0)
+    Global("rqJaheira1AmbushSpawn","GLOBAL",0)
+    OR(7)
+        AreaCheck("AR0300") // Docks
+        AreaCheck("AR1000") // Government
+        AreaCheck("AR0900") // Temple
+        AreaCheck("AR0400") // Slums
+        AreaCheck("AR0020") // City Gates
+        AreaCheck("AR0500") // Bridge
+        AreaCheck("AR0700") // Waukeen's Promenade
+    OR(4)
+        OpenState("Cell01",FALSE)
+        Global("JaheiraJerk","GLOBAL",1)
+        Global("JaheiraHunt","GLOBAL",1)
+        ReputationLT([PC],13)
+THEN
+    RESPONSE #100
+        SetGlobal("rqJaheira1Timer1","GLOBAL",1)
+        SetGlobalTimer("rqRevanInParty6","GLOBAL",TWO_DAYS)
+        SetGlobal("SPRITE_IS_DEADJaheira","GLOBAL",1)
+        ActionOverride("Jaheira",DestroySelf())
+END
+
+// Jaheira Ambush 1
+IF
+    Global("rqJaheira1Timer1","GLOBAL",1)
+    GlobalTimerExpired("rqRevanInParty6","GLOBAL")
+    Global("rqJaheira1AmbushSpawn","GLOBAL",0)
+    InParty("rqrev")
+    !Dead("rqrev")
+    //!Global("Chapter","GLOBAL",7)
+    !Global("Chapter","GLOBAL",4)
+    !Global("Chapter","GLOBAL",5)
+    AreaType(OUTDOOR)
+    !See([ENEMY])
+    !Range([NEUTRAL],10)
+THEN
+    RESPONSE #100
+        SetGlobal("rqJaheira1AmbushSpawn","GLOBAL",1)
+        CreateCreatureObjectOffScreen("rqjah121",Myself,0,0,0) // Jaheira
+        CreateCreatureObjectOffScreen("rqgalva",Myself,0,0,0) // Galvarey
+        CreateCreatureObjectOffScreen("rqjaga4",Myself,0,0,0) // Iko
+        CreateCreatureObjectOffScreen("rqjaga1",Myself,0,0,0) // Bessen
+        CreateCreatureObjectOffScreen("rqjaga2",Myself,0,0,0) // Kail
+        CreateCreatureObjectOffScreen("rqjaga3",Myself,0,0,0) // Nadinal
+END
+
+// Jaheira Ambush 1 ---- reaction ----
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    Dead("rqmintip")
+    !See([ENEMY])
+    CombatCounter(0)
+    Global("rqJaheira1Ambush","GLOBAL",1)
+    Global("rqJaheira1AmbushReaction","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqJaheira1AmbushReaction","GLOBAL",1)
+        StartDialogNoSet(Player1)
+END
+
+// Jaheira Ambush 2
+IF
+    Global("rqJaheira1Ambush","GLOBAL",1)
+    Dead("rqgalva")
+    InParty("rqrev")
+    !Dead("rqrev")
+    Global("rqJaheira2Ambush2","GLOBAL",0)
+    Global("rqJaheira2Timer2","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("rqrevaninparty7","GLOBAL",TWO_DAYS)
+        SetGlobal("rqJaheira2Timer2","GLOBAL",1)
+END
+
+IF
+    GlobalTimerExpired("rqrevaninparty7","GLOBAL")
+    Global("rqJaheira2Timer2","GLOBAL",1)
+    Global("rqJaheira2AmbushSpawn","GLOBAL",0)
+    Global("rqJaheira2ReinforceRylock","GLOBAL",0)
+    Global("rqJaheira2ReinforceRenfeld","GLOBAL",0)
+    InParty("rqrev")
+    !Dead("rqrev")
+    Dead("rqgalva")
+    !Global("Chapter","GLOBAL",7)
+    !Global("Chapter","GLOBAL",4)
+    !Global("Chapter","GLOBAL",5)
+    AreaType(OUTDOOR)
+    !See([ENEMY])
+    !Range([NEUTRAL],10)
+THEN
+    RESPONSE #100
+        SetGlobal("rqJaheira2AmbushSpawn","GLOBAL",1)
+        CreateCreatureObjectOffScreen("rqjah122",Myself,0,0,0) // Jaheira
+        //CreateCreatureObjectOffScreen("rqhass1",Myself,0,0,0) // Lucette
+        CreateCreatureObjectOffScreen("rqberin","rqjah122",0,0,0) // Berinvar
+        //CreateCreatureObjectOffScreen("rqpace",Myself,0,0,0) // Pace
+        //CreateCreatureObjectOffScreen("rqmero",Myself,0,0,0) // Meronia
+        CreateCreatureObjectOffScreen("jahei1",Myself,0,0,0)  // Harper
+        CreateCreatureObjectOffScreen("jahei2",Myself,0,0,0)  // Harper
+        CreateCreatureObjectOffScreen("jahei3",Myself,0,0,0)  // Harper
+        CreateCreatureObjectOffScreen("jahei4",Myself,0,0,0)  // Harper
+END
+
+IF
+    Global("rqJaheira2AmbushSpawn","GLOBAL",1)
+    GlobalTimerNotExpired("RenfeldDeath","GLOBAL")
+    !PartyHasItem("MISC5F")
+    Global("rqJaheira2ReinforceRenfeld","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqJaheira2ReinforceRenfeld","GLOBAL",1)
+        CreateCreatureObjectOffScreen("rqrenf",Myself,0,0,0) // Renfeld
+END
+
+IF
+    Global("rqJaheira2AmbushSpawn","GLOBAL",1)
+    !Dead("RYLOCK")
+    Global("rqJaheira2ReinforceRylock","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqJaheira2ReinforceRylock","GLOBAL",1)
+        CreateCreatureObjectOffScreen("rqrylo",Myself,0,0,0) // Rylock
+END
+
+IF
+    Global("rqJaheira2AmbushSpawn","GLOBAL",1)
+    !Dead("HARPASS1")
+    Global("rqJaheira2ReinforceLucette","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqJaheira2ReinforceLucette","GLOBAL",1)
+        CreateCreatureObjectOffScreen("rqhass1",Myself,0,0,0) // Lucette
+END
+/*
+IF
+    Global("rqJaheira2AmbushSpawn","GLOBAL",1)
+    !Dead("BERINVAR")
+    Global("rqJaheira2ReinforceBerinvar","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqJaheira2ReinforceBerinvar","GLOBAL",1)
+        CreateCreatureObjectOffScreen("rqberin",Myself,0,0,0) // Berinvar
+END
+*/
+IF
+    Global("rqJaheira2AmbushSpawn","GLOBAL",1)
+    !Dead("PACE")
+    Global("rqJaheira2ReinforcePace","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqJaheira2ReinforcePace","GLOBAL",1)
+        CreateCreatureObjectOffScreen("rqpace",Myself,0,0,0) // Pace
+END
+
+IF
+    Global("rqJaheira2AmbushSpawn","GLOBAL",1)
+    OR (3)
+        !Dead("JAMERONI")
+        !Dead("MERONIA")
+        !Dead("MERINIA")
+    Global("rqJaheira2ReinforceMeronia","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqJaheira2ReinforceMeronia","GLOBAL",1)
+        CreateCreatureObjectOffScreen("rqmero",Myself,0,0,0) // Meronia
+END
+
+// Revianne jah ambush 3
+IF
+    Global("rqJaheira2Ambush","GLOBAL",1)
+    Dead("rqjah122")
+    InParty("rqrev")
+    !Dead("rqrev")
+    Global("rqJaheira3Timer3","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqJaheira3Timer3","GLOBAL",1)
+        SetGlobalTimer("rqrevaninparty8","GLOBAL",TWO_DAYS)
+END
+
+IF
+    GlobalTimerExpired("rqrevaninparty8","GLOBAL")
+    Global("rqJaheira3Timer3","GLOBAL",1)
+    Global("rqHarper3RevianeSpawn","GLOBAL",0)
+    !Global("Chapter","GLOBAL",4)
+    !Global("Chapter","GLOBAL",5)
+    !Global("Chapter","GLOBAL",7)
+    AreaType(OUTDOOR)
+    InParty(Myself)
+    !See([ENEMY])
+    !Range([NEUTRAL],10)
+THEN
+    RESPONSE #100
+        SetGlobal("rqHarper3RevianeSpawn","GLOBAL",1)
+        CreateCreatureObjectOffScreen("rqjare",Myself,0,0,0)  // Reviane
+        CreateCreatureObjectOffScreen("rqjare1",Myself,0,0,0)  // Harper
+        CreateCreatureObjectOffScreen("rqjare2",Myself,0,0,0)  // Harper
+        CreateCreatureObjectOffScreen("rqjare3",Myself,0,0,0)  // Harper
+        CreateCreatureObjectOffScreen("rqjare4",Myself,0,0,0)  // Harper
+END
+
+// Jaheira Ambush 4
+IF
+    Global("rqHarper3RevianeSpawn","GLOBAL",1)
+    Global("rqJaheira4Timer4","GLOBAL",0)
+    Dead("rqjare")
+    InParty("rqrev")
+    !Dead("rqrev")
+THEN
+    RESPONSE #100
+        SetGlobalTimer("rqrevaninparty9","GLOBAL",TWO_DAYS)
+        SetGlobal("rqJaheira4Timer4","GLOBAL",1)
+        //SetGlobal("rqJaheira4AmbushSpawn","GLOBAL",0)
+END
+
+IF
+    GlobalTimerExpired("rqrevaninparty9","GLOBAL")
+    Global("rqJaheira4Timer4","GLOBAL",1)
+    Global("rqJaheira4AmbushSpawn","GLOBAL",0)
+    !Global("Chapter","GLOBAL",4)
+    !Global("Chapter","GLOBAL",5)
+    !Global("Chapter","GLOBAL",7)
+    AreaType(OUTDOOR)
+    InParty(Myself)
+    !See([ENEMY])
+    !Range([NEUTRAL],10)
+THEN
+    RESPONSE #100
+        SetGlobal("rqJaheira4AmbushSpawn","GLOBAL",1)
+        CreateCreatureObjectOffScreen("rqjah131",Myself,0,0,0)  // Jaheira13
+        CreateCreatureObjectOffScreen("rqdermin",Myself,0,0,0)  // Dermin Courtierdale
+        CreateCreatureObjectOffScreen("rqjade1",Myself,0,0,0)  // Lennah
+        CreateCreatureObjectOffScreen("rqjade2",Myself,0,0,0)  // Thenry
+        CreateCreatureObjectOffScreen("rqjade3",Myself,0,0,0)  // Jeremon
+        CreateCreatureObjectOffScreen("rqjade4",Myself,0,0,0)  // Chrost
+END
+
+IF
+    Dead("rqjah131") // Jaheira13
+    Dead("rqdermin") // Dermin Courtierdale
+    Dead("rqjade1") // Lennah
+    Dead("rqjade2") // Thenry
+    Dead("rqjade3") // Jeremon
+    Dead("rqjade4") // Chrost
+    PartyHasItem("rqletder")
+    Global("rqJaheira4AmbushSpawn","GLOBAL",1)
+    Global("rqJaheira4AmbushReaction","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqJaheira4AmbushReaction","GLOBAL",1)
+        StartDialogNoSet(Player1)
+END
+

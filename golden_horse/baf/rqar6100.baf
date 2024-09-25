@@ -1,0 +1,155 @@
+// Sendai's Lair
+IF
+    Dead("SENDAI")
+    Global("rqT6DeathStalkerSendai","GLOBAL",0)
+    Global("rqT6DeathStalkersSEN","AR6100",0) // Sendai's Enclave
+THEN
+    RESPONSE #100
+        SetGlobal("rqT6DeathStalkersSEN","AR6100",1) // Sendai's Enclave
+        SetGlobal("rqT6DeathStalkerSendai","GLOBAL",1)
+        CreateCreature("rqt6clf1",[1472.1322],8) // Deathstalker Itwantos
+        CreateCreature("rqt6clt1",[1557.1207],8) // Deathstalker Rengarn
+        CreateCreature("rqt6clt2",[1506.1335],8) // Deathstalker Jatwalg
+        Continue()
+END
+// -------------------------- Sendai Reinforcements -----------------------
+IF
+    Global("rqT6DeathStalkerSendai","GLOBAL",1)
+    !Dead("rqt5clt1")
+    Global("rqT6DeathStalkerTylgarth","AR6100",0) // Sendai's Enclave
+THEN
+    RESPONSE #100
+        SetGlobal("rqT6DeathStalkerTylgarth","AR6100",1)
+        CreateCreature("rqt5clt1",[1620.1369],8) // Deathstalker Tylgrath
+        Continue()
+END
+
+IF
+    Global("rqT6DeathStalkerSendai","GLOBAL",1)
+    !Dead("rqt5clt2")
+    Global("rqT6DeathStalkerAmmar2","AR6100",0) // Sendai's Enclave
+THEN
+    RESPONSE #100
+        SetGlobal("rqT6DeathStalkerAmmar2","AR6100",1) // Sendai's Enclave
+        CreateCreature("rqt5clt2",[1725.1381],8) // Deathstalker Ammar
+        Continue()
+END
+
+IF
+    Global("rqT6DeathStalkerSendai","GLOBAL",1)
+    !Dead("rqt5clf1")
+    Global("rqT6DeathStalkerIrgulis","AR6100",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqT6DeathStalkerIrgulis","AR6100",1) // Sendai's Enclave
+        CreateCreature("rqt5clf1",[1627.1398],8) // Deathstalker Irgulis
+        Continue()
+END
+/*
+IF
+    Global("rqT6DeathStalkerSendai","GLOBAL",1)
+    !Dead("rqt5clf1")
+    //Dead("rq1illa")
+    Global("rqT7DeathStalkerIll61002","AR6000",0) // Sendai's Enclave
+THEN
+    RESPONSE #100
+        SetGlobal("rqT7DeathStalkerIll61002","AR6000",1) // Sendai's Enclave
+        CreateCreature("rq2illa",[1754.1246],0) // Illasera
+        Continue()
+END
+*/
+// Illasera Type
+IF
+    Global("rqT6DeathStalkerSendai","GLOBAL",1)
+    !Dead("rqt5clf1") // Deathstalker Irgulis
+    !Dead("rq2illa") // Illasera
+    Global("rqIllaseraType2","AR6100",0) // Sendai's Enclave
+    Global("rqIllaseraType3","AR6100",0) // Sendai's Enclave
+    Global("rqIllaseraType4","AR6100",0) // Sendai's Enclave
+THEN
+    RESPONSE #100
+        SetGlobal("rqIllaseraType2","AR6100",1) // Sendai's Enclave
+        CreateCreature("rq2illa",[1754.1246],0) // Illasera
+        Continue()
+END
+
+IF
+    Global("rqT6DeathStalkerSendai","GLOBAL",1)
+    !Dead("rqt5clf1") // Deathstalker Irgulis
+    Dead("rq2illa") // Illasera
+    !Dead("rq3illa") // Illasera
+    Global("rqIllaseraType2","AR6100",0) // Sendai's Enclave
+    Global("rqIllaseraType3","AR6100",0) // Sendai's Enclave
+    Global("rqIllaseraType4","AR6100",0) // Sendai's Enclave
+THEN
+    RESPONSE #100
+        SetGlobal("rqIllaseraType3","AR6100",1) // Sendai's Enclave
+        CreateCreature("rq3illa",[1530.1411],8) // Illasera
+        Continue()
+END
+
+IF
+    Global("rqT6DeathStalkerSendai","GLOBAL",1)
+    !Dead("rqt5clf1") // Deathstalker Irgulis
+    Dead("rq2illa") // Illasera
+    Dead("rq3illa") // Illasera
+    !Dead("rq4illa") // Illasera
+    Global("rqIllaseraType2","AR6100",0) // Sendai's Enclave
+    Global("rqIllaseraType3","AR6100",0) // Sendai's Enclave
+    Global("rqIllaseraType4","AR6100",0) // Sendai's Enclave
+THEN
+    RESPONSE #100
+        SetGlobal("rqIllaseraType4","AR6100",1) // Sendai's Enclave
+        CreateCreature("rq4illa",[1645.1275],8) // Illasera
+        Continue()
+END
+// ---------------------------- Abazigal ----------------------------------
+IF
+    Global("rqT6DeathStalkerSendai","GLOBAL",1)
+    !Dead("rqt7clf1")
+    Dead("Abazigal")
+    Global("rqT6DeathStalkers1Sixtarch","AR6100",0) // Sendai's Enclave
+THEN
+    RESPONSE #100
+        CreateCreature("rqt7clf1",[1740.1334],8) // Deathstalker Sixtarch
+        SetGlobal("rqT6DeathStalkers1Sixtarch","AR6100",1) // Sendai's Enclave
+        Continue()
+END
+
+IF
+    Global("rqT6DeathStalkerSendai","GLOBAL",1)
+    !Dead("rqt7clt1")
+    Dead("Abazigal")
+    Global("rqT6DeathStalkersLlergwyn","AR6100",0) // Sendai's Enclave
+THEN
+    RESPONSE #100
+        SetGlobal("rqT6DeathStalkersLlergwyn","AR6100",1) // Sendai's Enclave
+        CreateCreature("rqt7clt1",[1879.1347],8) // Deathstalker Llergwyn
+        Continue()
+END
+
+IF
+    Global("rqT6DeathStalkerSendai","GLOBAL",1)
+    !Dead("rqt7clt2")
+    Dead("Abazigal")
+    Global("rqT6DeathStalkerNalgarath","AR6100",0) // Sendai's Enclave
+THEN
+    RESPONSE #100
+        SetGlobal("rqT6DeathStalkerNalgarath","AR6100",1) // Sendai's Enclave
+        CreateCreature("rqt7clt2",[1775.1377],8) // Deathstalker Nalgarath
+        Continue()
+END
+/*
+IF
+    GlobalTimerExpired("rqTobCheckOnMen","GLOBAL")
+THEN
+    RESPONSE #100
+        ActionOverride("rqt7clt2",DestroySelf())
+        ActionOverride("rqt7clt1",DestroySelf())
+        ActionOverride("rqt7clf1",DestroySelf())
+        ActionOverride("rqt6clt2",DestroySelf())
+        ActionOverride("rqt6clt1",DestroySelf())
+        ActionOverride("rqt6clf1",DestroySelf())
+        Continue()
+END
+*/

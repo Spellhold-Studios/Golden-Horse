@@ -1,0 +1,17 @@
+IF
+    InParty("rqrev")
+    !Dead("rqrev")
+    GlobalTimerExpired("rqRevanInParty3","GLOBAL")
+    Global("rqSpawnTempleBards","AR0900",0)
+    Global("rqTempleTimer3","GLOBAL",1)
+
+THEN
+    RESPONSE #100
+        SetGlobal("rqSpawnTempleBards","AR0900",1) // Temple District
+        CreateCreature("rq3temo2",[1858.993],5) // Onlooker
+        CreateCreature("rq3temp1",[1957.1034],8) // Peasant orig. observer
+        CreateCreature("rq3temm1",[1930.965],14) // Merchant
+        CreateCreature("rq3temm2",[1963.983],5) // Merchant
+        Continue()
+END
+

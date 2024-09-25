@@ -1,0 +1,20 @@
+IF
+    NumTimesTalkedTo(0)
+    See([PC])
+THEN
+    RESPONSE #100
+        StartDialogueNoSet([PC])
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    Allegiance(Myself,ENEMY)
+    Global("rqTurnedToMarajah","LOCALS",0)
+    HPLT(Myself,20)
+THEN
+    RESPONSE #100
+        ForceSpellRES("rqraksha",Myself)
+        SetGlobal("rqTurnedToMarajah","LOCALS",1)
+        SetGlobal("rqTobIllaseraIsRakshasa","GLOBAL",1)
+        EscapeArea()
+END

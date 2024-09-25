@@ -1,0 +1,65 @@
+IF
+    Global("rqcontract5battle","GLOBAL",1)
+    Allegiance(Myself,NEUTRAL)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+THEN
+    RESPONSE #100
+        Enemy()
+        SetGlobal("rqcontract5battle","GLOBAL",1)
+END
+
+IF
+    Global("rqBlowHorn","LOCALS",0)
+    Global("rqcontract5battle","GLOBAL",1)
+    //Global("rqUsedHorn","LOCALS",1)
+    !Dead("rqpaud")
+THEN
+    RESPONSE #100
+        SetGlobalTimer("rqHornOfWilderness","LOCALS",25)
+        SetGlobal("rqBlowHorn","LOCALS",1)
+        DisplayStringHead(Myself,@0)  // Uses Horn of Wilderness
+        PlaySound("rqhorn")
+        ReallyForceSpellRES("rqwodbei",NearestEnemyOf(Myself)) // Summon Woodland Beings
+        ReallyForceSpellRES("rqanisu3",NearestEnemyOf(Myself)) // Animal Summoning III
+        ReallyForceSpellRES("rqconani",NearestEnemyOf(Myself)) // Summon Conjure Animals
+END
+
+IF
+    GlobalTimerExpired("rqHornOfWilderness","LOCALS")
+    !Dead("rqpaud")
+    Global("rqBlowHorn","LOCALS",1)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("rqHornOfWilderness","LOCALS",25)
+        SetGlobal("rqBlowHorn","LOCALS",0)
+        DisplayStringHead(Myself,@0)  // Uses Horn of Wilderness
+        PlaySound("rqhorn")
+        ReallyForceSpellRES("rqwodbei",NearestEnemyOf(Myself)) // Summon Woodland Beings
+        ReallyForceSpellRES("rqanisu3",NearestEnemyOf(Myself)) // Animal Summoning III
+        ReallyForceSpellRES("rqconani",NearestEnemyOf(Myself)) // Summon Conjure Animals
+END
+
+
+/*
+IF
+    GlobalTimerExpired("rqHornOfWilderness","AR1900")
+    Global("rqBlowHorn","LOCALS",0)
+    !Dead("rqpaud")
+THEN
+    RESPONSE #100
+        SetGlobalTimer("rqHornOfWilderness","AR1900",20)
+        SetGlobal("rqBlowHorn","LOCALS",1)
+        DisplayStringHead(Myself,@0)  // Uses Horn of Wilderness
+        PlaySound("rqhorn")
+        ReallyForceSpellRES("rqwodbei",NearestEnemyOf(Myself)) // Summon Woodland Beings
+        ReallyForceSpellRES("rqearele",NearestEnemyOf(Myself)) // Summon Earth Elemental
+        ReallyForceSpellRES("rqfirele",NearestEnemyOf(Myself)) // Summon Fire Elemental
+END
+*/

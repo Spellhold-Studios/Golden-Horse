@@ -1,0 +1,162 @@
+// AR5200 marching mountains dialog script
+/*
+IF
+    AreaCheck("AR5200")
+    NumTimesTalkedTo(0)
+    See([PC])
+THEN
+    RESPONSE #100
+        StartDialogNoSet([PC])
+END
+*/
+// cast improved haste
+IF
+    See(NearestEnemyOf(Myself))
+    Global("rqUsedClaw","LOCALS",0)
+THEN
+    RESPONSE #100
+        PlaySound("rqcast01")
+        SetGlobal("rqUsedClaw","LOCALS",1)
+        DisplayStringHead(Myself,@1) // Uses Item
+        ForceSpellRES("rqhymfur",Myself)  // Hymmn to Murderous Fury
+END
+// Itwantos escape attempt Deathstalker last encounter failed attempt to escape
+IF
+    HPPercentLT(Myself,40)
+    Global("rqRetreatEnc3-0","LOCALS",0)
+    Global("Enclave","GLOBAL",2)
+    Global("rqTobRetreatImpossible","GLOBAL",0)
+THEN
+    RESPONSE #100
+        CreateVisualEffectObject("SPDIMNDR",Myself)
+        DisplayStringHead(Myself,@2) // Next time!
+        DisplayStringHead(Myself,@3) // What?! The magic does not work! Someone betrayed us!
+        SetGlobal("rqRetreatEnc3-0","LOCALS",1)
+        SetGlobal("rqTobRetreatImpossible","GLOBAL",2)
+        //SetGlobal("rqTobItwanSpeakToCharname","LOCALS",1)
+END
+// Itwantos tries himself
+IF
+    See([PC])
+    Global("rqTobRetreatImpossible","GLOBAL",1)
+THEN
+    RESPONSE #100
+        CreateVisualEffectObject("SPDIMNDR",Myself)
+        SetGlobal("rqTobRetreatImpossible","GLOBAL",2)
+END
+// Itwantos
+IF
+    Global("rqTobRetreatImpossible","GLOBAL",2)
+    See([PC])
+THEN
+    RESPONSE #100
+        SetGlobal("rqTobRetreatImpossible","GLOBAL",3)
+        StartDialogNoSet([PC])
+END
+// !Not last retreat
+IF
+    GlobalLT("Enclave","GLOBAL",2)
+    Global("rqTobRetreatImpossible","GLOBAL",0)
+    HPPercentLT(Myself,40)
+    Global("rqRetreatEncT6-0","LOCALS",0)
+THEN
+    RESPONSE #100
+        ReallyForceSpell(Myself,DRYAD_TELEPORT)
+        DisplayStringHead(Myself,74086) // Damn you!
+        SetGlobal("rqRetreatEncT6-0","LOCALS",1)
+END
+// !Not last retreat
+/*
+IF
+    Global("rqTobRetreatImpossible","GLOBAL",0)
+    HPPercentLT(Myself,40)
+    Global("rqRetreatEncT6-1","LOCALS",0)
+THEN
+    RESPONSE #100
+        ReallyForceSpell(Myself,DRYAD_TELEPORT)
+        DisplayStringHead(Myself,74086) // Damn you!
+        SetGlobal("rqRetreatEncT6-1","LOCALS",1)
+END
+*/
+// Turn hostile script 6000 Abazigal
+IF
+    Allegiance("rq7clf1",ENEMY)  // Deathstalker Sixtarch
+    !Allegiance(Myself,ENEMY)
+    Global("rqAttackBegins2","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqAttackBegins2","LOCALS",1)
+        Enemy()
+END
+// Give Holy symbols
+IF
+    Global("rqGiveItemsCharControl","LOCALS",0)
+    Global("rqTobGiveCharnItems","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("rqGiveItemsCharControl","LOCALS",1)
+        GiveItem("rqhosy1",Player1)
+END
+// Ally
+IF
+    Global("rqChangeToAlly","LOCALS",0)
+    Global("rqTobChangeToAlly","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("rqChangeToAlly","LOCALS",1)
+        ClearAllActions()
+        ChangeEnemyAlly(Myself,ALLY)
+END
+// Escape Area
+IF
+    Global("rqEscapeAreaControl","LOCALS",0)
+    Global("rqTobEscapeArea","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("rqEscapeAreaControl","LOCALS",1)
+        ClearAllActions()
+        ChangeEnemyAlly(Myself,NEUTRAL)
+        EscapeArea()
+END
+// Neutral stay in area Area2
+IF
+    Global("rqNeutral2","LOCALS",0)
+    Global("rqTobNeutral","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("rqNeutral2","LOCALS",1)
+        ClearAllActions()
+        ChangeEnemyAlly(Myself,NEUTRAL)
+END
+
+IF
+    !Dead("rqt6clt1")  // Deathstalker Rengarn
+    !Dead("rqt6clt2")  // Deathstalker Jatwalg
+    !Dead("rqt7clf1")  // Deathstalker Sixtarch
+    !Dead("rqt7clt1")  // Deathstalker Llergwyn
+    !Dead("rqt7clt2")  // Deathstalker Nalgarath
+    Dead("rqt5clf1")  // Deathstalker Irgulis
+    Dead("rqt5clt1")  // Deathstalker Ammar
+    Dead("rqt5clt2")  // Deathstalker Tylgarth
+    Global("rqTobItwantosPrimaryAlly","GLOBAL",1)
+    Global("rqTobCheckonMenCTRL1","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("rqTobCheckOnMen","GLOBAL",12)
+        SetGlobal("rqTobCheckonMenCTRL1","LOCALS",1)
+        SetGlobal("rqTobEscapeArea","GLOBAL",1)
+        DisplayStringHead(Myself,@13) //Men! We *shall* bite off delicious revenge out our former comrades and i am hungry!!
+END
+
+IF
+    Dead("rqt5clf1")  // Deathstalker Irgulis
+    Dead("rqt5clt1")  // Deathstalker Ammar
+    Dead("rqt5clt2")  // Deathstalker Tylgarth
+    Global("rqTobItwantosPrimaryAlly","GLOBAL",1)
+    Global("rqTobCheckonMenCTRL2","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("rqTobEscapeArea","GLOBAL",1)
+        SetGlobal("rqTobCheckonMenCTRL2","LOCALS",1)
+        DisplayStringHead(Myself,@14) //I will have to return to gather our dead or perhaps i shall send some our servants
+END
