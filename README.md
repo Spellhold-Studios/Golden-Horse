@@ -33,7 +33,7 @@ This mod introduces a joinable NPC, Revan Artecratos, with a story, new items, a
 
 Revan is a fugitive from Moonsea trying to establish his new life in Athkatla; however, recent events have revealed to him that there is someone with influence who can cast shadow long enough to reach from Moonsea to Athkatla.
 
-Revan does not have a lot of interactions, though he does have at least one banter with each Bioware NPC in SoA (less in ToB). If you are looking for a fully-fleshed NPC telling his life story throughout BG2, you may be disappointed. This mod is more about protecting an NPC from assassins with a story tying it all together.
+Revan does not have a lot of interactions, though he does have at least one banter with each Bioware NPC in SoA (less in ToB). If you are looking for a fully fleshed out NPC telling his life story throughout BG2, you may be disappointed. This mod is more about protecting an NPC from assassins with a story tying it all together.
 
 <br>
 
