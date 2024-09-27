@@ -54,7 +54,7 @@ Revan does not have a lot of interactions, though he does have at least one bant
 
 ## Key features
 
-- A main joinable NPC, Revan Artecratos, selectable as Assassin/Mage, Thief/Mage, or Fighter/Mage/Thief
+- A joinable NPC, Revan Artecratos, selectable as Assassin/Mage, Thief/Mage, or Fighter/Mage/Thief
 - 7 minor NPCs without any dialogue available as mercenaries
 - 22 new items
 - 16 new encounters in Shadows of Amn
@@ -65,4 +65,18 @@ Revan does not have a lot of interactions, though he does have at least one bant
 <!-- double white space after each credits **Heading** -->
 
 **Author**  
-svj (Juraj Svitnic)
+
+- svj (Juraj Svitnic)
+
+**Contributors**  
+
+&nbsp;&nbsp;&nbsp; All below have provided me with useful advice:
+
+- CamDawg
+- Jarno Mikkola
+- jmerry
+- jastey
+- argent77
+- subtledoctor
+- Avenger
+- skellytz
