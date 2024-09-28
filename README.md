@@ -12,6 +12,15 @@
 [![Games](https://img.shields.io/badge/games-BG2%20%a0%20BGT-%2392403a)](https://github.com/Spellhold-Studios/Golden-Horse/releases)
 [![Language](https://img.shields.io/badge/language-en-%2392403a)](https://github.com/Spellhold-Studios/Golden-Horse/releases)
 
+<!--
+Badges white space separator: %20%a0%20
+Badges ":" (colon) symbol: %3A
+Badges "-" (hyphen) symbol: --
+Games full list: BG1 BG2 BGT BG%3AEE SoD BG2%3AEE EET IWD1 IWD2 IWD%3AEE PST PST%3AEE
+IETF language tags: https://support.elucidat.com/hc/en-us/articles/6068623875217-IETF-language-tags
+Why some badges update slowly: https://github.com/pujux/badge-it/issues/78
+-->
+
 # Golden Horse Mercenary Company
 
 *A Spellhold Studios mod for Baldur's Gate II*
@@ -62,7 +71,7 @@ Revan does not have a lot of interactions, though he does have at least one bant
 
 ## Credits
 
-<!-- double white space after each credits **Heading** -->
+<!-- double space after each credits **Heading** if you don't need lists -->
 
 **Author**  
 
