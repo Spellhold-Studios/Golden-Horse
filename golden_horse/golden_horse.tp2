@@ -3031,7 +3031,7 @@ COPY_EXISTING ~DPLAYER2.bcs~ ~override~
 BEGIN @374
 SUBCOMPONENT @375
 
-COPY ~golden_horse/cre/rqreva6.cre~ ~override/rqrev9.cre~
+COPY ~golden_horse/cre/rqreva9.cre~ ~override/rqrev9.cre~
   SAY NAME1 @25 //
   SAY NAME2 @25 //
   SAY BIO @26
@@ -3047,7 +3047,7 @@ COPY ~golden_horse/cre/rqreva25.cre~ ~override/rqrev25.cre~
 BEGIN @376
 SUBCOMPONENT @375
 
-COPY ~golden_horse/cre/rqrevf6.cre~ ~override/rqrev9.cre~
+COPY ~golden_horse/cre/rqrevf9.cre~ ~override/rqrev9.cre~
   SAY NAME1 @25
   SAY NAME2 @25
   SAY BIO @26
