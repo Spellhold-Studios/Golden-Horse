@@ -2,7 +2,7 @@
 ====================================================================================================================
 Golden Horse mercenary company mod for Baldur's Gate 2 Throne of Bhaal
 ====================================================================================================================
-Creator Name: Juraj Svitnic
+Creator Name: Juraj Svitnič
 Creator E-mail: oaq@gmx.com
 Creator Web URL: none
 Version: 1.5e
@@ -133,7 +133,7 @@ Interplay Entertainment Corp. All Rights Reserved. Exclusively licensed and dist
 Interplay Entertainment Corp. All other trademarks and copyrights are property of their respective owners.
 
 Golden Horse mercenary company mod for Baldur's Gate II
-© 2018-24 Juraj Svitnic. The Golden Horse mercenary company mod
+© 2018-24 Juraj Svitnič. The Golden Horse mercenary company mod
 is not developed, supported, or endorsed by BioWare, Black Isle Studios, Interplay Entertainment Corp
 or the Wizards of the Coast. All other trademarks and copyrights are property of their respective owners.
 
