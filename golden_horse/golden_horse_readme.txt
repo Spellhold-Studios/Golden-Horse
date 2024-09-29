@@ -5,25 +5,24 @@ Golden Horse mercenary company mod for Baldur's Gate 2 Throne of Bhaal
 Creator Name: Juraj Svitnic
 Creator E-mail: oaq@gmx.com
 Creator Web URL: none
-Version: 1.4e
+Version: 1.5e
 
 ====================================================================================================================
 MOD CONTENT:
---------------------------
-This mod adds 1 Revan Artecratos selectable Assassin/Mage, Thief/Mage, Fighter/Mage/Thief
+------------
+This mod adds 1 Revan Artecratos selectable class: Assassin/Mage, Thief/Mage, Fighter/Mage/Thief
 7 NPCs without any dialogue see MERCENARIES: New items and new encounters.
 
 MAIN NPC:
 ---------
-Revan Artecratos a fugitive from Moonsea is trying to establish his new life in Athkatla. But recent events has
-shown to Revan that there is someone with influence who can cast shadow long enough to reach
-from Moonsea to Athkatla.
+Revan Artecratos is a fugitive from Moonsea trying to establish his new life in Athkatla. However, recent events
+have revealed to him that there is someone with influence who can cast shadow long enough
+to reach from Moonsea to Athkatla.
 
-Revan Artecratos does not have a lot of interactions though he does have at least one banter with Bioware NPCs
-in SOA less in Throne of Bhaal.
-Main NPC Revan does not have lot of interjections so if you are looking for fully fleshed NPC telling his life
-story throughout BG2 you will be disappointed. This mod is more like protect NPC which assassins are after
-and there is story to tying it together.
+Revan does not have a lot of interactions, though he does have at least one banter with each
+Bioware NPC in SoA (less in ToB). If you are looking for a fully fleshed out NPC telling his life story
+throughout BG2, you may be disappointed.
+This mod is more about protecting an NPC from assassins with a story tying it all together.
 
 Revan Artecratos
 ----------------
@@ -41,7 +40,7 @@ NEW ITEMS:
 7 new encounters in Throne of Bhaal
 
 MERCENARIES:
------------
+------------
 Two Dwarwen Battleragers
 Dwarwen Fighting Thief
 Half-Elven Fighting Mage Cleric
@@ -77,8 +76,8 @@ Linux
 - You should have weinstall binary in your $PATH You can confirm this by typing whereis weinstall
 - If not download Weidu for linux and copy tolower, weinstall, weidu to /usr/bin
 - Extract mod to game folder with chitin.key
-- cd to directory of game
-- run tolower to lowercase everything and create linux.ini if you do not have it
+- Change to directory of game
+- Run tolower to lowercase everything and create linux.ini if you do not have it
 - weinstall golden_horse/golden_horse.tp2
 If you wish to use windows version of Weidu then:
 - Extract mod to game folder with chitin.key
@@ -109,6 +108,7 @@ Inkscape https://inkscape.org
 Gnewview https://apps.kde.org/gwenview/
 
 CONTRIBUTORS: all below have provided me with useful advice
+-------------
 CamDawg
 Jarno Mikkola
 jmerry
@@ -145,9 +145,9 @@ VERSION HISTORY:
 ----------------
 
 Version 0.90:
-   First internal release
+   First internal release.
 Version 1.0e
-   First release submitted to skellytz
+   First release submitted to skellytz.
 Version 1.1e
    Traifyied with Bigg traify tool & replaced some old functions with newer ones.
 Version 1.2e
@@ -156,5 +156,7 @@ Version 1.3e
    Allowing readme to be translated.
 Version 1.4e
    Proofreading.
+Version 1.5e
+   Fixed typo in class choosing component. Updated readme.
 
 ====================================================================================================================
