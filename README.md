@@ -75,7 +75,7 @@ Revan does not have a lot of interactions, though he does have at least one bant
 
 **Author**  
 
-- svj (Juraj Svitnic)
+- svj (Juraj Svitnič)
 
 **Contributors**  
 
