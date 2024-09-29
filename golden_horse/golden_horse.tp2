@@ -12,6 +12,7 @@ LANGUAGE ~English~
          ~golden_horse/tra/english/setup.tra~
 
 BEGIN @22
+LABEL rq-Main_Golden_Horse_mercenary_company
 REQUIRE_PREDICATE (GAME_IS ~tob bgt~) @23
 /*
 // COMPONENTS
@@ -3030,6 +3031,7 @@ COPY_EXISTING ~DPLAYER2.bcs~ ~override~
 //REQUIRE_COMPONENT @22
 BEGIN @374
 SUBCOMPONENT @375
+LABEL rq_Revan_Alt-Class_Assassin-Mage
 
 COPY ~golden_horse/cre/rqreva9.cre~ ~override/rqrev9.cre~
   SAY NAME1 @25 //
@@ -3046,6 +3048,7 @@ COPY ~golden_horse/cre/rqreva25.cre~ ~override/rqrev25.cre~
 
 BEGIN @376
 SUBCOMPONENT @375
+LABEL rq_Revan_Alt-Class_Fighter-Mage-Thief
 
 COPY ~golden_horse/cre/rqrevf9.cre~ ~override/rqrev9.cre~
   SAY NAME1 @25
