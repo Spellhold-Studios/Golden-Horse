@@ -444,6 +444,14 @@ SAY NAME1 @40
 SAY NAME2 @40
 SAY UNIDENTIFIED_DESC @52
 
+// Gervin letter of search
+COPY ~golden_horse/itm/rqletsea.itm~ ~override/rqletsea.itm~
+/* Unidentified name */
+SAY NAME1 ~Letter~
+/* Identified name */
+SAY NAME2 ~Letter~
+SAY UNIDENTIFIED_DESC ~Gervin after you have delivered your package search for my stolen potions. Make haste who knows what they could do in wrong hands. If you find potions just inform our friends they will take care of the matter from there.~
+
 // Letter to Prangl
 COPY ~golden_horse/itm/rqletder.itm~ ~override/rqletder.itm~
 /* Unidentified name */
@@ -1795,6 +1803,7 @@ COPY ~golden_horse/cre_other/rqessl.cre~ ~override/rqessl.cre~
 COPY ~golden_horse/cre_other/rqgerv.cre~ ~override/rqgerv.cre~
   ADD_CRE_ITEM ~rqdeliv~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
   ADD_CRE_ITEM ~rqpotn2~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
+  ADD_CRE_ITEM ~rqletsea~ #0 #0 #0 ~UNSTEALABLE~ ~INV~ fix later
   WRITE_ASCII 0x280 ~rqgerv~ #32 // Script name aka Death Variable
   WRITE_ASCII 0x248 ~rqhost4a~ #8 // Override script
   SAY NAME1 @235
