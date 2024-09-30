@@ -1,0 +1,177 @@
+@0    = ~Greetings.~
+@1    = ~Maybe for now. I don't think Harpers will give up so easily Revan... anyway.~
+@2    = ~Protect Revan from assassins: Completed.
+
+        I have killed Mintiper this should stop further Harper ambushes. I am not so sure if they will give up so soon but who am i to complain i got my 15000 gold pieces.~
+@3    = ~Did Revan talked to you about mercenary contracts? You interested?~
+@4    = ~Yes he told me to talk to you.~
+@5    = ~Yeah that's not the case, Farewell.~
+@6    = ~For this specific contract reward 4000 gold. Target is Marcian Argent and he is leader of bandit group of no small power.~
+@7    = ~4000 Gold sounds acceptable where is he?~
+@8    = ~Why he does have bounty on his head?~
+@9    = ~Can you tell me more about this Marcian Argent?~
+@10   = ~On second thought we don't have time for this.~
+@11   = ~We don't ask too many questions. To answer your query i don't know i only ask question that can be used in defeat bounty target no other.~
+@12   = ~Right tell me more about him and his group.~
+@13   = ~Okay but knowing all these details might be helpful to defeat them.~
+@14   = ~Very true but sometimes you have clients that wish to remain anonymous as possible and prefer not share these details.~
+@15   = ~I was able to deduce that he has formed splinter group from unknown religious cult. Cultists want him dead... No one leaves cult alive i guess.~
+@16   = ~Marcian himself is skilled fighter and has couple clerics one wizard and several fighting men in his group.~
+@17   = ~Where can we find him?~ ~Rugos1AgreedLocation~
+@18   = ~Okay but i want bigger share of the reward.~
+@19   = ~Graveyard district. Possibly he could be hiding in one of the crypts or be there only at night i don't know.~
+@20   = ~He is good as dead.~
+@21   = ~4000 is too small amount i want 10000 gold pieces.~
+@22   = ~Not interested.~
+@23   = ~Revan has instructed me to give you highest possible share of reward. And so i cannot give you more as i only take one quarter of reward.~
+@24   = ~Alright i will do it for 4000 gold pieces.~
+@25   = ~Not enough.~
+@26   = ~I understand, Farewell.~
+@27   = ~You interested doing my contract?~
+@28   = ~Can you repeat contents of your contract?~
+@29   = ~Maybe later as of now, Farewell.~
+@30   = ~Excellent! He is somewhere in Graveyard District right here in Athkatla.~
+@31   = ~Assassination Contract: Marcian Argent.
+
+        I have agreed to kill Marcian Argent for Dwarf Rugos in Mithrest Inn. He is supposed to be somewhere in Graveyard District i should be expecting Marcian to be protected by at least two Priests, several Fighters and one Wizard.~
+@32   = ~You return with good news i hope. Is it done? and do you have his head?~
+@33   = ~It is done Marcian is dead and here is his head.~
+@34   = ~Marcian but i forgot his head.~
+@35   = ~Not yet i will have to figure out how to finish the job.~
+@36   = ~Well then come back later.~
+@37   = ~Show it to me...Hmm....appearance matches. Here is your gold, Talk to me when you are ready to take another contract, Farewell.~
+@38   = ~Assassination Contract: Marcian Argent completed.
+
+        Marcian Argent is dead and i have my reward 4000 gold.~
+@39   = ~Greetings, I have second job for you.~
+@40   = ~Lets hear it.~
+@41   = ~Maybe we shall talk later about this, Farewell~
+@42   = ~Reward for this job is 14000 gold. This contract is for zealous Wizardslayer and his pupils. These contracts from mages pop out from time to time.~
+@43   = ~14000 Gold?! Consider it done. Just tell me where they are.~
+@44   = ~Mages? That can be only from Cowled Wizards? No?~
+@45   = ~Can you tell me more about this Wizardslayer group?~
+@46   = ~We don't ask too many questions. But i can confirm that yes Cowled Wizards issued this contract.~
+@47   = ~Right, tell me more why Cowled Wizards want him dead.~
+@48   = ~More details less chance of ambush in worst case or any other problems...~
+@49   = ~I assure you the contract is solid. Simple assassination contract from Cowled Wizards it is official and straightforward as it gets.~
+@50   = ~I would say the Wizardslayers and Cowled Wizards have some conflict going on. And someone of leadership from Cowled Wizards had enough and put up contract on them.~
+@51   = ~Leader is highly skilled Wizardslayer fighter and has couple fighting wizards plus several fighters with different arms specialization in his group.~
+@52   = ~Where can we find him?~
+@53   = ~We are not sure where he is specifically. Last time they were seen in Umar Hills Inn. You should start your search from there.~
+@54   = ~14000 gold is too small amount i want more.~
+@55   = ~Alright i will do it for 14000 gold pieces.~
+@56   = ~Understandable.~
+@57   = ~Not yet Rugos.~
+@58   = ~Excellent! Last time they were seen in Umar Hills Inn do not forget to bring his amulet.~
+@59   = ~Assassination Contract: Kamraarn.
+
+        I have agreed to kill Kamraarn for Dwarf Rugos Mithrest Inn. He is supposed to be somewhere in Umar Hills i should be expecting Kamraarn to be accompanied with several fighting men with Wizardslayer specialization. Supported by few fighting mages.~
+@60   = ~You return with good news i hope. Is it done? and do you have his amulet?~
+@61   = ~It is done Kamraarn is dead and here is his amulet.~
+@62   = ~Kamraarn is dead but i forgot proof of deed.~
+@63   = ~Give it to me. Looks alright. Here is your gold, Come back tomorrow i will have new contract for you by then, Farewell.~
+@64   = ~Assassination Contract on Kamraarn completed.
+
+        Kamraarn is dead and i have my reward 14000 gold.~
+@65   = ~Greetings, I have new job for you.~
+@66   = ~I sure did like your previous contract.~
+@67   = ~You have my ear.~
+@68   = ~Reward is 4000 gold. Kensai Mage duo these two are working for competing mercenary company and someone wants to force them to retirement quickly and forcefully.~
+@69   = ~4000 gold alright i will take it.~
+@70   = ~Who issued this contract?~
+@71   = ~Seems like lower paying job less enemies to eliminate?~
+@72   = ~I don't know It was not me or Revan if ye curious. As i said i am very certain the contractor is another mercenary company.~
+@73   = ~Perhaps they are here on mission of sorts.~
+@74   = ~In my experience these two are just scouts they should not have any backup. If you find any problems come to see me and we shall reassess and make adjustments.~
+@75   = ~Tell me more about them.~
+@76   = ~They must be scouts or perhaps assassins but why would mercenary company would put contract on them? If you find out tell me.~
+@77   = ~Both are highly skilled in their domain one is warrior specializing in fighting without armor other is powerful mage.~
+@78   = ~You should find them in Trademeet.~
+@79   = ~They are good as dead.~
+@80   = ~4000 gold is three quarters of the full sum you got from contractor?~
+@81   = ~Not interested in such lowly paying contracts , Farewell.~
+@82   = ~Yes i would like that too. It is 4000 or nothing.~
+@83   = ~Fine, Farewell.~
+@84   = ~Can you repeat terms of your contract?~
+@85   = ~Never mind.~
+@86   = ~Trademeet is where you find them.~
+@87   = ~Assassination Contract: Anakarhysse.
+
+        I have agreed to kill Anakarhysse for Dwarf Rugos Mithrest Inn. Last seen in Trademeet though it is very likely he would not be where is a lot of people. He was last seen with Berkris a powerful Magi.~
+@88   = ~It is done Anakarhysse is dead and here is his head.~
+@89   = ~Anakarhysse left and i failed to stop him.~
+@90   = ~They are dead but i forgot proof the of the deed.~
+@91   = ~Show it to me...Hmm....appearance matches. Here is your gold, Talk to when you are ready for next contract.~
+@92   = ~Assassination Contract on Anakarhysse completed.
+
+        Contract is fulfilled and i got my 4000 gold.~
+@93   = ~You did what?!, Alright i will send messenger when i will have next contract for you.~
+@94   = ~Assassination Contract on Anakarhysse completed.~
+@95   = ~Greetings, i do have new contract for you but this one radically different compared to past contracts.~
+@96   = ~How so?~
+@97   = ~So tell me about it.~
+@98   = ~Do not be offended <CHARNAME> but this is not the type of contract you could fulfill.~
+@99   = ~Farewell.~
+@100  = ~I have contract from Church to eliminate group of Paladins of Torm.~
+@101  = ~At last... we shall have revenge...~
+@102  = ~Any more details?~
+@103  = ~I don't know.~
+@104  = ~Any other details?~
+@105  = ~Can i get into problems with good aligned faction after this contract?~
+@106  = ~This i cannot tell but i think risk of these surprises is reflected in reward.~
+@107  = ~This group have angered powerful church and they want to quicken their journey to heavens.~
+@108  = ~Group is composed of single mage, pair of clerics and dozen of knights.~
+@109  = ~Athkatla Slums District Oh and reward is 20000 gold pieces.~
+@110  = ~20000 that's quite lot but i will be spending a lot get my reputation back up. I want more gold for this contract.~
+@111  = ~Apologies but i cannot give you more gold. But as i want to establish my reputation as reliable mercenary... I can give you magic if you complete contract.~
+@112  = ~20000 and magic sound far more interesting.~
+@113  = ~Not enough. Farewell.~
+@114  = ~Not yet right now i have different priorities.~
+@115  = ~They will arriving to Athkatla Slums District.~
+@116  = ~Assassination Contract: Hevguris.
+
+        I have agreed to kill Inquisitor Hevguris for Dwarf Rugos in Mithrest Inn. They are supposed to be in Athkatla Slums District. According to Rugos the group should consist of one wizard, few clerics and several knights.~
+@117  = ~It is done Hevguris is dead and here is proof you require.~
+@118  = ~I have killed Hevguris but i forgot to loot his ring.~
+@119  = ~Well then ye return later I will only reward you if you bring me proof of deed.~
+@120  = ~Give it to me...Hmm....appearance matches. Here is your gold, Talk to when you are ready for next contract.~
+@121  = ~Assassination Contract on Hevguris completed.
+
+        Paladin Hevguris is dead and i got my 20000 gold for the deed.~
+@122  = ~Once again i have contract very unusual contract.~
+@123  = ~Tell me more.~
+@124  = ~I'm listening.~
+@125  = ~I am aware of your Nature preserving inclinations but Druids themselves have brought this contract to me. As far as i am concerned this is internal conflict. Do you wish to participate in this?~
+@126  = ~You do not have to murder anyone just disrupt their spell which i assume can be done peacefully.~
+@127  = ~No not interested in our disputes.~
+@128  = ~Assume? That is not enough.~
+@129  = ~Maybe you could start telling me the details.~
+@130  = ~What if i am not able to resolve it peacefully?~
+@131  = ~If you accept but fail just come back to me with news of failure.~
+@132  = ~Alright tell me more.~
+@133  = ~Nope i will not be taking this contract.~
+@134  = ~Disruption or ritual that is to be performed by group of Druids and their allies.~
+@135  = ~Color me interested Where are they?~
+@136  = ~Some unknown druid sect Ashbrought or something. Though i suspect it be just cover of Shadow Druids.~
+@137  = ~Can i get into problems with Druids faction after completion of this contract?~
+@138  = ~This i cannot tell but i think risk of these surprises is reflected in size of reward.~
+@139  = ~Group is composed few Druids and Rangers, Shapeshifters and couple of Elemental beings.~
+@140  = ~They are gathering for ritual in Druid Groove and reward is 10000 gold.~
+@141  = ~Time to return them to more natural state of being.~
+@142  = ~10000 gold that's quite lot but i will be spending a lot get my reputation back up. I want more gold for this contract.~
+@143  = ~Apologies but i cannot give you more gold. Though i can give you magic for completion of contract.~
+@144  = ~10000 gold and magic sounds far more interesting.~
+@145  = ~Perfectly understandable.~
+@146  = ~Excellent they are located in Druid Grove near Trademeet.~
+@147  = ~Contract: Archdruid Dubovy.
+
+        I have agreed to disrupt ritual or destroy druids that are supposed to perform it Contractors is Dwarf Rugos in Mithrest Inn. Potential opposition would consist of few Druids Rangers Shapeshifters and Elemental beings.~
+@148  = ~You return with good news i hope. Is it done? Ritual disrupted i hope.~
+@149  = ~It is done ritual is disrupted but druids live.~
+@150  = ~It is done ritual is disrupted and druids are dead.~
+@151  = ~Here is your gold, and i have run out of contracts why don't contact Revans godfather to give me more contracts?~
+@152  = ~Assassination Contract on Archdruid Dubovy completed.
+
+        Completed contract for disruption of druids and got 10000 gold pieces.~
+@153  = ~No contracts as of now. Come back after you will receive message from courier.~
+@154  = ~I have run out of contracts. Why don't you contact Revans godfather to give me more contracts?~
