@@ -1803,7 +1803,7 @@ COPY ~golden_horse/cre_other/rqessl.cre~ ~override/rqessl.cre~
 COPY ~golden_horse/cre_other/rqgerv.cre~ ~override/rqgerv.cre~
   ADD_CRE_ITEM ~rqdeliv~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
   ADD_CRE_ITEM ~rqpotn2~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
-  ADD_CRE_ITEM ~rqletsea~ #0 #0 #0 ~UNSTEALABLE~ ~INV~ fix later
+  ADD_CRE_ITEM ~rqletsea~ #0 #0 #0 ~UNSTEALABLE~ ~INV~
   WRITE_ASCII 0x280 ~rqgerv~ #32 // Script name aka Death Variable
   WRITE_ASCII 0x248 ~rqhost4a~ #8 // Override script
   SAY NAME1 @235
