@@ -1,9 +1,0 @@
-IF
-    HPPercentLT(Myself,45)
-    Global("rqRetreatEnc1-1","LOCALS",0)
-THEN
-    Response #100
-        ReallyForceSpell(Myself,DRYAD_TELEPORT)
-        DisplayStringHead(Myself,@8)
-        SetGlobal("rqRetreatEnc1-1","LOCALS",1)
-END

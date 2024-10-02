@@ -1,7 +1,7 @@
 BACKUP ~golden_horse/backup~
 AUTHOR ~oaq@gmx.com~
 
-VERSION ~v1.5e~
+VERSION @377
 
 README ~golden_horse/tra/%LANGUAGE%/golden_horse_readme.txt~ ~golden_horse/golden_horse_readme.txt~
 
@@ -14,26 +14,6 @@ LANGUAGE ~English~
 BEGIN @22
 LABEL rq-Main_Golden_Horse_mercenary_company
 REQUIRE_PREDICATE (GAME_IS ~tob bgt~) @23
-/*
-// COMPONENTS
-BEGIN ~Change Revan's class to Fighter Mage Thief~
-SUBCOMPONENT @375
-COPY ~golden_horse/cre_fmt/rqrevf6.cre~ ~golden_horse/cre/rqrev9.cre~
-COPY ~golden_horse/cre_fmt/rqrevf25.cre~ ~golden_horse/cre/rqrev25.cre~
-
-BEGIN ~Change Revan's class to Mage Assassin~
-SUBCOMPONENT @375
-COPY ~golden_horse/cre_ma/rqreva6.cre~ ~golden_horse/cre/rqrev9.cre~
-COPY ~golden_horse/cre_ma/rqreva25.cre~ ~golden_horse/cre/rqrev25.cre~
-
-BEGIN ~Change Revan's class to Mage Thief~
-SUBCOMPONENT @375
-COPY ~golden_horse/cre_mt/rqrev9.cre~ ~golden_horse/cre/rqrev9.cre~
-COPY ~golden_horse/cre_mt/rqrev25.cre~ ~golden_horse/cre/rqrev25.cre~
-*/
-//REQUIRE_COMPONENT ~Revan Artecratos NPC Mod (Requires Throne of Bhaal)~
-//BEGIN ~Revan Artecratos NPC Mod (Requires Throne of Bhaal)~
-//REQUIRE_FILE ~data/25dialog.bif~ @23
 
 // Make items "talk"
 COPY_EXISTING ~itemdial.2da~ ~override~
@@ -216,11 +196,8 @@ EXTEND_TOP ~ar6200.bcs~ ~golden_horse/baf/rqar6200.baf~
 COPY ~golden_horse/spl/rqmaze.spl~ ~override/rqmaze.spl~ // Maze Esslin
 COPY ~golden_horse/spl/rqlunge.spl~ ~override/rqlunge.spl~ // Lunge Physical damage Esslin
 COPY ~golden_horse/spl/rqpoiso.spl~ ~override/rqpoiso.spl~ // Poison Esslin
-//COPY ~golden_horse/spl/rqsregen.spl~ ~override/rqsregen.spl~ // Spell Regeneration
 COPY ~golden_horse/spl/rqmararf.spl~ ~override/rqmararf.spl~ // Marcian Argent fireball
 COPY ~golden_horse/spl/rqgwehr.spl~ ~override/rqgwehr.spl~ // Shapeshift Greater Werewolf
-// Marcian Argent Fireball
-//COPY ~golden_horse/spl/rqfireb.spl~ ~override/rqfireb.spl~ // Party Safe fireball Marcian Argent
 // horn of wilderness summons
 COPY ~golden_horse/spl/rqwodbei.spl~ ~override/rqwodbei.spl~ // Summon Woodland Beings
 COPY ~golden_horse/spl/rqconani.spl~ ~override/rqconani.spl~ // Conjure Animals
@@ -447,10 +424,10 @@ SAY UNIDENTIFIED_DESC @52
 // Gervin letter of search
 COPY ~golden_horse/itm/rqletsea.itm~ ~override/rqletsea.itm~
 /* Unidentified name */
-SAY NAME1 ~Letter~
+SAY NAME1 @44
 /* Identified name */
-SAY NAME2 ~Letter~
-SAY UNIDENTIFIED_DESC ~Gervin after you have delivered your package search for my stolen potions. Make haste who knows what they could do in wrong hands. If you find potions just inform our friends they will take care of the matter from there.~
+SAY NAME2 @44
+SAY UNIDENTIFIED_DESC @378
 
 // Letter to Prangl
 COPY ~golden_horse/itm/rqletder.itm~ ~override/rqletder.itm~
@@ -1386,11 +1363,7 @@ SAY NAME2  @220
 
 SAY DESC
 @221
-//SAY UNIDENTIFIED_DESC
-//SAY DESC
 
-//REQUIRE_PREDICATE MOD_IS_INSTALLED "setup_golden_horse.tp2" "0" "You must have main component of Revan NPC installed"
-//BEGIN 100 DESIGNATED 100 LABEL "Revan alternative class Assasin/Mage multi-class"
 
 // copy sounds
 COPY ~golden_horse/sounds~ ~override~
@@ -3001,25 +2974,8 @@ COPY ~golden_horse/cre_other/rqt0clt4.cre~ ~override/rqt0clt4.cre~
   SAY NAME1 @373
   SAY NAME1 @373
 
-// Bhaal 6-3 quest Sendai Enclave
-// Bhaal 7-4 quest Abazigal Lair
-
 // Make mercenaries to never leave -------------------------------------------
-/*
-COPY_EXISTING ~DPLAYER2.bcs~ ~override/DPLAYER2.bcs~
-DECOMPILE_BCS_TO_BAF
-REPLACE_TEXTUALLY ~BreakingPoint()~
-~BreakingPoint()
-!CharName("rqfbe",Myself)
-!CharName("rqfbet",Myself)
-!CharName("rqfth",Myself)
-!CharName("rqfmc",Myself)
-!CharName("rqfmn",Myself)
-!CharName("rqcmi",Myself)
-!CharName("rqsrc",Myself)
-!CharName("rqrev",Myself)~
-COMPILE_BAF_TO_BCS
-*/
+
 COPY_EXISTING ~DPLAYER2.bcs~ ~override~
     DECOMPILE_AND_PATCH BEGIN
       REPLACE_TEXTUALLY ~BreakingPoint()~
