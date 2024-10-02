@@ -163,5 +163,6 @@ Version 1.6e
    Project Infinity labels.
    Added one new letter to explain certain future developments.
    From this version Golden Horse development in terms of adding new features has ended.
+   Added missing file. Do not know how it was it got deleted.
 
 ====================================================================================================================
