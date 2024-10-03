@@ -1,7 +1,7 @@
 BACKUP ~golden_horse/backup~
 AUTHOR ~oaq@gmx.com~
 
-VERSION ~1.6e~
+VERSION ~1.8e~
 
 README ~golden_horse/tra/%LANGUAGE%/golden_horse_readme.txt~ ~golden_horse/golden_horse_readme.txt~
 
