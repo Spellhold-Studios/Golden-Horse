@@ -1,7 +1,6 @@
 [![Release](https://img.shields.io/github/v/release/Spellhold-Studios/Golden-Horse?include_prereleases&color=%2392403a)](https://github.com/Spellhold-Studios/Golden-Horse/releases/latest)
 [![Published](https://img.shields.io/github/release-date/Spellhold-Studios/Golden-Horse?display_date=published_at&label=published&color=%2392403a)](https://github.com/Spellhold-Studios/Golden-Horse/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/Spellhold-Studios/Golden-Horse/total?color=%2392403a)](https://github.com/Spellhold-Studios/Golden-Horse/releases)
-[![Views](https://badges.pufler.dev/visits/Spellhold-Studios/Golden-Horse?label=views&color=%2392403a)](https://github.com/Spellhold-Studios/Golden-Horse/releases)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%a0%20macOS%20%a0%20Linux%20%a0%20Project%20Infinity-%2392403a)](https://github.com/Spellhold-Studios/Golden-Horse/releases)
 [![Games](https://img.shields.io/badge/games-BG2%20%a0%20BGT-%2392403a)](https://github.com/Spellhold-Studios/Golden-Horse/releases)
 [![Language](https://img.shields.io/badge/language-en-%2392403a)](https://github.com/Spellhold-Studios/Golden-Horse/releases)
