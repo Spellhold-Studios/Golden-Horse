@@ -684,9 +684,28 @@ AC bonus +2
 
 Special Abilities:
 Can cast following abilities once per day
-  Remove Paralysis
-  Zone of Sweet Air
-  Lesser Restoration
+
+Remove Paralysis
+  Duration: Permanent
+  Area of Effect: 15-foot radius
+  Saving Throw: None
+
+By the use of this spell, the priest can free several creatures from the effects of any paralyzation or related magic (such as a ghoul touch, or a hold spell).
+
+Zone of Sweet Air
+  Range: 30 yards
+  Duration: Instant
+  Saving Throw: None
+
+Zone of Sweet Air repels all noxious elements from poisonous vapors (including magically created vapors such as Cloudkill).  This spell will dismiss all clouds in the entire area that the caster is currently in.  The spell offers no protection against poisonous vapors created by a dragon's breath weapon (such as the chlorine gas of a green dragon).
+
+Neutralize Poison
+  Range: Touch
+  Duration: Instant
+  Area of Effect: Creature touched
+  Saving Throw: None
+
+This spell removes all toxins from the body, both natural and magical in nature.  When this spell is cast upon a poisoned individual, it immediately neutralizes any poison and restores 10 lost hit points.   This spell will also cure any diseases that the target may be suffering from, as well as blindness and deafness.
 
 Usable By:
 Clerics(Single-class,Multi-class,Dual-class)

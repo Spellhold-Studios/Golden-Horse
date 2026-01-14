@@ -80,7 +80,7 @@ END
 */
 // Turn hostile script 6000 Abazigal
 IF
-    Allegiance("rq7clf1",ENEMY)  // Deathstalker Sixtarch
+    Allegiance("rqt7clf1",ENEMY)  // Deathstalker Sixtarch
     !Allegiance(Myself,ENEMY)
     Global("rqAttackBegins2","LOCALS",0)
 THEN

@@ -3025,4 +3025,37 @@ COPY ~golden_horse/cre/rqrevf25.cre~ ~override/rqrev25.cre~
   SAY NAME2 @25
   SAY BIO @26
 
+// ----- TESTING STUFF -----
+/*
+BEGIN ~rqpton tests~
 
+COMPILE ~golden_horse/teststuff/rqtest.d~ ~override/~
+
+COPY ~golden_horse/teststuff/rqminhp1.itm~ ~override/rqminhp1.itm~
+COPY ~golden_horse/teststuff/rqtest.cre~ ~override/rqtest.cre~
+  WRITE_ASCII 0x280 ~rqtest~ #32 // Script name aka Death Variable
+  SAY NAME1 ~Attack Construct~
+  SAY NAME2 ~Attack Construct~
+COPY ~golden_horse/teststuff/rqpotnte.cre~ ~override/rqpotnte.cre~
+  WRITE_ASCII 0x2cc ~rqtest~ #8 // Dialogue file
+  SAY NAME1 ~Potion Construct~
+  SAY NAME2 ~Potion Construct~
+COPY ~golden_horse/teststuff/rqdummy.cre~ ~override/rqdummy.cre~
+COPY ~golden_horse/teststuff/rqtest14.spl~ ~override/rqtest14.spl~
+COPY ~golden_horse/teststuff/rqtest15.spl~ ~override/rqtest15.spl~
+COPY ~golden_horse/teststuff/rqtest16.spl~ ~override/rqtest16.spl~
+COPY ~golden_horse/teststuff/rqtest17.spl~ ~override/rqtest17.spl~
+COPY ~golden_horse/teststuff/rqtest18.spl~ ~override/rqtest18.spl~
+//COPY ~golden_horse/teststuff/rqtest19.spl~ ~override/rqtest19.spl~
+COPY ~golden_horse/teststuff/rqabju.spl~ ~override/rqabju.spl~
+COPY ~golden_horse/teststuff/rqalte.spl~ ~override/rqalte.spl~
+COPY ~golden_horse/teststuff/rqconj.spl~ ~override/rqconj.spl~
+COPY ~golden_horse/teststuff/rqdivi.spl~ ~override/rqdivi.spl~
+COPY ~golden_horse/teststuff/rqench.spl~ ~override/rqench.spl~
+COPY ~golden_horse/teststuff/rqillu.spl~ ~override/rqillu.spl~
+COPY ~golden_horse/teststuff/rqinvo.spl~ ~override/rqinvo.spl~
+
+COPY ~golden_horse/teststuff/rqnecr.spl~ ~override/rqnecr.spl~
+COPY ~golden_horse/teststuff/rqnone.spl~ ~override/rqnone.spl~
+COPY ~golden_horse/teststuff/rqwild.spl~ ~override/rqwild.spl~
+*/
